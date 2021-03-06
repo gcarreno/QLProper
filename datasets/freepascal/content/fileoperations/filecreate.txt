@@ -1,0 +1,19 @@
+*M1
+
+  uses ... sysutils;
+
+    function FileCreate(  const FileName : UnicodeString )  : THandle;
+
+    function FileCreate( const FileName :  UnicodeString; 
+                                          Rights  : Integer )  :  THandle;
+
+    function FileCreate( const FileName : UnicodeString; ShareMode: Integer; 
+                                          Rights : Integer ) : THandle;
+
+    function FileCreate( const FileName : RawByteString ) : THandle;
+
+    function FileCreate( const FileName : RawByteString; 
+                                         Rights : Integer )  : THandle;
+
+    function FileCreate( const FileName : RawByteString; ShareMode : Integer;
+                                        Rights: Integer ) : THandle;

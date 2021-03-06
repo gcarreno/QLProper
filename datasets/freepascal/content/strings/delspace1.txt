@@ -1,0 +1,13 @@
+*M1
+
+  uses ... strutils;
+
+    function DelSpace1( const S : string ) : string;
+
+      Var S : String = 'A   String';
+
+    Call: S := DelSpace1( S );
+
+   return S = 'A String'
+
+ 

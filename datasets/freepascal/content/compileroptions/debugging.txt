@@ -1,0 +1,14 @@
+*M1
+
+     For Debugging
+
+     Dropdown Listbox>Project Options
+     Compliation and Linking
+     -->   [   ] Smart Linkable (-CX)
+     Debugging
+     -->   [X] Generate Debugging info for GDB
+     -->   [X] Display Line Numbers in Runtime Error
+     -->   [   ] Strips Symbole From Executtable (-Xs)
+
+     Link Style
+     -->   [   ] Link Smart (-XX)

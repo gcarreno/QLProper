@@ -1,0 +1,23 @@
+*M1
+
+  Open the project SQLCopoments. Expand the main main form to 1/2 of
+  your screen size. Set the form to open in the center of the Desltop and as 
+  the primary form. Here is where the Font and Font size should be set. Set
+  Form1.Caption to SQLite3Compomemts.
+
+  Drop the following components on the main form.
+
+               SQLQuerry		Toolbar>SQLdb		1st on the left
+               SQLite3Connectio	Toolbar>SQLdb 		5th from right	
+               DataSource		Toolbar>Data Access 	1st position
+               DBGrid		Toobar>Data Control	2nd from right
+               DBNavigator
+
+  Select Menu>View>Components. In the Filter type tdb and select 
+  TDBNavigator.  ( I can never find TDBNavigator in the toolbar ) 
+
+  Resize the grid to half the form size and center it on the form. Place the 
+  DBNavigator under the grid centered. Stack the components to the right
+  of the DBGrid.
+
+  See: SQLQuerry

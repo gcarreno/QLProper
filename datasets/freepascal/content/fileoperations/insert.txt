@@ -1,0 +1,19 @@
+*M1
+
+  uses ... system;
+
+    procedure Insert(const source: shortstring; var s: shortstring;  index: SizeInt);
+
+    procedure Insert(source: Char; var s: shortstring; index: SizeInt);
+
+    procedure Insert(const Source: RawByteString; var S: RawByteString;  Index: 
+                                      SizeInt);
+
+    procedure Insert(const Source: UnicodeString; var S: UnicodeString;
+                                     Index: SizeInt);
+
+    procedure Insert(const Source: WideString; var S: WideString; Index: SizeInt);
+
+  Note: Insert inserts string Source in string S, at position Index, shifting all
+              characters after Index to the right. The resulting string is truncated at 255
+              characters, if needed. (i.e. for shortstrings) 

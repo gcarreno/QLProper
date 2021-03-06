@@ -1,0 +1,22 @@
+*M1
+
+  DB Browser can be installed anywhere, Download it and run the exe.
+     
+  SQLite3.dll  Download the correct version from the web. It can be installed
+  two ways. It can be added in the system path. (Not explaned here).
+
+  Create a directory on the C:\Drive (any drive will do) and copy the 
+  SQLite3.dll into the directory created. This is a storage location dor the DFLL's.
+
+  Create a directory on your systen somewhere called SQLComponent. This is the 
+  peoject directoey for the projecr. 
+ 
+  Create a new project: Menu>New Project>Application. Save it in  
+  SQLComponent as SQLComp. Close the Lazarus IDE.
+
+  Copy the SQLite3.dll into the project directory SQLComponent and into 
+  the Lazarus directory. That is, where the Lazarus.exe is installed.
+
+  You shoud be installed with extrenal components.
+
+  See: DB Browser

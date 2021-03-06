@@ -1,0 +1,15 @@
+*M1
+ 
+  uses ... math 
+
+    function InRange(const AValue : Integer; const AMin : Integer;
+                                      const AMax: Integer) : Boolean; overload;
+
+    function InRange(const AValue: Int64; const AMin : Int64; const AMax : Int64) : 
+                                       Boolean; overload;
+
+    function InRange(const AValue : Double; const AMin : Double; 
+                                      const AMax: Double) : Boolean; overload;
+
+  Note: InRange returns True if AValue is in the range AMin..AMax. It returns False 
+              if Value lies outside the specified range. 

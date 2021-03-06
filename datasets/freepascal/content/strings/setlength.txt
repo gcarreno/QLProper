@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    procedure SetLength(var S : AStringType; Len: SizeInt);
+
+    procedure SetLength(var A: DynArrayType; Len : SizeInt);

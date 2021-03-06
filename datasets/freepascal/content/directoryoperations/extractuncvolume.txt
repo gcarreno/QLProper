@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ExtractUNCVolume(const {%H-}Path: String): String;

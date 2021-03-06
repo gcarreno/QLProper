@@ -1,0 +1,7 @@
+*M1
+
+  uses ... sysutils;
+
+    function CreateDir( const NewDir : RawByteString) : Boolean;
+         
+    function CreateDir(const NewDir : UnicodeString) : Boolean;

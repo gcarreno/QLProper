@@ -1,0 +1,22 @@
+*M1
+
+  uses ... dateutils;
+
+   function IncMilliSecond( const AValue : TDateTime;  
+                                        const ANumberOfMilliSeconds: Integer ) : TDateTime;
+
+    function IncMilliSecond(  const AValue : TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncMilliSecond( TDT, 2 );
+
+    Return TDT 2000 MilliSecond later that the value of TDT in TDateTime format.
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncMilliSecond( TDT );
+
+    Return TDT = TDT + 1 MilliSecond later expresed in TDateTime format.

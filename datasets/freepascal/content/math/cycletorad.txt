@@ -1,0 +1,12 @@
+*M1
+
+  uses ... math ;
+
+    function CycleToRad(cycle : Float) : Float;
+
+  Note: CycleToRad transforms it's argument cycle (an angle expressed in cycles) to 
+               radians. (1 cycle is $2 \pi$ radians).Errors
+
+	
+
+  

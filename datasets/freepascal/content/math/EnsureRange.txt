@@ -1,0 +1,18 @@
+*M1
+
+  uses ... math ;
+
+    function EnsureRange(const AValue : Integer;  const AMin : Integer;
+                                             const AMax: Integer) : Integer; overload;
+
+    function EnsureRange(const AValue : Int64; const AMin : Int64;
+                                             const AMax: Int64) : Int64; overload;
+
+    function EnsureRange(const AValue : Double; const AMin : Double;
+                                             const AMax: Double) : Double; overload;
+
+  Note: EnsureRange returns Value if AValue is in the range AMin..AMax. It returns 
+              AMin if the value is less than AMin, or AMax if the value is larger than 
+              AMax.
+  See: InRange
+

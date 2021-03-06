@@ -1,0 +1,12 @@
+*M1
+
+  uses ... typinfo;
+
+    function GetFloatProp( Instance : TObject; PropInfo : PPropInfo ) : Extended;
+
+    function GetFloatProp( Instance : TObject; const PropName : string ) : Extended;
+
+  See: SetStrProp, SetWideStrProp, GetOrdProp, GetInt64Prop, GetMethodProp
+   
+
+                Couldn't Make Working Demo

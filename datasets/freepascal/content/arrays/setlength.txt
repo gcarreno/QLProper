@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+    procedure SetLength(THEARRAY : Array; ASIZE : Integer);  
+
+ Call: SetLength(DataArray, 500);
+
+  See: Length

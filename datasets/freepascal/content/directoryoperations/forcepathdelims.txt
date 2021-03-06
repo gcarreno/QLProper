@@ -1,0 +1,13 @@
+*M1
+
+  uses ... lazfileutils;
+
+  Procedure ForcePathDelims(Var FileName: string);
+
+
+
+   
+   
+
+
+

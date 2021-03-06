@@ -1,0 +1,14 @@
+*M1
+
+  uses ... marh;
+
+    function RoundTo( const AValue : Double;
+                                       const Digits: TRoundToRange ) : Double;
+
+    function RoundTo( const AVAlue : Extended;
+                                        const Digits : TRoundToRange ) : Extended;
+
+    function RoundTo( const AValue : Single;
+                                     const Digits : TRoundToRange ) : Single;
+
+

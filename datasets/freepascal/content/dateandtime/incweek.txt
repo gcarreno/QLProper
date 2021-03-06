@@ -1,0 +1,19 @@
+*M1
+
+  uses ... dateutils;
+
+    function IncWeek( const AValue : TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncWeek( TDT, 6 );
+
+    Return TDT 6 weeks later that the value of TDT in TDateTime format.
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncWeek( TDT );
+
+    Return TDT = TDT + 1 week later expresed in TDateTime format.

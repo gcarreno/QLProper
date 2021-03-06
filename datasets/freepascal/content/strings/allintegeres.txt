@@ -1,0 +1,22 @@
+*M1
+
+  uses ... system;
+
+    function  AllIntegeresData(Const aStr : String): Boolean;
+
+  Note: Not a FPC funcion
+
+    function  TForm1.AllIntegeresData(Const aStr : String): Boolean;
+      Var  
+        Index : Integer = -1;
+        iNumeric : Boolean = False; 
+      begin 
+        Index := 1;
+        while Index <= length(aStr) do 
+           if (aSTR[Index] in ['0'..'9']) then  begin  
+           Result  := True;
+           exit;
+         end 
+       else inc(Index);
+     Result := iNumeric;
+   end; 

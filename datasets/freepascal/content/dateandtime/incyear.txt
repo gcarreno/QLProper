@@ -1,0 +1,19 @@
+*M1
+
+  uses ... dateutils;
+ 
+    function IncYear( const AValue : TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncYear( TDT, 4 );
+
+    Return TDT 4 years later that the value of TDT in TDateTime format.
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncYear( TDT );
+
+    Return TDT = TDT + 1 year later expresed in TDateTime format.

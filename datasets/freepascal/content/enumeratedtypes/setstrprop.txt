@@ -1,0 +1,14 @@
+*M1
+
+  uses ... typinfo;
+
+   procedure SetStrProp(Instance : TObject;  const PropName : string;
+                                             const Value : AnsiString);
+
+    procedure SetStrProp(Instance : TObject;  PropInfo : PPropInfo;
+                                             const Value: Ansistring);
+
+  See: SetWideStrProp, GetFloatProp, GetInt64Prop, GetMethodProp
+   
+
+                Couldn't Make Working Demo

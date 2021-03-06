@@ -1,0 +1,12 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function DateInRange(ADate: TDate; AStartDate: TDate;  AEndDate: TDate;
+                                               AInclusive: Boolean = True) : Boolean;
+
+    Borwe: DateInRange checks whether the value ADate lies between AStartDate 
+                   and AEndDate, and returns True if it is. When AInclusive is True
+                   (the default), then the limits are included. When AInclusive is False, the
+                   limits are excluded. Only the date part of the 3 parameters is considered. 
+  See: TimeInRAnge, DateTimeInRange

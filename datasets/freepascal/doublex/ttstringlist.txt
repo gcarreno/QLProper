@@ -1,0 +1,17 @@
+CaseSensitive
+Aassigments
+Create
+Clear
+CustomSort
+Delete
+Duplicates
+Exchange
+Find
+Indexof
+Insert
+OnChange
+OnChanging
+OwnsObjects
+Sort
+Sorted
+SortStyles

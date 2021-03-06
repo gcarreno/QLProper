@@ -1,0 +1,34 @@
+*M1
+
+  uses ... system
+
+    function IOResult: Word;
+
+  Note: IOresult contains the result of any input/output call, when the {\$i-} 
+              compiler directive is active, disabling IO checking. When the flag is 
+              read, it is reset to zero. If IOresult is zero, the operation completed 
+              successfully. If non-zero, an error occurred. 
+
+            The following errors can occur:
+
+                                                       Dos errors :
+     2     File not found.                                  6     Invalid file handle.                  
+     3     Path not found.                               12   Invalid file-access mode.
+     4     Too many open files.                      15   Invalid disk number.
+     5     Access denied.                                 16   Cannot remove current directory.
+                                   17 Cannot rename across volumes.
+
+                                                                I/O errors :
+     100 Error when reading from disk.                103 File not open.
+     101 Error when writing to disk.                      104 File not opened for input.
+     102 File not assigned.                                       105 File not opened for output.
+                                              106 Invalid number.
+
+                                                             Fatal errors : 
+     150 Disk is write protected.                       156 Seek error on disk.
+     151 Unknown device.                                  157 Invalid media type.
+     152 Drive not ready.                                    158 Sector not found.
+     153 Unknown command.                           159 Printer out of paper.
+     154 CRC check failed.                                  160 Error when writing to device.
+     155 Invalid drive specified.                        161 Error reading from device.
+                                                     162 Hardware failure. 

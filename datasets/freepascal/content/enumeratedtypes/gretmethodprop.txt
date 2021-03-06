@@ -1,0 +1,13 @@
+*M1
+
+  uses ... typinfo;
+    
+    function GetMethodProp( Instance : TObject; PropInfo : PPropInfo; ) : TMethod;
+
+    function GetMethodProp( Instance : TObject; const PropName : string ) : 
+                                                     TMethod;
+
+  See: SetStrProp, SetWideStrProp, GetOrdProp, GetFloatProp, GetInt64Prop
+           
+
+                Couldn't Make Working Demo

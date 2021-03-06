@@ -1,0 +1,21 @@
+*M1
+
+  uses ... math;
+
+    function IsZero(const A : Single; Epsilon : Single) : Boolean; overload;
+
+    function IsZero(const A : Single) : Boolean; overload;
+
+    function IsZero(const A : Double; Epsilon : Double) : Boolean; overload;
+
+    function IsZero(const A : Double) : Boolean; overload;
+
+    function IsZero(const A : Extended; Epsilon : Extended) : Boolean; overload;
+
+    function IsZero(const A : Extended) : Boolean; overload;
+
+  Note: IsZero checks whether the float value A is zero, up to a precision of Epsilon.
+              It returns True if Abs(A) is less than Epsilon. The default value for Epsilon 
+              depends on the type of the argument: it is 1E-4 for Single, 1E-12 for Double 
+              and 1E-16 for extended.
+  See: IsNan, IsInfinite, SameValue

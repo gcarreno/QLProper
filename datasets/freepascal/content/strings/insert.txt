@@ -1,0 +1,13 @@
+*M1
+
+  uses ... systen;
+
+    procedure Insert( const source : string; var S : string; const Index : Integer );
+
+
+
+   Note: Inserta string  S at Index shifting all characters after Index to the right
+
+
+
+

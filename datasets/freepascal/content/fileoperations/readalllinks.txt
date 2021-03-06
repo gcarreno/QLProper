@@ -1,0 +1,8 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ReadAllLinks(const Filename : string ; {%H-}ExceptionOnError: boolean) : 
+                                                string; 
+
+  Note: If a link is broken returns ''

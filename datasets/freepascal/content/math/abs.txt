@@ -1,0 +1,25 @@
+*M1
+
+  uses ... system;
+ 
+    function TForm1.ABS ( I : LongInt ) : Longint;
+
+    Call:   ALong := ABS( -624 );
+
+    Returns 624
+ 
+
+
+    function TForm1.ABS( l : Int64 ) : Int64;
+
+    Call: A64 := ABS( -624 );
+
+    Returns 624
+
+
+
+    function ABS( d : ValReal ) : ValReal;
+
+    Call: ABS(  -624.0 );
+
+    Returns 624.0

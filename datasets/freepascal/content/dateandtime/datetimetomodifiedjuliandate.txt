@@ -1,0 +1,7 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function DateTimeToModifiedJulianDate(const AValue : TDateTime) : Double;
+
+  Note: TDateTime value to convert to Modified Julian representation

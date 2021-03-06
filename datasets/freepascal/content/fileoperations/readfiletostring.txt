@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function ReadFileToString(const Filename : string) : string;
+

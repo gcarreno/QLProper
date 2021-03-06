@@ -1,0 +1,13 @@
+*M1
+
+  uses ... math;
+
+    function SetRoundMode( const RoundMode : TFPURoundingMode
+                                                     ) : TFPURoundingMode;
+
+    SetRoundMode sets the floating point unit rounding mode.
+
+  rmNearest     Round to nearest integer
+  rmDown         Round to biggest integer smaller than value.
+  rmUp               Round to smallest integer larger than value
+  rmTruncate    Cut off fractional part 

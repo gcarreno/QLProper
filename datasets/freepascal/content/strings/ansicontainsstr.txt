@@ -1,0 +1,16 @@
+*M1
+
+  uses ... strutils;
+
+    function AnsiContainsStr( const AText, ASubText : string ) : Boolean;
+
+       Var AString : String = 'A string to search'; S : Boolean;
+
+  Call: S := AnsiContrinsStr( 'string to', AString );
+
+  Return S := True;
+
+  Note: This search is case sensitive
+
+
+

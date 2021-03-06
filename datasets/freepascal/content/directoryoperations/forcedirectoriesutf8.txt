@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ForceDirectoriesUTF8(const Dir: string): Boolean;

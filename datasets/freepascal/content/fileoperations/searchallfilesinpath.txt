@@ -1,0 +1,9 @@
+*M1
+
+  uses ... fileutil;
+
+    function SearchAllFilesInPath(const Filename : string;
+                                                              const BasePath: string;
+                                                              const SearchPath: string;
+                                                              const Delimiter: string;
+                                                              Flags: TSearchFileInPathFlags) : TStrings;

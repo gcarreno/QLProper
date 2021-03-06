@@ -1,0 +1,13 @@
+*M1
+
+ uses ... sysutils;
+
+   Procedure DecodeDate;
+
+       Var  YY,MM,DD : Word;
+     
+          DeCodeDate (Date,YY,MM,DD);
+ 
+  Return YY = 2020, MM = 10, DD = 28
+
+  See: EncodeDate, DecodeTime                              

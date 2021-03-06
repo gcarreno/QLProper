@@ -1,0 +1,8 @@
+M1
+
+  uses ... math;
+
+     function RadToCycle(rad: Float) : Float;
+
+  Notes: Radtocycle converts its argument rad (an angle expressed in radians) to
+                an angle in cycles. (1 cycle equals 2 pi radians) 

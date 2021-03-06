@@ -1,0 +1,10 @@
+*M1
+
+  uses ... strutils;
+
+     function binStr(Val : LongInt;cnt : Byte) : shortstring;
+
+    function binStr(Val : Int64; cnt : Byte ) : shortstring;
+
+    function binStr(Val : QWord; cnt: Byte) :shortstring;
+

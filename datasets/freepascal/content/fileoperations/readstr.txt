@@ -1,0 +1,5 @@
+*M1
+
+  uses ... system;
+
+    procedure ReadStr(const S : string;  Args : Arguments);

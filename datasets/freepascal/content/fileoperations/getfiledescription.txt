@@ -1,0 +1,5 @@
+*M1
+
+  uses ... laxfileutils;
+
+    function GetFileDescription(const AFilename : string) : string;

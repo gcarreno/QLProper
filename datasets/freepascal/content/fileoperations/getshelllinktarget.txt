@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function GetShellLinkTarget(const FileName : string) : string;

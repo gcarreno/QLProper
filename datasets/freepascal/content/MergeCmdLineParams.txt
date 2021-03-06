@@ -1,0 +1,5 @@
+*M1
+ 
+  uses ... lazutils;
+
+    function MergeCmdLineParams(ParamList: TStrings): string;

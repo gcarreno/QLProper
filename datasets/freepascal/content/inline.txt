@@ -1,0 +1,7 @@
+*M1
+
+  Notes:  Inline indicates to the compiler that the procedure should 
+                 be copied to it's  execution. Therefore, avoiding a call.  
+                 This is a a request and may not happen;
+
+ 

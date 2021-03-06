@@ -1,0 +1,15 @@
+*M1
+
+  uses ... math ;
+
+    function SumInt(const data: PInt64; const N: LongInt) : Int64;
+
+    function SumInt(const data : array of Int64) : Int64;
+
+    function SumInt(const data : PInteger;  const N : LongInt) : Int64;
+
+    function SumInt(const data: array of Integer) : Int64;
+
+
+  Note: SumInt returns the sum of the N integers in the Data array, where this can
+              be an open array or a pointer to an array. 

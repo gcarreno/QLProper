@@ -1,0 +1,5 @@
+*M1
+
+  uses ... sysutils;
+
+    function DateTimeToFileDate(DateTime : TDateTime) : LongInt;

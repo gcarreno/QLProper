@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+  EPOCH
+
+  Note: Elapsed seconds between  Jan 1st, 1970 and present expressed as an  
+               Int64. This is a Unix date time.
+
+  See: DateTimeToUnix, GetLocalTimeOffset, TDateTime

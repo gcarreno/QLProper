@@ -1,0 +1,66 @@
+*M1
+
+  DB Browser  Creating a SQLite3 database.
+
+  Click on the DB Btowser icon (looks like a grey barrel ). You may have to 
+  copy SQLite3.dll into the DB Browser directory. 
+
+  We will be creating one database with one table. The data base, table and
+  table data specifications are:
+ 		
+
+  Database Name:
+
+  Click the 'New Database' button. Select the drive and SQLComponets 
+  directory. Enter Airports as the database name and save.. 
+
+  Table Name:
+
+   The Edit Table defination form will appear. At the top of the form enter 
+   'APTable' in the table name edit box. 
+
+
+  DataBase Specifications:
+
+    DataBase Name:	Airports
+    Table Name:	APTable
+
+    Table Fields Specifications:
+ 
+  Field    Name     Type        Status       Primary Key       AutoIncrement    Unique
+
+    Field1   Id         Integer    Not Nul      Promary key      Auto increment  Unique 
+    Field2   City     Text          Not Nul      ---------------        -------------------    ---------                
+                                                                                          
+    Field3   IATA    Text          Not Nul     ----------------      --------------------   ---------- 
+
+
+    Data Specifications:
+
+        ID      City                    IATA
+-----------------------------------------
+         1  ,  Phoenix       ,   KPHX
+         2  ,  Los Angles  ,   KLAX
+         3  ,  New York     ,   KJFK 
+
+
+  Field(s) Creation:
+
+  In the midddle of the form click the 'Add' button to add fields to the table
+  Use the  Table Fields Specifications: above for guidence. Once you have
+  created the table  press 'OK' to save the table. You will return to the 
+  DB Browser main form.
+ 
+
+   Table Data Entry:
+
+  Under the Table drop down there are two entries. APTable and  sqlite 
+  sequence. Select the APTable. Enter the data cccording to the  Data 
+  Specifications above. To enter data into the table click the 6th icon on
+  the third row down. It is next to the printer icon. This will open a row. 
+  In this entry form  you have to enter the primary keys. When completed 
+  click 'Write Changes' top row and in the dropdown File>Save ALL and 
+  then exit. There should be an Airport.db file in the 
+  SQLComponents directory.
+
+  See: SQLIte Components

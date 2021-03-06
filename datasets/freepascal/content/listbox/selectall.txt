@@ -1,0 +1,20 @@
+*M1
+
+  uses ... system;
+
+    Listbox1.MultiSelect := True;
+ 
+    for i := 0 to ListBox1.Count-1 do begin
+           ListBox1.Selected[ i ] := True; 
+    end;
+
+*M2
+
+    procedure Tform1.SelectAll;
+      Var i : Integer;
+        begin
+           Listbox1.MultiSelect := True;
+            for i := 0 to ListBox1.Count -1 do begin
+               ListBox1.Selected[ i ] := True; 
+            end;
+         end;   

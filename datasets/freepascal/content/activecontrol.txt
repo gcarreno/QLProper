@@ -1,0 +1,13 @@
+*M1
+
+  uses ... system;
+
+    ActiveControl
+
+  Type
+
+   TButton1 : Button;
+
+     Call:   Form1.ActiveControl := Button1;
+
+    See SetFocus

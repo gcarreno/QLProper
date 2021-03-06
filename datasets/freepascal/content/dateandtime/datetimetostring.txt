@@ -1,0 +1,15 @@
+*M1
+
+  uses ... sysutiles;
+
+    procedure DateTimeToString( out Result : string; const FormatStr : string;
+                                                                 const DateTime : TDateTime;
+                                                                  Options : TFormatDateTimeOptions = [ ]  );
+
+    procedure DateTimeToString( out Result : string; const FormatStr : string;
+                                                                const DateTime : TDateTime;
+                                                                const FormatSettings : TFormatSettings;
+                                                                Options: TFormatDateTimeOptions = []  );
+
+
+                                     UNSURE

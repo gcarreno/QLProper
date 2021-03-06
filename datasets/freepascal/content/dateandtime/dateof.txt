@@ -1,0 +1,9 @@
+*M1
+ 
+  uses ... dateutils;
+
+    function DateOf(const AValue: TDateTime) : TDateTime;
+
+  Note: DateOf extracts the date part from AValue and returns the result. Since the
+              TDateTime is actually a double with the date part encoded in the integer 
+              part, this operation corresponds to a call to Trunc. 

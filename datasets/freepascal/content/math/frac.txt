@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    function Frac(X: ValReal): ValReal;
+
+      Var S : Real = 0.456; R : Real;
+
+    CAll: R := Frac( S );
+
+    Return R = 456
+

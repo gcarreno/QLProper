@@ -1,0 +1,8 @@
+Enumerated Type
+Exclude
+GetFloatProp
+GetInt64Prop
+GretMethodProp
+GetOrdProp
+SetStrProp
+SetWideStrProp

@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function FindDiskFilename(const Filename : string) : string;
+

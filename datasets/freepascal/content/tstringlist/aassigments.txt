@@ -1,0 +1,22 @@
+*M1
+
+  uses ... system;
+
+     Var TheList : TStringList; AFILENAME : String = 'MyFile.txt'; 
+
+    begin
+       TheList := TStringList.Create;
+         Try
+           TheList .LoadFromFile( AFILENAME );
+           Memo1.Clear;
+           Memo1.Lines.AddStrings( TheList, True );
+           ListBox1.Items.Assign(  TheList ); 
+         finally
+           TheList.Free;
+    end;
+ end;
+
+  Note: The TStringList TheList is created and a text file is read into the TheList.
+              Memo1 is cleared and TheList is added to Memo1. TheList is assigned to
+              Listbox1.
+

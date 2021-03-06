@@ -1,0 +1,17 @@
+*M1
+
+  uses ... system;
+
+    function EOF( var f : file ) : Boolean;
+
+    function EOF( var t: Text ) : Boolean;
+
+  See: Eoln, Assign, Reset, Rewrite
+
+
+    While not eof( TestFile ) do begin
+        read (t1,C);
+        write (t2,C);
+   end;
+   Close (t1);
+   Close (t2);

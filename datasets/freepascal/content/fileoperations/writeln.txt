@@ -1,0 +1,47 @@
+*M1
+
+  uses ... system;
+
+    procedure WriteLn( V1 : Type1 );
+
+    procedure WriteLn( V1 : Type1; V2 : type2 );
+
+    procedure WriteLn( V1 : Type1; V2 : Type2; V3 : Type3 );
+
+    procedure WriteLn( var F : Text;  V1 : Type1 );
+
+    procedure WriteLn( var F : Text; V1 : Type1;  V2 : type2 );
+
+    procedure WriteLn( var F : Text; V1 : Type1;  V2 : Type2; V3 : Type3 );
+
+
+     Var FName : String =  'Item.txt'. 
+
+    Call: ListBoxToFile( FName, Listbox1);
+
+    procedure TForm1.ListBoxToFile(const AFile : String;const  ABOX : TListbox);
+      var
+       OutFile : Textfile;
+       Line    : String = '';
+     begin
+      AssignFile(OutFile, AFile);
+      Try
+       Rewrite(OutFile);
+       for line in ABox.Items do
+        WriteLn (Outfile,Line.trim);
+      finally
+        Flush(OutFile);                                 // <---- !!! flush() before closing !!!
+        CloseFile(OutFile);
+      end;
+    end;
+
+  Note: Considered Old School
+  See: Write, Read, Readln, Blockwrite
+
+       Write(field1: 5);
+      Write(Field2: 8);
+      Writeln(Field3:10);
+                  or
+     Writeln(field1:5, field2:8 field3:10); 
+                       
+  Return: 123  12345   12345678

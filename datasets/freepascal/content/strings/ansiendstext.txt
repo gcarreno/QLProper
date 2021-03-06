@@ -1,0 +1,7 @@
+*M1
+
+  uses ... strutils;
+
+    function AnsiEndsText(const ASubText : string;
+                                                 const AText : string) : Boolean;
+

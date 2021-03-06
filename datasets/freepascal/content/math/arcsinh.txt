@@ -1,0 +1,5 @@
+*M1
+ 
+  uses ... Math 
+
+    function ArcSinH(x :  Float) : Float;

@@ -1,0 +1,9 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function CreateRelativePath(const Filename, BaseDirectory: string;
+                                                      UsePointDirectory: boolean = false; 
+                                                      AlwaysRequireSharedBaseFolder
+                                                      : Boolean = True) : string;
+

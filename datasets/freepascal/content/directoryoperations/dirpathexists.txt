@@ -1,0 +1,7 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function DirPathExists(DirectoryName : string) : boolean;
+
+  See: DirectoryExists

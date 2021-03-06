@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math;
+
+     
+   function LnXP1(x : Float) : Float;
+
+  Note: Lnxp1 returns the natural logarithm of 1+X. The result is more precise for
+              small values of x. x should be larger than -1. 
+  See: Ldexp. Log10, Log2, Logn

@@ -1,0 +1,8 @@
+*M1
+
+  Uses ... Classes
+
+      public property TStringList.OnChange : TNotifyEvent
+                                                           read FOnChange
+                                                           write FOnChange;
+

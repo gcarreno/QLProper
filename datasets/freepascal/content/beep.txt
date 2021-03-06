@@ -1,0 +1,13 @@
+*M1
+
+  uses ... system;
+
+    procedure Beep;
+
+    Call: Beep;
+
+  Return System bell will beep once.
+
+
+
+   

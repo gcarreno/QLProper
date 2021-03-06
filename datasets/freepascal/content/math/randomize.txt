@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+    Randomize;
+ 
+   Note: Randomize iInitialize the random number generator.
+               Randomize must be called before calling the Random 
+               function.  This is usually done in FormCreate.
+   See: Random

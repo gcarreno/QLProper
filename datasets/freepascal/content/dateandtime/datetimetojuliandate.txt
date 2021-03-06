@@ -1,0 +1,8 @@
+*M1
+ 
+  uses ... dateutils
+
+  function DateTimeToJulianDate(const AValue : TDateTime) : Double;
+
+  Note: DateTimeToJulianDate converts the AValue date/time indication to a Julian
+              (as opposed to Gregorian) date. 

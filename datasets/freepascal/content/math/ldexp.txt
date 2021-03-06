@@ -1,0 +1,8 @@
+*M1
+
+  uses ... math; 
+  
+    function Ldexp(x : Float; const p : Integer) : Float;
+
+  Note: Ldexp returns (2 to the power p) times x. 
+  See: Lnxp1, Log10, Log2, Logn

@@ -1,0 +1,22 @@
+*M1
+
+  uses ... dateutils;
+
+   function LocalTimeToUniversal( LT : TDateTime ) : TDateTime;
+
+   function LocalTimeToUniversal( LT : TDateTime; TZOffset: Integer ) : TDateTime;
+
+ See: GetLocalTimeOffset,  UniversalTimeToLocal 
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT : LocalTimeToUniversal(  TDT );
+
+    Return TDT = UTC.
+
+     Var TDT : TDateTime; Offset : Integer;
+
+    Call: TDT : LocalTimeToUniversal(  TDT, Offset );
+
+    Return TDT = UTC

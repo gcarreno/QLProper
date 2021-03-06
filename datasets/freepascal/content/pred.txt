@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    function Pred( X : TOrdinal ) : TOrdinal;
+
+  Notes: Pred returns the element that precedes X. If it is applied to the 
+               first value of the ordinal type, and the program was compiled with
+              range checking on ({$R+}), then a run-time error will be generated. 
+  See: Succ, Ord, High, Low
+

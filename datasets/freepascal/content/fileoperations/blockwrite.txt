@@ -1,0 +1,17 @@
+*M1
+
+  uses ... system;
+
+    procedure BlockRead( var f : file; var Buf; count : Int64; var Result : Int64 );
+
+    procedure BlockRead( var f : file; var Buf; count : LongInt; va r Result: LongInt );
+
+    procedure BlockRead( var f: file; var Buf; count : Cardinal; var Result: Cardinal );
+
+    procedure BlockRead( var f : file; var Buf; count : Word; ar Result : Word );
+
+    procedure BlockRead(var f : file; var Buf; count : Word; var Result : Integer );
+
+    procedure BlockRead( var f : file; var Buf; count : Int64 );
+
+  See: WriteLn, Read, Readln

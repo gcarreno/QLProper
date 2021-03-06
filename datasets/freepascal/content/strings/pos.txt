@@ -1,0 +1,6 @@
+*M1
+
+  uses ... system;
+
+    function Pos(const substr: shortstring; 
+                             const s: shortstring ) : SizeInt;

@@ -1,0 +1,8 @@
+*M1
+
+  uses ... system;
+
+         i := Listbox1.Items.Indexof( 'KPHX' );
+         if i <> -1 then begin ListBox1.ItemIndex := i; end;
+
+       i would be the index of 'KPHX' in Listbox1.

@@ -1,0 +1,16 @@
+*M1
+
+  uses ... sysutils;
+
+    function DeleteFile( const FileName : UnicodeString ) : Boolean;
+
+    function DeleteFile( const FileName : RawByteString ) : Boolean;
+
+  See: FileCreate, FileExists
+
+
+     Var Deleted : Boolean;
+
+    Call:  Deleted := DeleteFile( 'My New File.txt' ); 
+
+   

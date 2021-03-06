@@ -1,0 +1,17 @@
+*M1
+
+ use ... sysutils;
+
+   function DirectoryExists( const Directory  : UnicodeString;
+                                                       FollowLink : Boolean = True ) : Boolean;
+
+   function DirectoryExists( const Directory : RawByteString; 
+                                                       FollowLink : Boolean = True ) : Boolean;
+  See: DirPathExists
+
+
+      Var Path : String = 'C:\X-Plane 11\;     Found : Boolean;
+
+      Found := DirectoryExists( Path,True );
+
+       Return True if C:\XPlane\ directory is present otherwise returns False.

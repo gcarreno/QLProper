@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ExtractFileNameOnly(const AFilename : string) : string;
+

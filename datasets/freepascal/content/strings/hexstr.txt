@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    function hexStr(Val : LongInt; cnt: Byte ) : shortstring;
+
+    function hexStr(Val: Int64; cnt: Byte ) : shortstring;
+
+    function hexStr(Val : QWord; cnt: Byte ) : shortstring;
+
+    function hexStr(Val: Pointer) : shortstring;
+

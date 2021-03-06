@@ -1,0 +1,19 @@
+*M1
+
+     DB Browser
+
+  DBBrowser will build and manage a SQLite3 database and database tables.
+  Any SQlite3 compatible DB manager tool can be used.
+ 
+    SQLLite3
+
+  SQLitr3.dll  Download the correct version from the web. The SQLite3.dll
+  MUST match your Lazarus/Free Pascal install  32 Bit or 64 bit. Check your
+  Lazarus About item.   Menu>Help>About
+
+  The remaining compoponents are all part of Laarus and Free Pascal.
+
+  See: All Required Installs
+
+
+

@@ -1,0 +1,21 @@
+*M1
+
+  uses ... math; 
+
+     function Norm(const data : array of Single) : Float;
+
+    function Norm(const data : PSingle; const N : Integer) : Float;
+
+    function Norm(const data : array of Double) : Float;
+
+    function Norm(const data : PDouble ; const N: Integer) : Float;
+
+    function Norm(const data : array of Extended) : Float;
+
+    function Norm(const data : PExtended; const N : Integer) : Float;
+
+  Note: Norm calculates the Euclidean norm of the array of data. This equals sqrt
+              (sumofsquares(data). The second form accepts a pointer to an array of N 
+              values.
+
+  See :Sumofsquares

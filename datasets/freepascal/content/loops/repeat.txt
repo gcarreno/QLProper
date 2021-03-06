@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    Bar X : Integer;
+
+    Repeat
+       Inc(X0;
+    Until X = 5;
+
+

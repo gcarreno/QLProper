@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function FindDefaultExecutablePath(const Executable: string;
+                                                                            const BaseDir: string = '') : string;

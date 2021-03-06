@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazutils;
+
+    function FindNextUTF8(var Rslt : TSearchRec) : Longint;

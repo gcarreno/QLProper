@@ -1,0 +1,13 @@
+*M1
+
+  uses ... classes;
+
+      public procedure TStringList.Sort; virtual;
+
+     Var TList : TStringList; 
+
+    Call: TList.Sorted := True;
+
+    Return Sort with QuickSort, If TStringSorted is set to True Nothing happens
+
+  See:  CustomSort

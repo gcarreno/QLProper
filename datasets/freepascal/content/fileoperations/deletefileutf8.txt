@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function DeleteFileUTF8(const FileName : String) :  Boolean;

@@ -1,0 +1,11 @@
+*M1
+
+  uses ... dateutils;
+
+   TDateTime
+
+  Note: TDateTime is expressed as a Double. It is the elapsed seconds
+               between  Dec 30, 1899 and the time when the Date functin is called.
+
+  See: EPOCH
+ 

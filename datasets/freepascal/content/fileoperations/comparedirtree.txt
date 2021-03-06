@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function CopyDirTree(const SourceDir : string;  const TargetDir : string;
+                                             Flags : TCopyFileFlags = []) : Boolean;

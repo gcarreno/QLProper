@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math;
+
+    function IntPower(base : Float; const exponent : Integer) : Float;
+
+  Note: If base is zero and the exponent is negative, then an overflow error will
+              occur.
+  See: Power 

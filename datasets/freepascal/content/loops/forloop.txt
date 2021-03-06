@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+     for i := 0 to Listbox.items.count do begin
+            Item := Listbox.itms[i];
+
+            Do sometning with item
+
+    end loop;

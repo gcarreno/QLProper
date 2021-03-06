@@ -1,0 +1,9 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function YearSpan(const ANow: TDateTime;  const AThen: TDateTime) : Double;
+
+ Note:  YearSpan returns the number of years between ANow and AThen, including
+              any fractional parts of a year. This number is an approximation, based on an 
+              average number of days of 365.25 per year (average over 4 years). 

@@ -1,0 +1,16 @@
+*M1
+
+  uses ... classes;
+
+     public destructor TStringList.Destroy; override;
+
+     Var TList : TStringList;
+
+    TList := TStringList.Create; 
+
+          { Your code here }
+
+    TList := TStringList.Destroy; 
+
+  Note: TstringList must be created and destroyed
+  

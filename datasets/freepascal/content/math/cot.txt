@@ -1,0 +1,7 @@
+*M1
+
+  uses ... math ;
+
+    function Cot(x : Float) : Float;
+
+  See: Cotan

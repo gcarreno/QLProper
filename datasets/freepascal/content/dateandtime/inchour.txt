@@ -1,0 +1,5 @@
+*M1
+
+  uses ... dateutils
+ 
+    function IncHour( const AValue : TDateTime ) : TDateTime;

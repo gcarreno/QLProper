@@ -1,0 +1,16 @@
+*M1
+ 
+  uses ... math 
+
+    function FutureValue(ARate: Float; NPeriods: Integer;  APayment: Float;
+                                              APresentValue: Float;  APaymentTime: TPaymentTime ) :
+                                              Float;
+  Note: FutureValue calculates the future value of an investment (FV) in the cash 
+              flow formula (see CashFlowFunctions) The function result is the future value 
+              of an investment of APresentValue (PV), where APayment (PMT) is invested
+              for NPeriods (n) at the rate of ARate (q) per period.
+                
+              The APaymentTime parameter determines whether the investment
+              (payment) is an ordinary annuity or an annuity due: ptEndOfPeriod 
+              must be used if payments are at the end of each period. If the payments are
+              at the beginning of the periode, ptStartOfPeriod must be used. 

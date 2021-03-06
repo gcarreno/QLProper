@@ -1,0 +1,11 @@
+*M1
+
+  uses ... sysutils;
+
+   function GetLocalTimeOffset : Integer;
+
+     Var Offset : Integer;
+
+    Call: Offset := GetLocalTimeOffset;
+
+  See: LocalTimeToUniversal,  Date, Time, Now

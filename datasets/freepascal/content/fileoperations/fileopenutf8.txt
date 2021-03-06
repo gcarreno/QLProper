@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileOpenUTF8(Const FileName  : string; Mode  : Integer)  : THandle;

@@ -1,0 +1,25 @@
+*M1
+
+uses ... system;
+
+    function High( Arg: TypeOrVariable ) : TOrdinal;
+
+    a) Ordinal type returns highest value.
+    b) Array highest index
+    c) Set highest value of ordinal type
+
+
+
+  Type
+    
+    TDays (Sun, Mon, Tue, Wed, Thur. Fri, Sat I;
+
+    Var Days : Tdays;
+
+   Days := High( TDays );
+
+    Days = Sat
+
+  See: Low
+
+  

@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileIsWritable(const AFilename : string) : boolean;
+

@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    ListBox1.ItemIndex := ListBox1.Count -1;
+
+  Result is to set focus on the last item in Listbox1.

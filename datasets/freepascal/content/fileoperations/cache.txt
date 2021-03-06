@@ -1,0 +1,9 @@
+*M1
+
+  uses ... lazfileutils;
+
+    TInvalidateFileStateCacheEvent = 
+    procedure(const Filename: string); var   OnInvalidateFileStateCache: 
+                          TInvalidateFileStateCacheEvent = nil;
+
+    procedure InvalidateFileStateCache(const Filename : string = ''); inline;

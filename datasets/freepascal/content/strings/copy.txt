@@ -1,0 +1,34 @@
+*M1
+
+uses ... strutils;
+
+    function Copy( S : String; IDX : SizeInt; Count : SizeInt )  : String; 
+
+    function Copy(A : DynArrayType; Index : SizeInt;  Count : SizeInt) : DynArray;
+
+
+     Var AString : String = 'Turn left on main.;
+             ATag : String;
+ 
+    Call:   Atag := Copy(Astring.6,4);
+
+    Result     ATag = 'left' 
+ 		 
+
+    Types
+
+     TArray = Array of Strings;
+
+    function Copy(A : DynArrayType; Index : SizeInt;  Count : SizeInt) : DynArray;
+
+      Var
+       Data : TArray;
+       Hold : TArray;
+		  
+    procedure TForm1.AProcedure;
+      begin
+        Hold := Copy(Data,0,High(Data));
+       end;
+	
+   Result Hold will = Data;
+	

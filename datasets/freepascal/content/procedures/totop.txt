@@ -1,0 +1,18 @@
+*M1
+
+  uses ... system;
+
+    procedure  ToTop( ABOX : TListbox );
+
+    Call: ToTop( Listbox1 );
+
+  Note: Not a FPC procedure, Will scrool the selected item in Listbox1 to 
+               the top
+               
+
+    procedure TForm1.ToTop(ABOX : TListBox);
+       begin 
+         ABOX.TopIndex := -1 + ABOX.Items.Count;
+         ABOX.TopIndex := ABOX.ItemIndex;
+         ABOX.SetFocus;
+     end;

@@ -1,0 +1,16 @@
+*M1
+
+  uses ... system;
+
+    function UpCase(const s : shortstring) : shortstring;
+
+    function UpCase(c : Char) :Char;
+
+    function UpCase(const s : ansistring) : ansistring;
+
+    function UpCase(const s : UnicodeString) : UnicodeString;
+
+    function UpCase(c : UnicodeChar) : UnicodeChar;
+
+    function UpCase(const s : WideString) : WideString;
+

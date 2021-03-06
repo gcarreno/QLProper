@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math;
+
+    N := X mod 2;
+
+     Var X :  Double = 44.2; N : Double;
+
+    rerurn N = 2

@@ -1,0 +1,20 @@
+*M1
+
+  uses ... system;
+
+  procedure Close(  var f: file );
+
+  procedure Close( var t : Text );
+
+  procedure Close;
+  
+  procedure TForm1.btnCloseClick(Sender: TObject);
+    begin
+      Close;
+   end; 
+
+  Note: Button Close will close the form. If the main form it will 
+               close the program.
+  
+  
+ Note: This flushes the buffer of the file text and closes the file.

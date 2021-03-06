@@ -1,0 +1,18 @@
+*M1
+
+  uses ... dateutils;
+
+    function IncMinute( const AValue: TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncMinute( TDT, 2 );
+
+    Return TDT 2 minuets later that the value of TDT in TDateTime format.
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncMinute( TDT );
+
+    Return TDT = TDT + 1 minuets later expresed in TDateTime format.

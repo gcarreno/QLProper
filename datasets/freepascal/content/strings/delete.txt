@@ -1,0 +1,15 @@
+*M1
+
+  uses ... system;
+
+    procedure Delete(var s: shortstring; index: SizeInt; count: SizeInt);
+
+    procedure Delete(var S: RawByteString; Index: SizeInt; Size: SizeInt);
+
+    procedure Delete(var S: UnicodeString; Index: SizeInt; Size: SizeInt);
+
+    procedure Delete(var S: WideString; Index: SizeInt; Size: SizeInt);
+
+  Note: Delete removes Count characters from string S, starting at position Index. 
+              All characters after the deleted characters are shifted Count positions to the 
+              left, and the length of the string is adjusted. 

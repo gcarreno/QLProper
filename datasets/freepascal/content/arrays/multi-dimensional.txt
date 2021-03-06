@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+    Aarray : Array of Array of Aarray of Strings; 
+
+    SetLength(Aarray, 25, 5);   
+
+

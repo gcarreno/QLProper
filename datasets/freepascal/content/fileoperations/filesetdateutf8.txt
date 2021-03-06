@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileSetDateUTF8(const FileName: String; Age: Longint): Longint;

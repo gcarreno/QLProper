@@ -1,0 +1,8 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function YearOf(const AValue : TDateTime) : Word;
+
+  Note: YearOf returns the year part of the AValue date/time indication. It is a 
+              number between 1 and 9999. 

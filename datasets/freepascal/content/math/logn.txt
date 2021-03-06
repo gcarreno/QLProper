@@ -1,0 +1,8 @@
+*M1
+
+  uses ... math;
+
+   function LogN(n : Float; x : Float) : Float;
+
+  Note: Logn returns the n-base logarithm of X.
+  See: Ldexp, Lnxp1, Log10, Log2

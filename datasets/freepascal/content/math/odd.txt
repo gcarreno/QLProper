@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    function odd(  l : LongInt ) : Boolean;
+
+    function odd(l : LongWord) : Boolean;
+
+    function odd(l : Int64 ) : Boolean;
+
+    function odd(l : QWord) : Boolean;

@@ -1,0 +1,32 @@
+*M1
+
+  uses ... system;
+
+         function Random(  l : LongInt ) : LongInt;
+
+  See: Randomize
+
+
+         Function GetRandomNumber : LongInt;
+          var  S : LongInt;
+          begin
+            S := Random;
+          end;
+
+   
+       Uses ...Math;
+
+       Call:  RNBR := RandomRange( 0, 400 );
+
+        function TForm1.RandomRange( AMin,  AMax:Double ) :  Double;
+           begin
+             Result := Random * (AMax - AMin) + AMin;
+          end;
+
+       Returns a random Double between 0 and 400.
+
+
+         function Random(   l : Int64 ) : Int64; 
+
+         Random : extended; 
+   

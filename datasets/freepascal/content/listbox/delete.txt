@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+      Var i : Integer; 
+     
+    i := ListBox1.Items.IndexOf( 'Cap' );
+    if i <> -1 then begin  ListBox1.Items.Delete ( i ); end;
+
+  Note: The value of i position in listbox1 would be be deleted

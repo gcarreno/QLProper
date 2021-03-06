@@ -1,0 +1,23 @@
+*M1
+
+  uses ... system;
+
+    procedure BlockRead(var f: file; var Buf; count: Int64;  var Result: Int64);
+
+    procedure BlockRead(var f: file; var Buf; count: LongInt;  var Result: LongInt);
+
+    procedure BlockRead(var f: file; var Buf; count: Cardinal; var Result: Cardinal);
+
+    procedure BlockRead(var f: file; var Buf; count: Word; var Result: Word);
+
+    procedure BlockRead(var f: file; var Buf; count: Word; var Result: Integer);
+
+    procedure BlockRead(var f: file; var Buf; count: Int64);
+
+  Note: Blockread reads count or less records from file F. A record is a block of bytes 
+              with size specified by the Rewrite or Reset statement. The result is placed in 
+              buffer, which must contain enough room for Count records. The function
+              cannot read partial records. If Result is specified, it contains the number of 
+              records actually read. If Result isn't specified, and less than Count records
+              ere read, a run-time error is generated. This behavior can be controlled by
+              the {$I} switch. 

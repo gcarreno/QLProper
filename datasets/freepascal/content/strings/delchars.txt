@@ -1,0 +1,5 @@
+*M1
+
+  uses ... strutils;
+
+    function DelChars(const S : string; Chr: Char) : string;

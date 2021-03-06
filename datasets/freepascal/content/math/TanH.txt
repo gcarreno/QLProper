@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math ;
+
+    function TanH(x : Float) : Float;
+
+  Note: Tanh returns the hyperbolic tangent of x. 
+
+  See: ArcSin, SinCos, Arccos

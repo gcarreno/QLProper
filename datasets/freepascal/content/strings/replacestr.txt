@@ -1,0 +1,6 @@
+*M1
+
+  uses ... strutils;
+
+    function ReplaceStr(const AText : string;  const AFromText : string;
+                                         const AToText : string) : string;

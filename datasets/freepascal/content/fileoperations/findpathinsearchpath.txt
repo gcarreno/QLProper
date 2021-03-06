@@ -1,0 +1,10 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FindPathInSearchPath(APath : PChar; APathLen : integer; 
+                                                                 SearchPath: PChar; SearchPathLen: integer): 
+                                                                  PChar; overload;
+
+    function FindPathInSearchPath(const APath, SearchPath : string) : integer; 
+                                                                  overload;

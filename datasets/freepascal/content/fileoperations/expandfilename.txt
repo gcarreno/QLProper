@@ -1,0 +1,15 @@
+*M1
+
+  uses ... sysutils;
+
+    function ExpandFileName(const FileName : UNICODESTRING):
+                                                      UNICODESTRING;
+
+    function ExpandFileName(const FileName : RAWBYTESTRING):
+                                                      RAWBYTESTRING;
+
+  Note: ExpandFileName expands the filename to an absolute filename. 
+              It changes all directory separator characters to the one appropriate
+              for the system first. If an empty filename is passed, it is expanded 
+              to the current directory.If BasePath is not passed, the current 
+              directory is used as base path. 

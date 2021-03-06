@@ -1,0 +1,55 @@
+*M1
+
+  c              Formats date shortdateformat, formats time longtimeformat  if time is 
+                  not zero.
+  f               Same as c, adds time regardless of value.  
+  d               day of month
+  dd            day of month (leading zero)
+  ddd          day of week (abbreviation)
+  dddd       day of week (full)
+  ddddd     shortdateformat
+  dddddd   longdateformat
+
+  m              month or minutes if preceded by h or hh specifiers.
+  mm          mo. or min. if preceded by h or hh specifiers, with leading zero.
+  mmm      month (abbreviation)
+  mmmm  month (full)
+
+  y               year (2 digits)
+  yy             year (two digits)
+  yyyy        year (with century)
+
+  h               hour
+  hh            hour (leading zero)
+
+  n              minute
+  nn            minute (leading zero)
+
+  s               second
+  ss             second (leading zero)
+
+  t                shorttimeformat
+  tt              longtimeformat
+
+  am/pm   use 12 hour clock and display am and pm accordingly
+
+  a/p           use 12 hour clock and display a and p accordingly
+  /                insert date separator
+  :                 insert time separator
+  "xx"          literal text
+  'xx'            literal text
+  z                milliseconds
+  zzz            milliseconds(leading zero)
+
+  [h]             hours including the hours of the full days (i.e. can be > 24). 
+  [hh]          hours with leading zero, including the hours of the full days 
+                    (i.e. can be > 24)
+
+  [n]             minutes including the minutes of the full hours and days
+  [nn]          minutes with leading zero, including the minutes of the full hours and 
+days
+
+  [s]             seconds including the seconds of the full minutes, hours and days.
+  [ss]           seconds with leading zero, including the seconds of the full
+                    minutes, hours and days. 
+

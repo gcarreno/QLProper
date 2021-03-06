@@ -1,0 +1,17 @@
+*M1
+ 
+  uses ... math 
+
+    function Max(a: Integer;  b: Integer) : Integer; overload;
+
+    function Max(a : Int64;  b : Int64) : Int64; overload;
+
+    function Max(a : QWord; b : QWord) : QWord; overload;
+
+    function Max(a : Single; b: Single) : Single; overload;
+
+    function Max(a : Double;  b: Double):Double; overload;
+
+    function Max( a: Extended;  b: Extended):Extended; overload;
+  
+  Note: Max returns the maximum of Int1 and Int2. 

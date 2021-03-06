@@ -1,0 +1,7 @@
+*M1
+
+  uses ... fileutil;
+
+    function ProgramDirectory : string;
+
+  Return the name of the directory in which the current program is found

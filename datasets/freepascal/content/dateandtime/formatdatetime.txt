@@ -1,0 +1,16 @@
+*M1
+
+  uses ... sysutils;
+
+    function FormatDateTime( const FormatStr : string; 
+                                                        DateTime : TDateTime;
+                                                         Options : TFormatDateTimeOptions = []
+                                                        ):string;
+
+    function FormatDateTime( const FormatStr : string; DateTime : TDateTime;
+                                                         const FormatSettings : TFormatSettings;
+                                                         Options : TFormatDateTimeOptions = [] 
+                                                         ) : string;
+
+
+                                       Don't Know

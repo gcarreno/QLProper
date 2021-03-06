@@ -1,0 +1,19 @@
+*M1
+
+  uses ... math; 
+
+   function Min(a: Integer; b: Integer) : Integer; overload;
+
+    function Min(a : Int64; b: Int64) : Int64; overload;
+
+    function Min(a : QWord; b : QWord) : QWord; overload;
+
+    function Min(a : Single; b : Single) : Single; overload;
+
+    function Min(a : Double; b : Double) : Double; overload;
+
+    function Min(a : Extended; b : Extended): Extended; overload;
+
+  Notes:Min returns the smallest value of Int1 and Int2;
+  See: Max
+	

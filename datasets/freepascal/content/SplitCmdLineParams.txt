@@ -1,0 +1,6 @@
+*M1
+ 
+  uses ... lazfileutils;
+
+    procedure SplitCmdLineParams(const Params : string; ParamList : TStrings; 
+                                                                  ReadBackslash: boolean = false);

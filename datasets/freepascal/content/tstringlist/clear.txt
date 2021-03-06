@@ -1,0 +1,12 @@
+*M1
+
+  uses ... classes;
+
+     public procedure TStringList.Clear; override;
+
+     Var TList : TStringList;
+
+    Call: TList .Clear;
+
+  Note: Clears TList of all entries
+  

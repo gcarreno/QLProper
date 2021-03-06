@@ -1,0 +1,14 @@
+*M1
+
+     Type
+
+       TContacts = Record
+          Name : String;
+          Street : String;
+          City      : String;
+          Phone : String;
+       end;
+
+       Var
+         Address : TContacts;
+

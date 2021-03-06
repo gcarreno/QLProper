@@ -1,0 +1,5 @@
+*M1
+
+  uses ... strutils;
+
+    function AnsiIndexStr( const AText,  AValues : array of string ) : Integer;

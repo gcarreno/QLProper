@@ -1,0 +1,9 @@
+*M1
+
+  uses ... sysutils;
+
+    procedure Sleep( milliseconds : Cardinal );
+
+  Note: Sleep suspends the execution of the program for the specified 
+              number of milliseconds 
+

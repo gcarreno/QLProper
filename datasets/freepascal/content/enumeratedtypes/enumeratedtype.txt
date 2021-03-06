@@ -1,0 +1,15 @@
+*M1
+
+  uses ... system;
+
+  Type
+ 
+  TDays = ( MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY ); 
+
+     Var Days : TDays;
+
+    Assigment: Days := SUNDAY;
+
+  See: SetStrProp, SetWideStrProp, GetOrdProp, GetFloatProp, GetInt64Prop,
+            GetMethodProp
+   

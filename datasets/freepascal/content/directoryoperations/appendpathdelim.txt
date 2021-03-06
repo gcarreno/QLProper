@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazutils;  
+
+    function AppendPathDelim(const Path : string) : string;
+

@@ -1,0 +1,11 @@
+*M1
+
+  uses ... strutils;
+
+    function AnsiReverseString( const AText : AnsiString ) : AnsiString;
+
+     Var S : AnsiString = '123456';
+
+    Call: S := AnsiReverseString( S );
+
+    Return S = '654321'

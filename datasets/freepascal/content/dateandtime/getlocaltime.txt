@@ -1,0 +1,15 @@
+*M1
+
+uses ... sysutils
+
+    procedure GetLocalTime( var SystemTime : TSystemTime );
+
+     Var TDT : TDateTime;
+
+   Call: TDT := GetLocalTime( Now );
+
+ See: Now, Date, Time, TSystemTime     
+ 
+
+
+

@@ -1,0 +1,13 @@
+*M1
+
+  uses ... strutils;
+
+    function Copy2Space( const S: string ) : string;
+
+     Var S :  String = 'Start This is the string'; ATag  : String;
+
+    ATag := Copy2Space( S );
+
+    Return  ATag = 'Start'
+
+  See Copy2SpaceDel

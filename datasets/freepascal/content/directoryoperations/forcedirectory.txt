@@ -1,0 +1,9 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ForceDirectory(DirectoryName : string) : boolean; Inline;
+
+
+
+ 

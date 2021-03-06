@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+    function Succ( X : TOrdinal ) : TOrdinal;
+
+  Note: Succ returns the element that succeeds X 
+  See:  Ord, Ored, High, Low
+

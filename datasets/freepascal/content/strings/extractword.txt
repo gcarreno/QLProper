@@ -1,0 +1,23 @@
+*M1
+
+  uses ... strutils;
+
+    function ExtractWord( N : Integer;   const S : string;
+                                           const WordDelims : TSysCharSet ) : string;
+
+  See: ExtractSubStr, ExtractWordPos, ExtractDelimited, IsWordPresent,
+           WordCount,   WordPosition
+
+
+      Var S : String; S1 : String = 'New York, London, Munic, Tokyo';
+
+    Call:  S := ExtractWord( 4, S1, [ ',' ]);
+
+    Return S = 'Tokyo'
+
+
+      Var S : String; S1 : String = ''New York|London|Munic|Tokyo|;
+
+    Call:  S := ExtractWord( 2, S1, [ '|' ]);
+
+    Return S = 'London'

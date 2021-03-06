@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    Item := ListBox1.Items[ i ];                        { Item   =  KORD }
+    i := ListBox1.Items.IndexOf( Item );      { Index of Item, 7}
+    ListBox1.Items.Strings[ i ] := ('KMIA');
+
+    This would change the Item at the index value of i (7) in
+    listbox1 from it's current value to 'KMIA'. A check should be
+    made to insure listbox1 has 7 or more entries.

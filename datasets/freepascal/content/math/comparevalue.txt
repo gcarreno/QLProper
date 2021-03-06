@@ -1,0 +1,31 @@
+*M1
+
+  uses ... math ;
+
+    function CompareValue(const A : Integer;  const B : Integer) : 
+                                                TValueRelationship;
+
+    function CompareValue(const A : Int64; const B : Int64) : TValueRelationship;
+
+    function CompareValue(const A : QWord; const B : QWord) : TValueRelationship;
+
+    function CompareValue(const A : Single; const B : Single; delta : Single = .0): 
+                                                 TValueRelationship;
+
+    function CompareValue(const A : Double; const B: Double;  delta : Double = .0) :
+                                                TValueRelationship;
+
+    function CompareValue(const A : Extended; const B : Extended; delta : Extended
+                                                 = 0.0 ) : TValueRelationship;
+
+  Note: CompareValue compares 2 integer or floating point values A and B and 
+             returns one of the following values:
+
+             -1   if A<B
+               0   if A=B
+               1   if A>B
+
+  See: TValueRelationship
+	
+
+ 

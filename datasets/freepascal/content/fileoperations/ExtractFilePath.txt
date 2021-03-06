@@ -1,0 +1,14 @@
+*M1
+  uses ... strutils;
+
+    function ExtractFilePath(const FileName : UNICODESTRING) : UNICODESTRING;
+
+    function ExtractFilePath(const FileName : RAWBYTESTRING) : RAWBYTESTRING;
+
+  Note: ExtractFilePath returns the path part (including drive letter) from 
+              FileName. The path consists of all characters before the last directory 
+              separator character ('/' or '\'), including the directory separator itself. In 
+              case there is only a drive letter, that will be returned.
+                 
+              The full filename can always be reconstructed by concatenating the result of
+              ExtractFilePath and ExtractFileName. 

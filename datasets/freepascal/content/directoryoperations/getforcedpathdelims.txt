@@ -1,0 +1,13 @@
+*M1
+
+  uses ... lazfileutils;
+
+ Function GetForcedPathDelims(Const FileName: string): String;
+
+
+
+   
+   
+
+
+

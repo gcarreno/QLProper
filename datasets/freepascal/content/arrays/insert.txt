@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+  procedure Insert( const source : DynaArrayType; 
+                                     var S : DynArrayType; 
+                                     const Index : Integer );
+
+  Notre: Insert array element S at Index, shifting all elements after Index 
+                to the right.
+
+ 

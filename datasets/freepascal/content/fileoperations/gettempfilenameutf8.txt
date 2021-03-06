@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function GetTempFileNameUTF8(const Dir, Prefix: String): String;

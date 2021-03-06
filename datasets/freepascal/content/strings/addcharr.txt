@@ -1,0 +1,11 @@
+*M1
+
+  uses ... stritls;
+
+    function AddCharR( C : Char; const S : string; N : Integer ) : string;
+
+     Var T : String = '123456'; S : String;
+
+    Call: S := AddCharR ( 'X', T, 8 );
+
+    Return S = '123456XX'

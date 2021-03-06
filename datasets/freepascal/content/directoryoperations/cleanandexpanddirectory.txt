@@ -1,0 +1,7 @@
+*M1
+
+  uses ... lazfileutils;
+
+  function CleanAndExpandDirectory(const Filename : string) : string;
+
+  Note: Empty string returns current directory

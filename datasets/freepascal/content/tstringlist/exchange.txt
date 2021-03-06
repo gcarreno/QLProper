@@ -1,0 +1,12 @@
+*M1
+
+  uses ... classes;
+
+     public procedure TStringList.Exchange( Index1,  Index2  :  Integer ) ; 
+                                                                                   override;
+
+     Var TList : TstrinList; Idx1, Idx2 : Integer;
+
+    Call: Unsure
+
+

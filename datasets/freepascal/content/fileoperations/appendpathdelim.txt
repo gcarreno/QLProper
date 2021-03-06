@@ -1,0 +1,5 @@
+*M1
+
+  uses ... fileutils;
+
+    function AppendPathDelim(const Path : string) : string;

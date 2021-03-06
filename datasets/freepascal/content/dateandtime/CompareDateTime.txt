@@ -1,0 +1,20 @@
+*M1
+
+  uses ... math ;
+
+    function CompareDateTime(const A : TDateTime; const B : DateTime): 
+                                                     TValueRelationship;
+  Arguments
+    A   First date-time to compare
+    B  First date-time to compare
+ 
+Return A negative number if A is earlier than B, zero if they are equal, or 
+              positive if A is later than B.
+
+    Note: CompareDateTime compares two timestamps A and B and returns
+               the following results 
+
+   See; SameDate, SameTime, SameDateTime
+	
+
+ 

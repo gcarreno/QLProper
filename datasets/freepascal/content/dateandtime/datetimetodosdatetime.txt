@@ -1,0 +1,22 @@
+*M1
+
+  uses ... DateUtil;
+
+    function DateTimeToDosDateTime(  Const AValue : TDateTime )  : LongInt;
+
+     Var TDT : TDateTime;
+
+    TDT := ( Now );
+
+    Return TDT = 44132.891733518518
+
+  See: TDateTime
+
+      Var S : LongInt;
+
+    S := DateTimeToDosDateTime( TDT );
+
+    Return S = 1604255744
+
+  0-4 Seconds divided by 2 ,   5-10 Minutes,   11-15 Hours
+  16-20 Day,   21-24 Month,   25-31 Years since 1980 

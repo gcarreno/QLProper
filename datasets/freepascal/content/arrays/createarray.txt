@@ -1,0 +1,15 @@
+*M1
+
+  uses ... system;
+
+  Type  
+     TIntegerArray = Array of Integer;  
+ 
+    var  A : TIntegerArray;  
+ 
+    begin  
+      A:=TIntegerArray.Create(1,2,3);  
+    end. 
+
+  Note: that this will not work for dynamic arrays for which no type
+             was created. 

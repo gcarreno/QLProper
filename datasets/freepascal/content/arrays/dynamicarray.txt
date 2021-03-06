@@ -1,0 +1,38 @@
+*M1
+
+  uses ... system;
+
+  unit unit1;
+   Interfaces
+   uses ... system;
+
+  Type
+
+    TCities = Array of String;
+
+   procedure LoadDataArray;
+
+  private
+
+  public
+
+  end;
+
+  Var Listbox1 : TListbox; 
+ 
+  implementation
+
+   {$R *.lfm}
+
+   procedure TForm1.LoadDataArray;
+    Var i : Integer;
+   begin
+     SetLength(Data,Listbox1.Items.Count;
+      for i := o to Listbox1.Items.Count -1 do begin
+            Data[ i ] := Listbox1.Items[ i ];
+      end;
+  end;
+
+  Note: This is asuming listbox1 is loaded with city names.  The size of  
+               Data ( array of string ) is set to the number of items in Listbox1 at run
+               time. If listbox1 is empty nothing will be assigned to Data. 

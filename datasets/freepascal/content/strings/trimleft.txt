@@ -1,0 +1,10 @@
+*M1
+
+  uses ... sysutils;
+
+    function TrimLeft( const S : string ) : string;
+
+    function TrimLeft( const S : widestring ) : widestring;
+
+    function TrimLeft( const S : unicodestring ) : unicodestring;
+

@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system
+
+    function int(d : ValReal) : ValReal;
+
+  Note: returns the integer part of any Real X, as a Real. 

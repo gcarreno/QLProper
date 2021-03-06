@@ -1,0 +1,14 @@
+*M1
+ 
+  uses ... sysutils;
+
+    function Now: TDateTime;
+
+     VarTDT :  TDateTime;
+
+    TDT := ( Now );
+
+    Return TDT = 44132.708905902778, tested 10/28/2020 5:01 
+
+  See: Date, Time, Today, Tomarrow, Yesterday
+    

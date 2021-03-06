@@ -1,0 +1,24 @@
+*M1
+
+  uses ... sysutils
+
+    function DateToStr(  Date : TDateTime ) : string;
+
+    function DateToStr( Date: TDateTime; 
+                                            const FormatSettings : TFormatSettings ) : string;
+
+  See TimeToStr. DateTimeToStr, FormatDateTime. StrToDate
+
+
+    function TForm1.ViewDateToStr : String;
+      begin
+        Result := DateToStr(Date);
+     end;
+
+    Returned    10/28/2020 on 10/28/2020
+
+
+    function DateToStr( Date : TDateTime; 
+                                          const FormatSettings : TFormatSettings ) : string;
+
+    DID NOT TEST     ??? const FormatSettings

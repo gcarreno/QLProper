@@ -1,0 +1,18 @@
+*M1
+
+  uses ... sysutils;
+
+   function EncodeTime( Hour: Word; Minute : Word;
+                                              Second: Word;
+                                             MilliSecond: Word ) : TDateTime;
+
+  See: EncodeDate, Decode Time
+
+
+
+     Var TDT : TDateTime; HH,MM,SS,MS : Word;
+
+    Call:    TDT := EncodeTime( HH, MM, SS, MS  );
+
+    Return TDateTime.
+   

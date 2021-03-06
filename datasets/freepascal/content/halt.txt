@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system
+
+    procedure Halt;
+
+    Result Halt stop program execution and returns to the calling program or
+                   system.
+
+ 
+

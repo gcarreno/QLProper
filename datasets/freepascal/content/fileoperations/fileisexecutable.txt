@@ -1,0 +1,19 @@
+*M1
+
+  uses ... lazfileutils;
+
+     function FileIsExecutable(const AFilename: string): boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

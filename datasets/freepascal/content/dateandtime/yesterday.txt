@@ -1,0 +1,14 @@
+*M1
+
+  uses ... dateutils;
+
+    function Yesterday : TDateTime;
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := Yesterday; 
+
+    Return Yesterday in TdateTime format. Determined from system clock;
+
+  See: Now, Date, Time, Today, Tomarrow 
+

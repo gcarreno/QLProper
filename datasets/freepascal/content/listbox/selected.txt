@@ -1,0 +1,12 @@
+*M1
+
+ uses ... system;
+
+    i := ListBox1.ItemIndex;
+    if i <> -1 then begin Item := Listbox1.Items[ i ] ; end;
+
+                                             OR
+
+    FocusedItem := ListBox1.Items[ ListBox1.ItemIndex ];
+
+    Result Determins the item selected in listbox1.

@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function ExpandFileNameUTF8(const FileName : string; 
+                                                              {const} BaseDir : string = '') : string;

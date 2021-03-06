@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+  procedure Continue;
+
+  See: Break, Exit;
+  Note: Continue jumps to the of the loop. Code between the continue and
+               end of the loop is not executed. The loop continues.
+ 

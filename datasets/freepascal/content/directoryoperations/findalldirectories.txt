@@ -1,0 +1,11 @@
+*M1
+
+  uses ... fileutil;
+
+    function FindAllDirectories(const SearchPath : string;
+                                                         SearchSubDirs: Boolean = True;
+                                                         PathSeparator: Char = ';' ) : TStringList; overload;
+
+    procedure FindAllDirectories(AList : TStrings;  const SearchPath : string;
+                                                             SearchSubDirs: Boolean = True;
+                                                             PathSeparator: Char = ';' ) ; overload;

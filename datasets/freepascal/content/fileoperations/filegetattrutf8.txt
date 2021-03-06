@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileGetAttrUTF8(const FileName : String) : Longint;

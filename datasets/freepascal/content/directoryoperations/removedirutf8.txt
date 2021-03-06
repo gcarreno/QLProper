@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function RemoveDirUTF8(const Dir : String) : Boolean;

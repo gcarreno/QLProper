@@ -1,0 +1,9 @@
+*M1
+
+  uses ... lazfileutils;
+
+  function FilenameIsWinAbsolute(const TheFilename : string):boolean;
+
+
+
+

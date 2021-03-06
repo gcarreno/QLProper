@@ -1,0 +1,13 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function DateTimeInRange(ADateTime: TDateTime;  AStartDateTime:                        
+                                                         TDateTime; AEndDateTime: TDateTime;   
+                                                         aInclusive: Boolean = True ) : Boolean;
+
+  Note:  DateTimeInRange checks whether the value ADateTime lies between
+               AStartDateTime and AEndDateTime, and returns True if it is. When 
+               AInclusive is True (the default), then the limits are included. When 
+               AInclusive is False, the limits are excluded. 
+  See: DateInRAmge, TimeInRange

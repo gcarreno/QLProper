@@ -1,0 +1,21 @@
+*M1
+
+  uses ... fileutil;
+
+    procedure TForm1.DirListToListbox( AFILENAME  : String; ABOX : TListbox );  
+
+
+    Call: DirListToListbox(  'C:\Userfiles\'  );
+
+    procedure TForm1.DirListToListbox( AFILENAME  : String; ABOX : TListbox );  
+     var  List: TStringList;
+     begin
+        {Don't search in subdirectory}
+        List := FindAllFiles( AFILENAME,'*', False   );     
+        ABox.Items := list;
+        List.Free;
+     end;
+
+  Note: Procedure will fill listbox passed as a  parm with all files in AFILENAME
+              (  'C:\Userfiles\'  )  in this case.
+

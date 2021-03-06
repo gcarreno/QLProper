@@ -1,0 +1,27 @@
+*M1
+
+  uses ... sysutils;
+
+    function ExpandFileNameCase(const FileName : UNICODESTRING;
+                                                                 out MatchFound : TFilenameCaseMatch):
+                                                                 UNICODESTRING;
+
+    function ExpandFileNameCase(const FileName : RAWBYTESTRING;
+                                                                 out MatchFound: TFilenameCaseMatch):
+                                                                 RAWBYTESTRING;
+
+  Note: On case insensitive platforms, ExpandFileNameCase behaves similarly
+               to ExpandFileName except for the fact that it returns the final part of
+               the path with the same case of letters as found on the disk 
+               (if it exists - otherwise the case equals the one provided on input). 
+               On case sensitive platforms it also checks whether one or more full 
+               paths exist on disk which would correspond to the provided input if
+               treated case insensitively and returns the first such match found and 
+               information whether the match is unique or not.
+                  
+               That the behaviour is basically undefined if the input includes wildcards
+               characters. Normally, wildcards in the last part of path provided on 
+               input are resolved to the first corresponding item found on the disk, 
+               but it is better not to rely on that and use other more suitable functions
+               if working with wildcards like FindFirst/FindNext.
+ 

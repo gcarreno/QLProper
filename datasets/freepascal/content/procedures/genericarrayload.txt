@@ -1,0 +1,11 @@
+*M1
+
+  uses ... types;
+    
+    procedure TForm1.GenericArrayLoad(out theArray : TStringdynArray; 
+                                                                      const aBox : TListBox);
+     begin
+       theArray := aBox.Items.ToStringArray;
+    end;
+
+  Note: Requires FPC 3.2.0

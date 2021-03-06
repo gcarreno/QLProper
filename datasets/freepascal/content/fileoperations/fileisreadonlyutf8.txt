@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutisl;
+
+    function FileIsReadOnlyUTF8(const FileName : String) : Boolean;

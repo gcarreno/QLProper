@@ -1,0 +1,13 @@
+*M1
+
+  uses ... system;
+
+    procedure Close(var f: file);
+
+    procedure Close(var t: Text);
+
+  Note:  Close flushes the buffer of the file F and closes F. After a call to Close, data
+               can no longer be read from or written to F. To reopen a file closed with
+               Close, it isn't necessary to assign the file again. A call to Reset or Rewrite is 
+               sufficient.
+  See: Assign, Reset, Rewrite, Flush

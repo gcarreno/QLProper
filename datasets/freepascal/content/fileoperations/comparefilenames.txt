@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function CompareFilenames(const FName1; const FName2 : String) : Integer; 
+                                                           overload;

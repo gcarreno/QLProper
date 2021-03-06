@@ -1,0 +1,16 @@
+*M1
+
+  uses ... fileutil;
+
+    function DeleteDirectory( const DirectoryName: string;
+                                                   OnlyChildren: Boolean ) : Boolean;
+
+     Var Path : String = 'C:\My Dir'; ISGood : Boolean = False;
+
+  Call: IsGood :=  DeleteDirectory( Path, True);
+
+  Note: if the parm Onl;yChildren is set to True then only the contents of the
+              directory are deleted. If False the Directory and the contents are
+              deleted.
+  See: rmdir
+

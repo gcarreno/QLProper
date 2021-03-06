@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math ;
+
+    function Ceil64(x : Float) : Int64;
+
+  Note: Ceil64 rounds the value Xto the nearest bigger int64 value. The result
+             is always bigger than X.
+
+  See: Cell, Floor64

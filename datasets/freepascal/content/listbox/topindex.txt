@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+     ListBox1.TopIndex := -1 + ListBox1.Items.Count;
+     Listbox1.TopIndex := Listbox1.ItemIndex;
+     Listbox1.SetFocus;
+
+   Scrools the item with focus to be visible in lisybox

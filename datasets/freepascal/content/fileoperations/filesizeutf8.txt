@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileSizeUtf8(const Filename : string) : int64;

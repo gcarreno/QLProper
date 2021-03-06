@@ -1,0 +1,11 @@
+A Quick Note
+All Required Components
+All Required Installs
+DB Browser
+SQLite Components
+SQLQuerry
+TDBGrid
+TDBNavigator
+TSQLTransactions
+XBuild Code
+XBuild Components

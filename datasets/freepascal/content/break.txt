@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+       
+   Procedure Break;
+
+    Call: Break;
+
+    Result Exit the current repetitive statement.
+
+  See: Continue, Delay, Exit

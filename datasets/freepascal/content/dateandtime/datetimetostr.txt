@@ -1,0 +1,17 @@
+*M1
+
+  uses ... sysutils;
+
+    function DateTimeToStr( DateTime: TDateTime; 
+                                                      ForceTimeIfZero: Boolean = False ) : string; *
+
+    function DateTimeToStr(  DateTime : TDateTime; 
+                                                       const FormatSettings : TFormatSettings;
+                                                       ForceTimeIfZero : Boolean = False ) : string;
+
+
+     Var S : String;
+
+        S :=  DateTimeToStr( Now,False );   
+
+    Return S = 11/2/2020 23:46:16

@@ -1,0 +1,106 @@
+*M1
+uses ... classes;
+
+    public function TStrings.Add( const S : string ) : Integer; virtual; overload;
+
+    function TStrings.Add( const Fmt : string; const Args : array of Const
+                                                 ) : Integer; overload;
+
+               Adds S at the end of the string and returns the index.
+
+
+    public procedure TStrings.Append( const S : string );
+
+               Adds S to the string
+
+     public property TStrings.Count : Integer read GetCount;
+
+               Number of strings in the list. RTange 0 to Count -1
+
+    public procedure TStrings.Clear; virtual; abstract;
+
+              Clear all string and objects.
+
+    public procedure TStrings.Delete( Index : Integer ); virtual; abstract;
+          
+               Deletes string at the index position
+
+    public function TStringList.Find( const S : string;
+                                                                 out Index: Integer ) : Boolean; virtual;  
+
+               True if S is  found in TListString, Use only on sorted strings. 
+               If not found Index will be where S will be inserted into the
+               string.
+
+    public function TStringList.Add( const S : string ) : Integer; override;
+
+               Add S to the  List. Depending on TStringLis.Duplicates
+               EStringListError can be raise. 
+
+    public function TStrings.IndexOf( const S : string ) : Integer; virtual;
+
+               Searches string for a match to S and returns index or -1;
+
+    public procedure TStringList.Insert( Index : Integer; const S : string ) ; override;
+
+               Insert  S at Index in the list. If sorted, an EStringListError
+               exception will be raised. Index is zero-based.
+
+    public procedure TStrings.InsertObject( Index : Integer; const S : string;
+                                                                                AObject:  TObject  );
+
+               Insert S and its object at position Index.
+
+
+ 
+    EStringListError 
+          1. Out of Memory
+          2. Beyond maxomal capacity
+          3 List index out of bounds
+          4 Trying to add a duplicate entry with TStringList Duplicates 
+              is set to false.
+*M2
+
+     Var TheText : TStringList; Path : String = 'C:/MyTextFile';
+
+    TheText := TStringList.Create;
+    TheText.LoadFromFile( Path );
+
+    Result TheText will be loaded with the text file in Path.
+
+*M3
+
+    Var TheText : TStringList;
+
+    begin
+      TheText :=  TStringList.Create;
+      TheText := Str.Add('Line 1 in TheText');
+      TheText := Str.Add('Line 21 in TheText');
+      TheText := Str.Add('Line 3 in TheText');
+      Memo1.Lines.AddStrings(TheText, True);
+      ListBox1.Items.AddStrings(TheText, True);      
+      TheText.Free; 
+    end;
+
+  Note: Memo.Lines.Assign(TheText); , and  ListBox.Items.Assign(TheText);
+              could be used instead of Lines.ADDString(TheText, True );
+ 
+
+*M4
+
+     Var TheText : TStringList;
+
+    begin
+      TheText :=  TStringList.Create;
+      TheText := Str.Add('Line 1 in TheText');
+      TheText := Str.Add('Line 21 in TheText');
+      TheText := Str.Add('Line 3 in TheText');
+      Memo1.Lines.AddStrings(TheText, True);
+      ListBox1.Items.AddStrings(TheText, True);      
+      TheText.Free; 
+    end;
+
+  Note: Memo.Lines.Assign(TheText); , and  ListBox.Items.Assign(TheText);
+              could be used instead of Lines.ADDString(TheText, True );
+ 
+

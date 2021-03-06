@@ -1,0 +1,13 @@
+*M1
+
+  uses ... math;
+
+    function IsNan(const d : Single) : Boolean; overload;
+
+    function IsNan(const d : Double) : Boolean; overload;
+
+    function IsNan(const d : Extended) : Boolean; overload;
+
+  Note: IsNan returns True if the double d contains Not A Number (a value which
+             cannot be represented correctly in double format).
+   See: IsZero, IsInfinate

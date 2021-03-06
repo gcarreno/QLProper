@@ -1,0 +1,12 @@
+*M1
+
+  uses ... typinfo;
+    
+    function GetOrdProp( Instance : TObject; PropInfo : PPropInfo ) : Int64;
+
+    function GetOrdProp( Instance : TObject; const PropName : string ) : Int64;
+
+ See: SetStrProp, SetWideStrProp, GetFloatProp, GetInt64Prop, GetMethodProp
+
+
+                Couldn't Make Working Demo

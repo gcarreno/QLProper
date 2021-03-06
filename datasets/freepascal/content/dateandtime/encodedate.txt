@@ -1,0 +1,13 @@
+*M1
+
+ uses ... sysutils;
+
+    function EncodeDate(  Year: Word; Month: Word; Day: Word ) :TDateTime;
+
+          Var TDT : TDateTime;
+
+        Call: TDT := EnCodeDate( 1970, 12, 31 );
+
+  Return TDateTime format for 12/31/1970  
+
+  See: DeCodeDate, DecodeTime                              

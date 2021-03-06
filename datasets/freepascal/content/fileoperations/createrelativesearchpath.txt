@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutil;
+
+    function CreateRelativeSearchPath(const SearchPath, BaseDirectory: string): 
+                                                                         string;

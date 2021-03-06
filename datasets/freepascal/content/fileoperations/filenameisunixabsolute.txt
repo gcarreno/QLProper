@@ -1,0 +1,12 @@
+*M1
+
+  uses ... lazfileutils;
+
+  function FilenameIsUnixAbsolute(const TheFilename: string):boolean;
+
+
+
+
+
+
+

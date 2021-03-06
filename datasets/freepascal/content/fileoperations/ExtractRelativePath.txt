@@ -1,0 +1,16 @@
+*M1
+
+  uses ... sysutils;
+
+    function ExtractRelativePath(const BaseName : UNICODESTRING;
+                                                         const DestNAme: UNICODESTRING):UNICODESTRING;
+
+    function ExtractRelativePath(const BaseName : RAWBYTESTRING; 
+                                                             const DestNAme :  RAWBYTESTRING):    
+                                                             RAWBYTESTRING; 
+
+  None: ExtractRelativePath constructs a relative path to go from BaseName to 
+               DestName. If DestName is on another drive (Not on Unix-like platforms)
+               then the whole Destname is returned. The directories must end on a path
+               delimiter for this function to work correctly. If not, the last part is stripped
+               and treated as a file name. 

@@ -1,0 +1,18 @@
+*M1
+
+  uses ... dateutils;
+
+    function UnixToDateTime( const AValue : Int64;
+                                                        aReturnUTC : Boolean = True ) : TDateTime;
+
+
+     Var  TDT : TDateTime; i64 : Int64;
+
+    begin
+     TDT := UnixToDateTime( I64, True); 
+     end;
+
+    Return TDT = Unix time expresed as TDT format
+
+  See:DateTimeToUnix
+ 

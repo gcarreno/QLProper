@@ -1,0 +1,8 @@
+*M1
+
+  uses ... classes;
+
+   public property TStringList.Sorted : Boolean 
+                                   read GetSorted
+                                   write SetSorted;
+

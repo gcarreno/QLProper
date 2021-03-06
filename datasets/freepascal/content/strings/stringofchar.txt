@@ -1,0 +1,9 @@
+*M1
+
+
+  uses ... system;
+
+    function StringOfChar(c: AnsiChar; l: SizeInt) : AnsiString;
+
+  Note: creates a new String of length l and fills it with 
+              the character c. 

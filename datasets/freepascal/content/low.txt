@@ -1,0 +1,25 @@
+*M1
+
+  uses ... system;
+
+    function Low( Arg: TypeOrVariable ) : TOrdinal;
+
+
+    a) Ordinal type returns lowest value.
+    b) Array lowest index
+    c) Set lowest value of ordinal type
+
+
+  Type
+    
+    TDays (Sun, Mon, Tue, Wed, Thur. Fri, Sat I;
+
+    Var Days : Tdays;
+
+   Days := Low( TDays );
+
+    Days = Sun
+
+  See: High
+
+  

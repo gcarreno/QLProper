@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math ;
+
+    function ArSinH(x :  Float) : Float;
+
+  Note: arsinh returns the inverse hyperbolic sine of its argument x. The
+             arscsinh variant of this function is supplied for Delphi compatibility.
+
+  See: ArCosH,  ArcCos, ArcSin, ArTanH 

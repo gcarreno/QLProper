@@ -1,0 +1,8 @@
+*M1
+
+  uses ... math ;
+
+    procedure ClearExceptions(RaisePending : Boolean = True);
+
+  Note: Clear Floating Point Unit exceptions
+

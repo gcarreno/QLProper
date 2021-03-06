@@ -1,0 +1,14 @@
+*M1
+
+  uses ... stritls;
+
+    function AnsiProperCase( const S, WordDelims : TSysCharSet ) : string;
+
+      Var S : String 'this is all lower case';
+
+    Call: S :=   AnsiProperCase( S, [' ']);
+
+    Return S = 'This is all proper  case' Not really it would return
+                          'This is all lowercase' 
+
+ See: LowerCase, UpperCase

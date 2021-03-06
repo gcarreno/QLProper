@@ -1,0 +1,19 @@
+*M1
+
+    function ToASCII(Const S : string): string;
+       type
+          USASCIIString = type ansistring(20127);
+      begin
+           Result := USASCIIString(s);
+      end;
+
+
+     Var S := São Paulo;
+
+    S := ToASCII(S);
+		  
+    Return S = 'San Paulo'
+
+	
+  Note: ToASCII is not 100%. Sometimes it can't deterine the 
+              character and will replace with a "?".

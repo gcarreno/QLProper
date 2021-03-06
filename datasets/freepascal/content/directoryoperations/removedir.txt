@@ -1,0 +1,7 @@
+*M1
+
+  uses ... sysutils;
+
+    function RemoveDir(const Dir : RawByteString) : Boolean;
+
+    function RemoveDir(const Dir : UnicodeString) : Boolean;

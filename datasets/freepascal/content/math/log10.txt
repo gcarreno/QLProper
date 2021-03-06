@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math;
+
+     
+   function Log10(x : Float) : Float;
+
+  Note: Log10 returns the 10-base logarithm of X. 
+  See: Ldexp, Lnxp1, Log2, Logn
+

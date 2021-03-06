@@ -1,0 +1,13 @@
+*M1
+
+  uses ... math ;
+
+    function ArTanH(x : Float) : Float;
+ 
+  Note: ArTanH returns the inverse hyperbolic tangent of its argument x, 
+             where x should lie in the interval [-1,1], borders included. The arctanh
+             variant of this function is supplied for Delphi compatibility. Errors
+             In case x is not in the interval [-1,1], an EInvalidArgument exception
+             is raised. 
+
+ See: ArCosH, ArcCos, ArCsin, ArTanH

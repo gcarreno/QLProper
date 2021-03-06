@@ -1,0 +1,15 @@
+*M1
+
+  uses ... system;
+
+    procedure getdir( drivenr : Byte; var dir : shortstring ); overload;
+
+    procedure getdir( drivenr : Byte; var dir : RawByteString ); overload;
+
+    procedure getdir( drivenr : Byte; var dir : unicodestring ); overload;
+
+   Note:  Getdir returns in dir the current directory on the drive drivenr, where 
+                {drivenr} is 1 for the first floppy drive, 3 for the first hard disk etc. A value
+                of  0 returns the directory on the current disk. On Linux and Unix systems,     
+                drivenr is ignored, as there is only one directory tree.  
+  See:     ChDir, Rmdir, DirExists, FileExists
