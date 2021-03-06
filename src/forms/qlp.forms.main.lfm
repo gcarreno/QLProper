@@ -1,0 +1,141 @@
+object frmMain: TfrmMain
+  Left = 333
+  Height = 348
+  Top = 250
+  Width = 1037
+  Caption = 'Quick List'
+  ClientHeight = 348
+  ClientWidth = 1037
+  Menu = mmMain
+  OnCreate = FormCreate
+  SessionProperties = 'Top;Left;Width;Height;WindowState;psDataSets.Position;psMainMenu.Position'
+  object psDataSets: TPairSplitter
+    Left = 0
+    Height = 348
+    Top = 0
+    Width = 1037
+    Align = alClient
+    Position = 150
+    object pssDataSetsOptions: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 348
+      Top = 0
+      Width = 150
+      ClientWidth = 150
+      ClientHeight = 348
+      object lbDataSets: TListBox
+        Left = 0
+        Height = 324
+        Top = 24
+        Width = 150
+        Align = alClient
+        ItemHeight = 0
+        OnSelectionChange = lbDataSetsSelectionChange
+        ScrollWidth = 148
+        TabOrder = 0
+        TopIndex = -1
+      end
+      object panDataSetsTitle: TPanel
+        Left = 0
+        Height = 24
+        Top = 0
+        Width = 150
+        Align = alTop
+        Caption = 'Data Sets'
+        TabOrder = 1
+      end
+    end
+    object pssDataSetsData: TPairSplitterSide
+      Cursor = crArrow
+      Left = 155
+      Height = 348
+      Top = 0
+      Width = 882
+      ClientWidth = 882
+      ClientHeight = 348
+      object psMainMenu: TPairSplitter
+        Left = 0
+        Height = 348
+        Top = 0
+        Width = 882
+        Align = alClient
+        Position = 150
+        object pssMainMenuOptions: TPairSplitterSide
+          Cursor = crArrow
+          Left = 0
+          Height = 348
+          Top = 0
+          Width = 150
+          ClientWidth = 150
+          ClientHeight = 348
+          object lbMainMenu: TListBox
+            Left = 0
+            Height = 324
+            Top = 24
+            Width = 150
+            Align = alClient
+            ItemHeight = 0
+            OnSelectionChange = lbMainMenuSelectionChange
+            ScrollWidth = 148
+            TabOrder = 0
+            TopIndex = -1
+          end
+          object panMainMenuTitle: TPanel
+            Left = 0
+            Height = 24
+            Top = 0
+            Width = 150
+            Align = alTop
+            Caption = 'Main Menu'
+            TabOrder = 1
+          end
+        end
+        object pssMainMenuData: TPairSplitterSide
+          Cursor = crArrow
+          Left = 155
+          Height = 348
+          Top = 0
+          Width = 727
+          ClientWidth = 727
+          ClientHeight = 348
+          object memData: TMemo
+            Left = 0
+            Height = 348
+            Top = 0
+            Width = 727
+            Align = alClient
+            ReadOnly = True
+            ScrollBars = ssAutoVertical
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object mmMain: TMainMenu
+    Left = 912
+    Top = 168
+    object mnuFile: TMenuItem
+      Caption = '&File'
+      object mnuFileExit: TMenuItem
+        Action = actFileExit
+      end
+    end
+  end
+  object alMain: TActionList
+    Left = 912
+    Top = 224
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
+    end
+  end
+  object IniPropStorage: TIniPropStorage
+    StoredValues = <>
+    Active = False
+    Left = 912
+    Top = 112
+  end
+end
