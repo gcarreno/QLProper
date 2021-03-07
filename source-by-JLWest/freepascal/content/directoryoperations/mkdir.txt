@@ -1,0 +1,18 @@
+*M1
+
+  uses ... system
+
+   procedure mkdir( const s: shortstring ); overload;
+
+    procedure mkdir( const s: RawByteString ); overload;
+
+    procedure mkdir( const s: unicodestring ); overload;
+
+ See:   ChDir, Rmdir, DirExists, FileExists
+  
+
+    Call: Mkdir( 'C:\My Files' );
+
+    Result:  Mkdir will create a directory 'My Files' on the C: drive.
+
+ 

@@ -1,0 +1,15 @@
+*M1
+
+  uses ... strutils;
+
+    ExtractWordPos(N :  Integer; const S : string;
+                                     const WordDelims : TSysCharSet; var Pos : Integer) : string;
+
+
+      Var i : Integer;  S : String =  'A four word string'; Answer : String; 
+
+
+  Call:  Answer := ExtractWordPos( 4, S, [' '], i );
+
+  Return Answer = 'string' 
+   

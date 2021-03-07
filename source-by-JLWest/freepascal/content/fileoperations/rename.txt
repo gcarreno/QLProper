@@ -1,0 +1,27 @@
+*M1
+
+  uses ... system;
+
+    procedure Rename( var f : file; const s : ShortString);
+
+    procedure Rename(var f: file; const p : PAnsiChar);
+
+    procedure Rename(var f: file; const c : AnsiChar);
+
+    procedure Rename(var f : file; const s : UnicodeString);
+
+    procedure Rename(var f: file;  const s : RawByteString);
+
+    procedure Rename(var t : Text; const s : shortstring);
+
+    procedure Rename(var t : Text; const p : PAnsiChar);
+
+    procedure Rename(var t : Text; const c : AnsiChar);
+
+    procedure Rename(var t : Text; const s : unicodestring);
+
+    procedure Rename(var t: Text; const s : RawByteString);
+ 
+  Note: Rename changes the name of the assigned file F to S. F must be assigned,
+              but not opened. 
+

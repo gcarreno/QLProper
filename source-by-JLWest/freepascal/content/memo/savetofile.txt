@@ -1,0 +1,9 @@
+*M1
+
+  uses ... stdctrls;
+
+     Var Path : String = 'ATextFile.txt';
+
+    Memo1.Lines.SaveToFile( Path );
+
+  Note: Will save Memo1 to ATextFile.txt

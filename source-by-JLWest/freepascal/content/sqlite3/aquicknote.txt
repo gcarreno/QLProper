@@ -1,0 +1,17 @@
+*M1
+
+  Special thanks to TRon and howardpc who helped me immensely.
+
+  A SQLite3 Free Pascal/Lazarus program can be implemented it two ways.
+  (As Far as I lnow) One is using the required components and coding the 
+  properties and events in the controls.
+  
+  The second way is to do it by coding functions and procedures in you
+  project 
+
+  I will attempt to do both step by step.
+
+   xBuild Components will do the compomemt build and XBuild Code will be
+   the Code build.
+
+  They are named XBuild and XCode for colating reasons.

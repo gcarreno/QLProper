@@ -1,0 +1,7 @@
+*M1
+
+  uses ... sysutils;
+
+    function FileWrite( Handle : THandle; const Buffer; Count : LongInt ) : LongInt;
+  
+  Note: Write count bytes.

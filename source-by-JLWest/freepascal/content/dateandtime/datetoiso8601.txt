@@ -1,0 +1,30 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function DateToISO8601(const ADate: TDateTime; 
+                                                    AInputIsUTC: Boolean = True) : string;
+
+  Note: DateToISO8601 is a String function used to convert the TDateTime value in
+              ADate to ISO 8601 date/time notation.
+
+             ADate contains the native TDateTime value converted in the function.
+
+             AInputisUTC indicates if the value in ADate represents a date/time value for   
+             the UTC time zone. When AInputIsUTC contains True, the 'Z' (Zulu time) time
+             zone designation is used in the converted ISO 8601 value. Otherwise, the 
+             time zone is expressed as a positive or negative number of hours and 
+             minutes (such as "-04:00") in the return value.
+             
+             DateToISO8601 calls GetLocalTimeOffset to determine the time zone offset 
+             in use on the local computer. The integer offset is used to adjust the value in 
+             ADate to the UTC time zone when necessary.
+             
+             The return value contains the adjusted value in ADate formatted using the 
+              notation:
+
+             yyyy-mm-ddThh:nn:ss.zzz±hh:nn or
+             yyyy-mm-ddThh:nn:ss.zzzZ for Zulu time
+
+             Use ISO8601ToDate to convert the return value back to a native TDateTime 
+             type. 

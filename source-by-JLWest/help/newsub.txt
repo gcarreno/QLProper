@@ -1,0 +1,23 @@
+*M2 newsub.txt
+
+  NEWSUB Help
+
+  To create a new SUB Menu entry:
+
+  1. Click the New SUB button
+
+  2. Enter the new tag name in the 
+       query. Click the 'OK'  button
+       on query.
+
+  3. Click the 'Execute' button;
+
+
+  Note: The new SUB Memu tag 
+     will be created with a Sub
+     of 'Placeholder(n).
+   
+      PRESS 'CLEAR' to exit .
+ 
+ This file 'newsub.txt' is located in
+ InnstallDir/help/newsub.txt

@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math ;
+
+    function ArcCos( x : Float) : Float;
+ 
+
+  Notes: Arccos returns the inverse cosine of its argument x. The argument x 
+               should lie between -1 and 1 (borders included). 

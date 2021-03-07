@@ -1,0 +1,14 @@
+*M2  run.txt
+
+  RUN Help
+
+  When the system is in RUN mode
+  the most of the buttons are 
+  active. Clicking on a button and
+  then the help button will display
+  help file specific to the button.
+
+  PRESS 'CLEAR' to exit .
+
+  This file 'run.txt' is located in 
+  installdir/help/run.txt    

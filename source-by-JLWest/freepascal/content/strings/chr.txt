@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    function chr(b : Byte) : Char;
+
+  Note: Chr returns the character which has ASCII value X. 

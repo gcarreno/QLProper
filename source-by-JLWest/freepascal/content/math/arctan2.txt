@@ -1,0 +1,13 @@
+*M1
+
+  uses ... math ;
+
+    function ArcTan2(y :  Float;  x :  Float) : Float;
+ 
+  Note: ArcTan2 calculates arctan(y/x), and returns an angle in the correct
+             quadrant. The returned angle will be in the range $-\pi$ to $\pi$
+             radians. The values of x and y must be between -2\^{}64 and 2\^{}64, 
+             moreover x should be different from zero. On Intel systems this
+             function is implemented with the native intel fpatan instruction.
+
+  See: ArcCos. ArCosH, ArSinh, ArTanH

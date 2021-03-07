@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    procedure Exit( const X: TAnyType );
+
+    procedure Exit;
+
+  Note: exit the current subroutine
+  See: Continue, Break 
+
+

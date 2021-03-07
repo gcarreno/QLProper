@@ -1,0 +1,6 @@
+*M1
+
+  uses ... strutils;
+
+    function IndexStr(const AText : UnicodeString;
+                                        const AValues : array of UnicodeString) : Integer;

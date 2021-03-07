@@ -1,0 +1,20 @@
+*M1
+
+  uses ... math ;
+
+    function Sum(const data : array of Single) : Float;
+
+    function Sum(const data : PSingle; const N : LongInt) : Float;
+
+    function Sum(const data : array of Double) : Float;
+
+    function Sum(const data : PDouble; const N : LongInt) : Float;
+
+    function Sum(const data : array of Extended) : Float;
+
+    function Sum(const data : PExtended ; const N : LongInt) : Float;
+  
+  Note: Sum returns the sum of the values in the data array. The second form of the   
+           function accepts a pointer to an array of N values.
+
+  See: SumOfSquares, SumsAndSquares,  Variance, 

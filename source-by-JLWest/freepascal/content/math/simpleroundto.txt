@@ -1,0 +1,12 @@
+*M1
+
+  uses ... math;
+
+   function SimpleRoundTo( const AValue : Single; 
+                                                  const Digits: TRoundToRange = - 2 ) : Single;
+
+    function SimpleRoundTo( const AValue : Double; 
+                                                     const Digits : TRoundToRange = - 2 ) : Double;
+
+    function SimpleRoundTo( onst AValue : Extended;
+                                                  const Digits : TRoundToRange = - 2 ) : Extended;

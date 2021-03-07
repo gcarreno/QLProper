@@ -1,0 +1,11 @@
+*M1
+
+  uses ... crt;
+
+    procedure Delay( MS : Word );
+
+      Call: Delay( 5000 );
+
+    Return  The pgm will delay for 5000 millisec 1000 millisec = 1 second.
+
+  See: Continue, Break,  Exit, Halt

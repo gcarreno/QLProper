@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    procedure FindCloseUTF8(var F : TSearchrec) ; inline;
+

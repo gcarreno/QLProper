@@ -1,0 +1,6 @@
+*M1
+
+  uses ... strutils;
+
+    function StartsStr(const ASubText : string; const AText : string) : Boolean;
+

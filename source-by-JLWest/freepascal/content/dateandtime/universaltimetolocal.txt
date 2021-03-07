@@ -1,0 +1,32 @@
+*M1
+
+  uses ... dateutils;
+ 
+    function UniversalTimeToLocal( UT : TDateTime ) : TDateTime;
+
+    function UniversalTimeToLocal( UT : TDateTime; 
+                                                                   TZOffset : Integer ) : TDateTime;
+
+ See: GetLocalTimeOffset
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := UniversalTimeToLocal( TDT );
+
+    Return  TDT = UTC time as TDateTime;
+
+
+ Var TDT : TDateTime; Offset : Integer;
+
+    Call: TDT := UniversalTimeToLocal( TDT, Offset  );
+
+    Return  TDT = UTC time as TDateTime;
+
+ 
+
+
+
+
+
+ 

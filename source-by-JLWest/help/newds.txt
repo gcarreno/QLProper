@@ -1,0 +1,41 @@
+*M2 newds.txt
+
+  New DS Help
+
+ When he sustem is in 'New DS'
+ Mode it will allow the creation of
+ a new DataSet. 
+
+  To create a new DataSet:
+
+  1. Click the 'New DS' button.
+
+  2. Enter a 4 digit pin number in
+       query. Click 'OK'.
+
+  3. Click the 'Execute' button.
+
+  4. Entr a Full Qualified Path or 
+       a DataSet name. If a DataSet
+       name is entered the new
+       DataSet will be created under
+       install path of the QuickList.exe.
+  
+  5. Click the 'Execute' button.
+
+  Note: The config.txt fill will be 
+     updated with the required 
+     entry. The sub-directories at
+     the specified location will be
+     created and one Infotext tag
+     name Placeholder(n) will be
+     created.
+
+      PRESS '*Help' to exit.
+
+  The operation can be cancled
+   prior clicking the 'Execute' 
+   button.
+ 
+  This file 'newds.txt' is located
+   in InstallDir/help/newds.txt

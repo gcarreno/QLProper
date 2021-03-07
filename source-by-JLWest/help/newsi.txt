@@ -1,0 +1,27 @@
+*M2 newsi.txt
+
+  New SI Help
+
+  To create a new SUB Menu item:
+
+  1. Click the New SI button.
+
+  2. Select the Sub menu fron the
+       LBSUB listbox. It will appear in 
+       the LBX Listbox.
+        
+  3.  Select an item from the 
+        Items listbox if needed.
+
+  4.  Click the 'Execute' Button.
+
+  5.  Enter the new tag name in the
+        quey. Click the 'Ok' button.
+ 
+  Note: The new SUB-memu tag 
+     will be created .
+   
+      PRESS 'CLEAR' to exit .
+ 
+ This file 'newsubsi.txt' is located
+ in InnstallDir/help/newsubsi.txt

@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    function ParamCount: LongInt;
+
+    Note: Paramcount returns the number of command-line arguments
+    See: Paramstr
+
+
+

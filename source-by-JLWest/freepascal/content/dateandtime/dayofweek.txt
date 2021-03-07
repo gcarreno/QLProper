@@ -1,0 +1,13 @@
+*M1
+
+  uses ... sysutils;
+
+    function DayOfWeek( DateTime: TDateTime ) : Integer;
+
+     Var S : Integer;
+
+    S := DayOfWeel( Now );
+
+    ReturnS := 4 Tested on Wed. 10/28/2020 ;
+
+  Note:  Sunday = 0; 

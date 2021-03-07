@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function FilenameIsPascalUnit(const Filename : string) : Boolean;
+

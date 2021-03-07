@@ -1,0 +1,19 @@
+*M1 additems.txt
+
+  ADDITEMS  Help
+
+  When the system is in ADDITEMS   mode it will allow the add items
+  to the Items Listbox.
+
+  To ADDITEMS:
+
+ 1. Click the 'Add Items' button
+ 2. Enter the new item in the query box
+ 3. Repeat steps 1 and 2 for additioal items
+ 4. Click the small red box next to the items listbox to save
+ 5. press the 'Clear' button
+
+
+     PRESS 'CLEAR' to exit the Help system 
+
+    This file 'additems.txt is located in YouInstalldir/help/additems.txt

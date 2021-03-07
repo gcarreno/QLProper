@@ -1,0 +1,5 @@
+*M1
+
+  uses ... system;
+
+    procedure Read(var F : Text;  Args : Arguments);

@@ -1,0 +1,19 @@
+*M1
+
+  uses ... dateutils;
+
+    function IncSecond( const AValue : TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncSecond( TDT, 2 );
+
+    Return TDT 2 seconds later that the value of TDT in TDateTime format.
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncSecond( TDT );
+
+    Return TDT = TDT + 1 second later expresed in TDateTime format.

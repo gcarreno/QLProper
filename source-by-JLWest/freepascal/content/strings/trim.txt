@@ -1,0 +1,16 @@
+*M1
+
+  uses ... sysutilsl
+
+  function Trim( const S : string ) : string;
+
+  function Trim( const S :  widestring ) : widestring;
+
+  function Trim( const S : unicodestring ) : unicodestring;
+
+
+      Var S : String = '  This is a String.   ';
+
+     Call:  S := Trim( S );
+
+   Return  S  = 'This is a String.'      

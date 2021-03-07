@@ -1,0 +1,12 @@
+*M1
+
+  uses ... strutils;
+
+    function AddChar( C : Char;  const S : string; N : Integer ) : string;
+
+     Var T : String = '123',  S : String'
+
+    Call: S := AddChar( 'X', T, 4);
+
+    Return S = '123X'
+ 

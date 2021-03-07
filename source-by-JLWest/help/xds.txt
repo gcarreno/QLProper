@@ -1,0 +1,43 @@
+*M2 xds.txt
+
+  X DS Help
+
+  When the system is in X DS
+  mode it will allow the deletion
+  of DataSet.
+
+  To DeleteSet:
+
+  1. Click the 'X DS' button.
+
+  2. Click the DataSet to be deleted 
+       in LBSub listbox.
+
+  3. Click the 'Execute'. 
+
+  4. Enter the 4 digit pin number.
+      Click 'OK'. 
+
+  5. Click the 'Continue' or ' 'Cancel'
+       on the query.
+
+   Press '*Help' to close.
+
+   This operation can be aborted
+   by clicking the 'Cancel' prior to
+   clicking the 'Execute' button, 
+   clicking the 'Cancel' on the 
+   4 digit pin enquiry or clicking 
+   clicking 'Cancel' on the delete
+   enquiry.
+
+ Note: If you don't know the Pin
+    number enter '0000' on the 
+    Pin enquiry and click 'OK'. The
+    Pin will appear on the lower
+    part of the form. 
+
+      PRESS '*Help' to exit.
+
+  This file 'X DS.txt' is located in
+   InstallDir/help/xds.txt

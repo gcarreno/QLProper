@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    Type
+
+    btnButton1 : TButton;
+
+    Call: btnButton1.SetFocus;
+
+  See: ActiveControl
+

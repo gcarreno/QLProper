@@ -1,0 +1,23 @@
+*M1 rename.txt
+
+  Rename Help
+
+  When the system is in Rename Mode InfoTags can be renamed.
+
+  To rename a Infotext tag:
+
+ 1.  Click the 'Rename' button
+ 2. Select the tag to rename from the LBSub listbox
+        The selected tag will appear in the LBX listbox
+        There can  be only 1 tag in LBX listbox
+ 3. Enter the new name in the 'Tag Name' edit entry
+ 4. Click the 'GO' button
+
+  Click the 'Cancel' to return to RUN mode or to start over.
+ 
+  Note: You can rename Infotext tags or Sub-Menu tags. You can not rename
+              DataSets
+
+      PRESS 'CLEAR' to exit the Help system 
+
+  This file 'rename.txt' is located in YourInstallDir/help/rename.txt      

@@ -1,0 +1,17 @@
+*M1
+
+  uses ... lazfileutils;
+
+  procedure CheckIfFileIsSymlink(const AFilename: string);
+
+
+
+
+
+
+
+
+
+
+
+

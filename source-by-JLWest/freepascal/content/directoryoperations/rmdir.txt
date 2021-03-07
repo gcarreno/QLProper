@@ -1,0 +1,14 @@
+*M1
+
+  uses ... system
+
+    procedure Rmdir( const s: shortstring ); overload;
+
+    procedure Rmdir( const s: RawByteString ); overload;
+
+    procedureRrmdir(  const s: unicodestring ); overload;
+
+ See: Chdir. Mkdir
+
+
+ 

@@ -1,0 +1,12 @@
+*M1
+
+  uses ... sysutils;
+
+    function IsLeapYear(  Year : Word ) : Boolean;
+
+     Var  Yes : Boolean;
+
+    Call:    Yes := IsLeapYear( 2020 );
+
+    Return True if 2020  is a leap year otherwise false.
+

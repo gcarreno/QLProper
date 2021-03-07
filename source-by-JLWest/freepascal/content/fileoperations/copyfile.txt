@@ -1,0 +1,17 @@
+*M1
+
+  uses ... fileutil;
+ 
+   function CopyFile( const SrcFilename : string; const DestFilename : string; 
+                                      Flags : TCopyFileFlags = [cffOverwriteFile];
+                                      ExceptionOnError : Boolean = False ) : Boolean;
+
+    function CopyFile( const SrcFilename : string; const DestFilename : string;
+                                       PreserveTime : Boolean;
+                                      ExceptionOnError : Boolean = False ) : Boolean;
+
+
+     Var Good : Boolean;
+
+    Call:  Good := CopyFile ( 'My File.txt', 'My New File.txt', True, False ); 
+ 

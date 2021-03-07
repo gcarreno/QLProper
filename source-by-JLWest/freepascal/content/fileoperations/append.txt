@@ -1,0 +1,27 @@
+*M1
+
+  uses ... system
+
+    procedure Append( var t : Text );
+
+    See: Rewrite, Reset
+
+    procedure TForm1.ListBoxToFile(AFile : String; ABOX : TListbox);
+      Var i : integer = -1;
+      OutFile : Textfile;
+      Line    : String = '';
+     begin
+       AssignFile( OutFile, AFile );
+      Try
+        Append( OutFile );
+       for i := 0 to ABOX.Items.Count -1 do begin
+              Line := ABOX.Items[i];
+              Line := Trim(Line);
+              WriteLn (Outfile,Line);
+       end;
+        finally
+          CloseFile(OutFile);
+      end;
+    end;
+
+  Note: Opens a file in append mode.

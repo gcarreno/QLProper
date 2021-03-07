@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazutils;
+
+    function MinimizeSearchPath(const SearchPath : string) : string;

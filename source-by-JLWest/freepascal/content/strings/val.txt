@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    procedure Val(const S : string; var V; var Code : Word);
+
+  Note: Val converts the value  S to a numerical value or  an enumerated value, and 
+              stores this value in the variable V, which can be of type Longint, Real and
+              byte or any enumerated type. If the conversion isn't succesfull, then the 
+              parameter Code contains the index of the  character in S which prevented 
+              the conversion.  The string S is allowed to contain spaces in the 
+              beginning. 

@@ -1,0 +1,13 @@
+*M1
+
+  uses ... dateutils;
+
+    function Tomorrow : TDateTime;
+
+     Var TDT : TDateTime;
+
+    Call: TDT := Tomarrow;
+
+    Return Next day as TDateTime.
+
+  See: Now, Date, Time, Today,  Yesterday

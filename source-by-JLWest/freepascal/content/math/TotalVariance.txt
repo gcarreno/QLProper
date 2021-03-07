@@ -1,0 +1,21 @@
+*M1
+
+  uses ... math ;
+
+    function TotalVariance(const data : array of Single) : Float;
+
+    function TotalVariance(const data : PSingle; const N : Integer) : Float;
+
+    function TotalVariance(const data : array of Double) : Float;
+
+    function TotalVariance(const data : PDouble; const N : Integer) : Float;
+
+    function TotalVariance(const data : array of Extended) : Fl oat;
+
+    function TotalVariance(const data : PExtended; const N : Integer) : Float;
+
+ Note: TotalVariance returns the total variance of the values in the data array. It 
+             returns zero if there is only one value.
+             The second form of the function accepts a pointer to an array of N values. 
+
+  See: Variance, StdDev, Mean

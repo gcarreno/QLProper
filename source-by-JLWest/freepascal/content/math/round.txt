@@ -1,0 +1,15 @@
+*M1
+
+uses ... system;
+
+    function Round( d: ValReal ) : Int64;
+
+     Var S : Float;
+
+    S := Round(2458.51);     S := 2459 
+
+    S := Round( 2.5 );            S :+ 2
+
+    S := Round( 3.5 );            S := 3
+
+  Rounds to the even number  

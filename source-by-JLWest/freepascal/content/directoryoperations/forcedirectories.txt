@@ -1,0 +1,13 @@
+*M1
+
+  uses ... sysutils;
+
+    function ForceDirectories( const Dir : RawByteString) : Boolean;
+
+    function ForceDirectories(const Dir : UnicodeString) : Boolean;
+ 
+
+  Note:ForceDirectories tries to create any missing directories in Dir 
+              till the whole path in Dir exists. It returns True if Dir already 
+              existed or was created successfully. If it failed to create any
+              of the parts, False is returned. 

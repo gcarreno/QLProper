@@ -1,0 +1,8 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function WeeksInAYear(const AYear: Word) : Word;
+
+  Note: WeeksInAYear returns the number of weeks in the year AYear. The return
+              value is either 52 or 53. 

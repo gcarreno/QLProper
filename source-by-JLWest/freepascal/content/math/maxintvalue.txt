@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math;
+
+   function MaxIntValue(const Data : array of Integer) : Integer;
+
+  Note: MaxIntValue returns the largest integer out of the Data array.
+             This function is provided for Delphi compatibility, use the maxvalue function
+             instead.
+  See: maxvalue, minvalue, minIntValue

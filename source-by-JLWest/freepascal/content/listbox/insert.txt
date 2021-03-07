@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+          ListBox1.Items.Insert( 4 , 'KPHX' );
+  
+       Result would be to insert 'KPHX' into the 4 position in listbox1.

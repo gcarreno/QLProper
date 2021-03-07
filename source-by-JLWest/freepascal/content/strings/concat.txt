@@ -1,0 +1,8 @@
+*M1
+
+  uses ... system;
+
+    function Concat(const S1: string;
+                                    const S2: string;
+                                    const S3: string;
+                                    const Sn: string) : string;

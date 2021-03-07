@@ -1,0 +1,5 @@
+*M1
+
+  uses ... fileutil;
+
+    function ExtractShortPathNameUTF8(const FileName : string) : string;

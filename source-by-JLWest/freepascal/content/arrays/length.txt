@@ -1,0 +1,16 @@
+*M1
+
+  uses ... system;
+
+    function Length(S : AStringType ) : SizeInt;
+
+    function Length(A : DynArrayType) : SizeInt;
+
+     Var i : Integer; S : String = 'This is a string.';
+
+ Call: i :=  Length( S );
+
+  Return i = 16
+
+  Note: Length returns the lenght of a string or Dynamic array.
+  See: SetLength

@@ -1,0 +1,14 @@
+*M1
+
+  uses ... sysutils;
+
+    function ExtractFileDrive(const FileName : UNICODESTRING)
+                                                : UNICODESTRING;
+
+function ExtractFileDrive(const FileName : RAWBYTESTRING)
+                                            : RAWBYTESTRING;
+ 
+  Notes: Extracts the drive letter from a filename. Note that some
+                 operating systems do not support drive letters. 
+
+  See: ExtractFileNameOnly

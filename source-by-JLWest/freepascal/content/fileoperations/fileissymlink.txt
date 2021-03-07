@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileIsSymlink(const AFilename : string) : boolean;
+

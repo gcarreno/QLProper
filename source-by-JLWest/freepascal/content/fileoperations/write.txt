@@ -1,0 +1,26 @@
+*M1
+
+  uses ... system;
+
+    procedure Write( const V1 : T );
+
+    procedure Write( const V1 : T; const V2 : T );
+
+    procedure Write( const V1 : T; const V2 : T; const v3 : T );
+
+    procedure Write( var F : Text; const V1 : T );
+
+    procedure Write( var F: Text; const V1 : T; const V2 : T );
+
+    procedure Write( var F: Text; const V1: T; const V2: T; const v3: T );
+
+    Var Fld1 : String = '123'; Fld2 : String = '12345';  Fld3 : String = '12345678';
+
+      Write(field1: 5);
+      Write(Field2: 8);
+      Writeln(Field3:10);
+                  or
+     Writeln(field1:5, field2:8 field3:10); 
+                       
+  Return: 123  12345   12345678
+  See: WriteLn, Read, Readln, Blockwrite

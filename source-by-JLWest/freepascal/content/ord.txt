@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+    function Ord( X : TOrdinal ) : LongInt;
+  
+  Note: Ord returns the Ordinal value of a ordinal-type variable X. 
+  See: Chr, Succ, Pred, High, Low
+

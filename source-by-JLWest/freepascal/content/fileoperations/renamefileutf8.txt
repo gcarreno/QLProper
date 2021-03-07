@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function RenameFileUTF8(const OldName, NewName: String): Boolean;

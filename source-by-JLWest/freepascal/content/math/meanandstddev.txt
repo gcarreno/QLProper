@@ -1,0 +1,26 @@
+*M1
+
+  uses ... math 
+
+    procedure MeanAndStdDev(const data : array of Single;  var mean: Float;
+                                                            var stddev: Float);
+
+    procedure MeanAndStdDev(const data : PSingle; const N: LongInt;
+                                                           var mean: Float; var stddev: Float);
+
+    procedure MeanAndStdDev(const data: array of Double; var mean: Float;
+                                                           var stddev: Float);
+
+    procedure MeanAndStdDev(const data: PDouble; const N: LongInt;
+                                                           var mean: Float; var stddev: Float);
+
+    procedure MeanAndStdDev(const data : array of Extended; var mean: Float;
+                                                           var stddev: Float);
+
+    procedure MeanAndStdDev(const data : PExtended;const N : LongInt;
+                                                            var mean: Float;var stddev: Float);
+
+  Note: Meanandstddev calculates the mean and standard deviation of data and
+              returns the result in mean and stddev, respectively. Stddev is zero if there is
+              only one value. The second form accepts a pointer to an array of N values. 
+  See: Mean, Sum, Sumofsquares, Momentskewkurtosis

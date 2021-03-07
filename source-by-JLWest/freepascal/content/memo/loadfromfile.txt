@@ -1,0 +1,9 @@
+*M1
+
+  uses ... stdctrls;
+
+     Var Path : String = 'AFile.txt';
+
+    Memo1.Lines.LoadFromFile( Path );
+
+  Note: Will load AFile.txt directly into Memo1

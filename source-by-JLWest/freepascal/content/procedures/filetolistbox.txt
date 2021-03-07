@@ -1,0 +1,28 @@
+*M1
+
+  uses ... fileutils;
+
+    procedure TForm1.FileToListbox( const AFileName: String; ABOX : TListBox );
+       Var Found : Boolean = False;
+      Const  U8BOM: String[3] = #$EF#$BB#$BF;
+      Var
+        AFileStream: TFileStream;
+        BOMTest: String[3];
+       begin
+         Found := FileExists(AFileName);
+         if Found then begin
+         ABox.Clear;
+         AFileStream := TFileStream.Create(AFilename, fmOpenRead);
+           try
+              BOMTest[0] := #3;
+              AFileStream.Read(BOMTest[1], 3);
+              if BOMTest <> U8BOM then
+              {Rewind if no BOM}
+              AFileStream.Seek(0, soFromBeginning);
+              ABOX.Items.LoadFromStream(AFileStream);
+           finally AFileStream.Free; end;
+        end;
+        if (Not Found) then begin 
+           ShowMessage('Error Loading ' + AFileName);
+        end;
+    end;                             

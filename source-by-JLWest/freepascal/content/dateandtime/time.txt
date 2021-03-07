@@ -1,0 +1,13 @@
+*M1
+
+  uses ... sysutils;
+
+    function Time : TDateTime;
+
+      VarTDT : TDateTime;
+
+    Call:  TDT := Time;
+
+    Return TDT = Time in TdateTime format;  
+
+  See: Now, Date, Today, Tomarrow, Yesterday

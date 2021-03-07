@@ -1,0 +1,19 @@
+*M1
+
+  uses ... strutils;
+
+    function .ContainsDigit(AW: RawByteString) : Boolean;
+
+  Note: This is not a FPC function
+
+
+    function .ContainsDigit(AW: RawByteString) : Boolean;
+      var i: Integer;
+     begin
+       Results := False;
+     for i := 1 to Length(AWord) do
+           If AWord[i] in Digits then begin  
+      Result := True;
+      Break;
+     end;
+   end;

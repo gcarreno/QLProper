@@ -1,0 +1,18 @@
+*M1
+
+  uses ... dateutils;
+
+    function DateTimeToUnix( const AValue : TDateTime; 
+                                                          AInputIsUTC : Boolean = True ) : Int64;
+
+     Var S : String; I64 : Int64;    
+
+    begin
+     I64  := DateTimeToUnix( Now , True );
+     S := IntToStr ( I64 );
+    end;
+
+    Return  := '1604361761' 
+ 
+  See: UnixToDateTime
+ 

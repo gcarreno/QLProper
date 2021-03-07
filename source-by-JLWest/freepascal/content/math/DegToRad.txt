@@ -1,0 +1,11 @@
+*M1
+
+  uses ... math ;
+
+    function DegToRad(deg : Float) : Float;
+
+
+  Note: Degtorad converts it's argument deg (an angle in degrees) to radians. 
+              (pi radians is 180 degrees) Errors
+  See: CycleToRad, DegToGrad, AdToDeg, RadToGrad, RadToCycle
+

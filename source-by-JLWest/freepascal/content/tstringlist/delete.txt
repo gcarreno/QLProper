@@ -1,0 +1,18 @@
+*M1
+
+  uses ... classes;
+
+        public procedure TStringList.Delete( Index : Integer ); override;
+
+      Var TList : TStringList; 
+
+    Call: TList.Delete( 7 );
+   
+  Note: Deletes the 7th entry in the TList 
+  See:  Insert
+
+
+ 
+
+   
+  

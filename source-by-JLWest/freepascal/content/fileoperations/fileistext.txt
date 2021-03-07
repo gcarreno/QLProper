@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileIsText(const AFilename : string) : boolean;

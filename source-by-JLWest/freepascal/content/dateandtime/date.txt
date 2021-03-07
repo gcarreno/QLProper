@@ -1,0 +1,7 @@
+*M1
+  uses ... sysutils;
+
+    function Date : TDateTime;
+
+  Note: Date returns the current date in TDateTime format. 
+  See: Time, Now

@@ -1,0 +1,8 @@
+*M1
+
+  uses ... classes;
+
+    property TStringList.CaseSensitive : Boolean
+                                             read FCaseSensitive
+                                             write SetCaseSensitive;
+

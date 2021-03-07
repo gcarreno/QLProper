@@ -1,0 +1,11 @@
+*M1
+
+  uses ... sysutils;
+
+  type TReplaceFlags = set of ( rfReplaceAll, rfIgnoreCase);
+  
+ Note:    rfReplaceAll,  Replace all occurrences of the  search string 
+                 with the replacement string.
+                 rfIgnoreCase specifices search case insensitive.
+
+ 

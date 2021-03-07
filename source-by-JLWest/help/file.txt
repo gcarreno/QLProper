@@ -1,0 +1,11 @@
+*M1 file.txt
+
+  File Help
+
+   Clicking the 'File'  button will save to the HD any Memo that is 
+   displayed if  the system is in EDIT Mode.
+
+    PRESS 'CLEAR' to exit the Help system 
+ 
+
+   This file 'filet.txt' is located in Yourinstalldir/help/file.txt   

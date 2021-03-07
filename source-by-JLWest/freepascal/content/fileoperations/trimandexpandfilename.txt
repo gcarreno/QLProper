@@ -1,0 +1,8 @@
+*M1
+
+  uses ... lazutils;
+
+  function TrimAndExpandFilename(const Filename : string;
+                                                                        const BaseDir : string = '') : string; 
+
+  Note: Eempty string returns empty string

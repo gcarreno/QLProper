@@ -1,0 +1,10 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function GetPhysicalFilename(const Filename : string; OnError: 
+                                                             TPhysicalFilenameOnError) :  string;
+
+    function GetUnixPhysicalFilename(const Filename : string; ExceptionOnError: 
+                                                                       boolean): string; 
+  Return If a link is broken returns ''

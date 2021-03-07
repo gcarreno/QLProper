@@ -1,0 +1,55 @@
+*M1 deletes.txt
+
+  X DS Help
+
+  When the system is in X DS mode it will allow the user to DELETE a 
+  DataSet.
+
+  To Delete a DataSet.
+
+ Note:  The system must be Set to a DataSet. The system will not allow
+               the deletion of a Set DataSet.
+
+ 1. Click the 'X DS' button. The DataSet(s) will be displayed in the LBWork
+      listbox.  A dialog will appear asking for a Pin number. The Pin is not for
+      securty. It is to slow down the process of deleting. Once a DataSet is 
+      deleted by mistake it is difficult and time consuming to replace.
+ 2. Enter the Pin of the DataSet to be deleted.      
+ 3. Select the DataSet in LBWork listbox.
+ 6. Click the 'GO' button.
+
+ Unknown Pin   (2 Ways)
+
+ 1. Look in the Config.txt file with a text  editor
+
+                                               OR
+
+ 1. Enter '0000' (4 zeroes) in the dialog box asking for the Pin 
+      and click 'OK'
+2.  Select the DataSet for deletion
+3.  Click the 'GO' button
+ 4. Click the 'OK' button on the Invalid Pin number message
+ 5. Click the 'Pin' button at the botton of the form
+      The Pin number for the DataSet selected for deletion
+      will appear
+ 6  Click 'Cancel'
+
+  Restart the X DS process
+
+ Replacing a deleted DataSet:
+
+ A deleted DataSet is a directory with several sub-directories. The top
+ level directory is the name of the DataSet. It should be in the system Trash
+ bin. Use windows to restore the directory.
+
+ Providing it is restored edit the config.txt file located in 
+ theinstalldirectory/files/config.txt. It will look something like this:
+
+  PhoneBook                                     |C:\phonebook.txt|5000|
+
+ Add the deleted DataSet.
+
+ PhoneBook                                     |C:\phonebook.txt|5000|
+ HouseAccounts                             |C:\houseaccounts.txt|6000|
+
+Restart QuickList. The system will have the deleted DataSet 

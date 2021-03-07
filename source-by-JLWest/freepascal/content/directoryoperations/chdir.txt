@@ -1,0 +1,13 @@
+*M1
+
+  uses ... system
+
+   procedure ChDir( const s: shortstring ); overload;
+
+   procedure ChDir( const s: RawByteString ); overload;
+
+   procedure ChDir( const s: unicodestring ); overload;
+
+  
+  See:    MKdir, Rmdir, DirExists, FileExists
+  Note: Chdir changes the working directory of the process to S.

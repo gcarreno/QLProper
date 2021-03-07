@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    function FileSize( var f : file ) : Int64;
+
+  See: Filepos

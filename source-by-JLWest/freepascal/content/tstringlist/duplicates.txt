@@ -1,0 +1,6 @@
+*M1
+
+  uses .... Classes
+
+    TDuplicates = Types.TDuplicates;
+

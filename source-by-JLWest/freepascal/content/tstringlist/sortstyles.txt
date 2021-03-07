@@ -1,0 +1,8 @@
+*M1
+
+  uses ... classes;
+
+     type TStringsSortStyle = ( sslNone,    { Not sorted}
+                                                        sslUser,      {kept sorted by user.}
+                                                        sslAuto );   {instance keeps sorted}
+  

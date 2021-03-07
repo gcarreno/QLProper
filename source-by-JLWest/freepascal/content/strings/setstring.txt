@@ -1,0 +1,25 @@
+*M1
+
+  uses ... system;
+
+    procedure SetString(out S : AnsiString; Buf: PAnsiChar;
+                                            Len: SizeInt);
+
+    procedure SetString(out S : AnsiString; Buf : PWideChar;
+                               Len: SizeInt);
+
+    procedure SetString(out S: Shortstring; Buf: PChar;
+                                           Len: SizeInt);
+
+    procedure SetString(out S : UnicodeString; Buf: PUnicodeChar;
+                                            Len: SizeInt);
+
+    procedure SetString(out S : UnicodeString; Buf : PChar;
+                                          Len: SizeInt);
+
+    procedure SetString(out S: WideString; Buf : PWideChar;
+                                            Len : SizeInt);
+
+  Note:  SetString sets the length of the string S to Len and if Buf is non-nil, copies
+               Len characters from Buf into S. S can be an ansistring, a short string or a 
+               widestring. For ShortStrings, Len can maximally be 255. 

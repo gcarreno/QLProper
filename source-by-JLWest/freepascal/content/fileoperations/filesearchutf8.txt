@@ -1,0 +1,8 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileSearchUTF8(const Name, DirList : String; ImplicitCurrentDir : Boolean
+                                                   = True): String;
+
+

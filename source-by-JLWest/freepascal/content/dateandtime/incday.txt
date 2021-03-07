@@ -1,0 +1,19 @@
+*M1
+
+  uses ... dateutils;
+
+    function IncDay(  const AValue : TDateTime ) : TDateTime;
+
+
+     Var TDT : TDateTime;
+
+    Call:    TDT := IncDay( TDT, 2 );
+
+    Return TDT 2 days later that the value of TDT in TDateTime format.
+
+
+     Var TDT : TDateTime;
+
+    Call: TDT := IncDay( TDT );
+
+    Return TDT = TDT + 1 day expresed in TDateTime format.

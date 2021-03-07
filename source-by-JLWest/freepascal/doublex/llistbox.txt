@@ -1,0 +1,18 @@
+Add Item
+Assign
+Clear
+Clear Focus
+Delete
+DoubleClicks
+Focus Last
+IndexOf
+Insert
+Listbox Clicks
+SaveToFile
+Search
+Select All
+Selected
+Set Focus
+SetSelected
+Top Index
+Update

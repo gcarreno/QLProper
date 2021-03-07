@@ -1,0 +1,19 @@
+*M1
+ 
+  uses ... math 
+
+   function StdDev(const data: array of Single):Float;
+
+    function StdDev(const data: PSingle;const N: Integer):Float;
+
+    function StdDev(const data: array of Double):Float; 
+
+    function StdDev(const data: PDouble; const N: Integer):Float;
+
+    function StdDev(const data: array of Extended):Float;
+
+    function StdDev(const data: PExtended;  const N: Integer):Float;
+
+  Note: Stddev returns the standard deviation of the values in Data. It returns zero
+              if there is only one value. The second form of the function accepts a pointer 
+              to an array of N values.

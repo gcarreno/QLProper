@@ -1,0 +1,8 @@
+*M1
+
+  uses ... lazfileutils;
+   
+   function TrimFilename(const AFilename : string) : string;
+
+
+

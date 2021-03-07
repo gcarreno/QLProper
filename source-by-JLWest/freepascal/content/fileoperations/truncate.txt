@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+
+    procedure Truncate( var F : file );
+    
+
+
+                             Not tested 

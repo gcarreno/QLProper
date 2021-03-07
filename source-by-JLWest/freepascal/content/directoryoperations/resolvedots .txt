@@ -1,0 +1,7 @@
+*M1
+
+  uses...lazfileutiils;
+
+    Function GetForcedPathDelims(Const FileName : string) : String;
+
+

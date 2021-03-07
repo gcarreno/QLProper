@@ -1,0 +1,27 @@
+*M1
+
+  uses ... math;
+
+   function Mean(const data: array of Single) : Float;
+
+    function Mean(const data : PSingle; const N : LongInt) : Float;
+
+    function Mean(const data : array of Double) : Float;
+
+    function Mean(const data : PDouble; const N : LongInt) : Float;
+
+    function Mean(const data : array of Extended) : Float;
+
+    function Mean(const data : PExtended; const N : LongInt) : Float;
+
+    function Mean(const data : PInt64;const N : LongInt) : Float;
+
+    function Mean(const data : array of Int64 ) : Float;
+
+    function Mean(const data : PInteger; const N : LongInt) : Float;
+
+    function Mean(const data : array of Integer) : Float;
+
+  Note: Mean returns the average value of data. The second form accepts a pointer 
+             to an array of N values.
+  See: Meanandstddev, MomentskewKurtosis 

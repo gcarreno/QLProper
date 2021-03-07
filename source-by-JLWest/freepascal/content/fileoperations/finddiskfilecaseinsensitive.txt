@@ -1,0 +1,5 @@
+*M1
+
+  uses ... fileutil;
+
+    function FindDiskFileCaseInsensitive(const Filename : string) : string;

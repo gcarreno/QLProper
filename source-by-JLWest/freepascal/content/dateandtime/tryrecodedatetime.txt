@@ -1,0 +1,9 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function TryRecodeDateTime( const AValue: TDateTime;  const AYear: Word;
+                                                              const AMonth: Word; const ADay: Word;
+                                                              const AHour: Word;  const AMinute: Word;
+                                                              const ASecond: Word;  const AMilliSecond: Word;
+                                                              out AResult: TDateTime) : Boolean;

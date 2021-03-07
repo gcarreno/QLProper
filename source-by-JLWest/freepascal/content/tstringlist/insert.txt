@@ -1,0 +1,19 @@
+*M1
+
+  uses ... classes;
+
+         public procedure TStringList.Insert( Index : Integer;
+                                                                               const S : string ); override;
+
+      Var TList : TStringList; 
+
+    Call: TList.Insert( 3, 'KLAX'  );
+   
+  Note: Insert 'KLAX at the 4th  position  in TList (  zero based ) 
+  See:  Delete
+
+
+ 
+
+   
+  

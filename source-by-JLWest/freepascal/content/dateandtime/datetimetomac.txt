@@ -1,0 +1,8 @@
+*M1
+ 
+  uses ... Dateutils
+
+    function DateTimeToMac(const AValue: TDateTime) : Int64;
+
+  Note: DateTimeToMac converts the TDateTime value AValue to a valid Mac
+              timestamp indication and returns the result. 

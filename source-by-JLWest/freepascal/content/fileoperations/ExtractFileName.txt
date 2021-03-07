@@ -1,0 +1,13 @@
+*M1
+  uses ... sysutils;
+
+    function ExtractFileName(const FileName : UNICODESTRING) : UNICODESTRING;
+
+    function ExtractFileName(const FileName : RAWBYTESTRING) : RAWBYTESTRING;
+
+    Note: ExtractFileName returns the filename part from FileName. The filename 
+               consists of all characters after the last directory separator character ('/' or
+               '\') or drive letter.
+
+             The full filename can always be reconstructed by concatenating the result 
+             of ExtractFilePath and ExtractFileName. 

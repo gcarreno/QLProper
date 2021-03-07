@@ -1,0 +1,17 @@
+*M1
+
+  use ... sysutils;
+
+    function FileExists( const FileName : UnicodeString;  
+                                            FollowLink :  Boolean = True ) : Boolean;
+
+    function FileExists( const FileName : RawByteString; 
+                                        FollowLink : Boolean = True ) : Boolean;
+ 
+
+     Var Path : String = 'C:\X-Plane 11\XPlane.exe';
+             Found : Boolean;
+
+    Found := FileExists( Path );
+
+    Returns True if XPlane.exe is in C:\X-Plane 11\ otherwise returns false.

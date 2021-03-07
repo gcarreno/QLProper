@@ -1,0 +1,15 @@
+*M1
+
+  uses ... system;
+
+     Var TList : TstringList;
+
+    begin
+      TList := TStringList.Create;
+       try
+         ...
+        {  do things with TKist  )
+  
+      finally
+        TList.Free;
+      end;

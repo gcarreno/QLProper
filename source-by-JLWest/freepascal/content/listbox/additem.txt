@@ -1,0 +1,8 @@
+*M1
+
+  uses ... system;
+
+   Listbox1.Items.Add('Add to Listbox1');
+
+   
+  Result 'Add to Listbox1' would be added as last item in listbox1

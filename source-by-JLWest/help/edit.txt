@@ -1,0 +1,25 @@
+*M2 edit.txt
+
+  EDIT Help
+
+  When the system is in EDIT mode
+  the user can edit a Infotext item.
+
+  To edit an Infotext item:
+
+  1.  Click the item to be edited. If 
+        the Infotext is in the view 
+
+  2.  Click the 'Edit' bitton.
+
+  3  Click the 'Save' button to save. 
+
+  PRESS '*Jelp' to exit .
+
+  The edit process can be 
+  terminated by clicking the 
+  'Cancel' button prior to 
+  clicking the 'Save' button.
+
+  This file 'edit.txt' is located in 
+  installdir/help/edit.txt  

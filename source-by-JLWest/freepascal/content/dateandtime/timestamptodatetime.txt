@@ -1,0 +1,6 @@
+*M1
+
+  uses ... sysutils;
+
+    function TimeStampToDateTime( const TimeStamp : TTimeStamp
+                                                                       ) : TDateTime;

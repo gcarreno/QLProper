@@ -1,0 +1,12 @@
+*M1
+
+  uses ... math ;
+
+    function DegNormalize(deg : single) : single;
+
+    function DegNormalize(deg : Double) : Double;
+
+    function DegNormalize(deg : extended) : extended;
+
+  Note: DegNormalize returns the angle deg as a positive angle between 0 and 360 
+              degrees. 

@@ -1,0 +1,22 @@
+*M1
+
+  uses ... system
+
+    procedure Inc( var X : TOrdinal );
+
+    procedure Inc( var X : TOrdinal; Increment : TOrdinal );
+
+  See: Dec
+
+
+     Var i : Integer = 5;
+
+    Call: Inc( i );
+
+    Result i = 6
+
+     Var i : Integer = 5;
+
+    Call: Inc( i,5 );
+
+    Result i = 10

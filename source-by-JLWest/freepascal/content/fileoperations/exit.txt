@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+    procedure Exit( const X : TAnyType );
+
+    procedure Exit;
+
+  Note:  Exit the current subroutine If in the main program exit the program.
+

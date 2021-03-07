@@ -1,0 +1,15 @@
+*M1
+ 
+  uses ... math 
+
+    function IfThen(val : Boolean; const iftrue : Integer;  const iffalse: Integer = 0): 
+                                   Integer; overload;
+
+    function IfThen(val : Boolean; const iftrue: Int64; const iffalse: Int64 = 0): 
+                                   Int64; overload;
+
+    function IfThen(val : Boolean; const iftrue: Double; const iffalse: Double = 0.0): 
+                                   Double; overload; 
+ 
+ Note: ifthen returns iftrue if val is True, and iffalse if val is False. This function can
+             be used in expressions. 

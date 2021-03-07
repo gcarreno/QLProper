@@ -1,0 +1,12 @@
+*M1
+
+  uses ... math;
+
+      function IsInfinite(const d : Single) : Boolean; overload;
+
+    function IsInfinite(const d : Double) : Boolean; overload;
+
+    function IsInfinite(const d : Extended) : Boolean; overload;
+
+  Note: IsInfinite returns True if the double d contains the infinite value. 
+  See: IsZero

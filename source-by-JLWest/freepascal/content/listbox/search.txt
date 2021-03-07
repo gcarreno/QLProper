@@ -1,0 +1,37 @@
+*M1
+
+uses ... system;
+
+     Var AString : String = 'KLAX';
+
+    function TForm1.SearchListbox1( AITEM: String ) : Integer;
+      Var S : String = 'Nil';  i : Integer;
+         begin
+           for i := 0 to Listbox1.Items.Count -1  do begin
+                 if AITEM = Listbox1.items[ i ] then  begin 
+                     S := Listbox1[ i ];
+                     Break; 
+        end;
+          Result := S;
+    end;
+
+    Returns 'KLAX' if found or 'Nil' if not found.
+
+*M2
+
+    Call:  SearchListbox1( 'KLAX, IDX );
+
+    function TForm1.SearchListbox1( AITEM: String;  
+                                                                        Out X : String  ) : Integer;
+      Var S : String = 'Nil';  i : Integer;
+         begin
+             X := -1;
+            for i := 0 to Listbox1.Items.Count -1  do begin
+                   if AITEM = Listbox1.items[ i ] then  begin 
+                       S := Listbox1[ i ];    X := I;   Break; 
+            end;
+              Result := S;
+         end;
+
+    Returns 'KLAX' if found and 'NIL' if not found. The out value
+    of X will be the index of the 'KLAX' in listbox1 if found or -1.  

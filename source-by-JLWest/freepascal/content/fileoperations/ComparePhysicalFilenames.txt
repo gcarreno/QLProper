@@ -1,0 +1,6 @@
+*M1
+
+  uses ... fileutil;
+
+    function ComparePhysicalFilenames(const Filename1 : string;
+                                                                  const Filename2: string) : Integer;

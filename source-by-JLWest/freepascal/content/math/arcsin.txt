@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math ;
+
+    function ArcSin(x : Float) : Float;
+ 
+
+  Notes: Arcsin returns the inverse sine of its argument x. The argument x 
+               should lie between -1 and 1. 

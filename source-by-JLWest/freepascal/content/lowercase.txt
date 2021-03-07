@@ -1,0 +1,14 @@
+*M1
+
+  uses ... system;
+
+         Function Lowercase;
+ 
+           Var S : String = 'Italy, Iceland, Netherlands';
+
+         Call: S := Lowercase(S);
+
+         Return  italy, iceland, netherlands  
+
+  Note: All characters in the string are changed to lowercase
+  See: UpperCase, AnsiProperCase 

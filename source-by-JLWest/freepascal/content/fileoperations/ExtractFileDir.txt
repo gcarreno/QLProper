@@ -1,0 +1,10 @@
+*M1
+  uses ... sysutils;
+
+    function ExtractFileDir( const FileName : UNICODESTRING) : UNICODESTRING;
+
+    function ExtractFileDir(const FileName : RAWBYTESTRING) : RAWBYTESTRING;
+
+  Note: ExtractFileDir returns only the directory part of FileName, including a drive 
+             letter. The directory name has NO ending directory separator, in difference 
+             with ExtractFilePath. 

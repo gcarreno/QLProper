@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math ;
+
+    function Csc(x :  Float) : Float;
+
+  Note: Csc is an alias for the cosecant function.
+  See: CoseCant
+

@@ -1,0 +1,17 @@
+*M1
+
+  uses ... system;
+ 
+      Turn Clicks On and Off
+
+          Turn On :  Listbox1.OnClick := @ListBox1Click;
+
+          Turn Off:   Listbox1.OnClick := nil;
+            
+          Turn On :  Listbox1.OnDblClick := @ListBox1DblClick;
+            
+          Turn Off:   Listbox1.OnDblClick := nil;
+                                          
+                                          
+         
+

@@ -1,0 +1,16 @@
+*M1
+
+  uses ... typinfo;
+
+    procedure SetWideStrProp( Instance : TObject; const PropName : string;
+                                                        const Value: WideString );
+
+    procedure SetWideStrProp( Instance : TObject; PropInfo : PPropInfo;
+                                                         const Value: WideString );   
+
+  See: SetStrProp, GetOrdProp, GetFloatProp, GetInt64Prop,
+            GetMethodProp
+
+
+                              NO IDEA
+   

@@ -1,0 +1,5 @@
+*M1
+
+  uses ... strutils;
+
+    function ReverseString( const AText : string ) : string;

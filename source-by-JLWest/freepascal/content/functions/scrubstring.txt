@@ -1,0 +1,22 @@
+*M1
+
+         function TForm1.ScrubString(Const aString : String): String;
+           var   i : Integer = 1;
+              Bit    : String ;            
+           begin
+               while Index <= length(aString) do begin
+                   if aString[i] in ['0'..'9', 'A'..'Z',  'a'..'z',  ','] then begin
+                       Bit := Bit + aStr[i];
+                       Inc(i);
+                   end;
+                end; 
+                  Result := Bit;
+           end;
+
+
+         Var
+            S : String = ' São Paulo, Sãn Paulo, Sãn Low'; 
+         begin
+          S := ScrubString(S);
+
+           Returns   ' São Paulo, Sãn Paulo, Sãn Low'

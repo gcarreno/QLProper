@@ -1,0 +1,21 @@
+*M1
+
+  uses ... math ;
+
+    function SumOfSquares(const data : array of Single) : Float;
+
+    function SumOfSquares(const data : PSingle;const N: Integer) : Float;
+
+    function SumOfSquares(const data : array of Double) : Float;
+
+    function SumOfSquares(const data : PDouble; const N : Integer) : Float;
+
+    function SumOfSquares(const data : array of Extended) : Float;
+
+    function SumOfSquares(const data : PExtended; const N : Integer) : Float;
+
+  Notee: Sumofsquares returns the sum of the squares of the values in the data 
+                array. The second form of the function accepts a pointer to an array of N 
+                values.
+
+ See: Sum, SumsAndSquares, TotalVariance, Variance

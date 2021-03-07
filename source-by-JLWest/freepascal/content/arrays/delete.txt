@@ -1,0 +1,14 @@
+*M1
+
+  uses ... system;
+
+    procedure Delete(var A : DynArrayType; const Index : Integer;
+                                       const Count: Integer);
+
+   Call: Delete( MyArray, 0 , 1);
+
+  Note: MyArray declared as a  dynamic array. There are 5 items in 
+               MyArray. The 0 item is deleted from the array.  MyArray's
+               Length is adusted.
+
+  See: Insert, ConCat

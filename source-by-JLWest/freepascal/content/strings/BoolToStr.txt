@@ -1,0 +1,11 @@
+*M1
+  uses ... system;
+
+    function BoolToStr(B : Boolean;  UseBoolStrs : Boolean = False) : string;
+
+    function BoolToStr(B : Boolean; const TrueS : string; const FalseS : string) : string;
+
+
+  Note: BoolToStr converts the boolean B to one of the strings 'TRUE' or 'FALSE'
+
+  See: StrToBool

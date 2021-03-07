@@ -1,0 +1,11 @@
+*M1
+
+  uses .... system;
+
+     function sqr(l : LongInt ) : LongInt;
+
+    function sqr(l : Int64) : Int64;
+
+    function sqr(l : QWord) : QWord;
+
+    function sqr(d : ValReal) : ValReal;    

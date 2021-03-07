@@ -1,0 +1,21 @@
+*M1
+
+  uses ... system;
+
+    procedure Reset( var f : file; l : LongInt );
+
+    procedure Reset( var f : file );
+
+    procedure Reset( var f : TypedFile );
+
+    procedure Reset(  var t : Text );
+
+  Note: Reset opens file F for reading. F can be any file type. If F is a text file, 
+             or refers to standard I/O (e.g : '') then it is opened read-only, otherwise 
+             it is opened using the mode specified in filemode.
+
+             If F is an untyped file, the record size can be specified in the optional 
+             parameter L. A default value of 128 is used.
+
+             File sharing is not taken into account when calling Reset. 
+

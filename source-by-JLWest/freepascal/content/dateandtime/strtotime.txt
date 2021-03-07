@@ -1,0 +1,22 @@
+*M1
+
+  uses ... sysutils;
+
+    function StrToTime( const S : Shortstring ) : TDateTime;
+
+    function StrToTime( const S : Ansistring ) : TDateTime;
+
+    function StrToTime( const S : ShortString; separator : Char ) : TDateTime;
+
+    function StrToTime( const S : AnsiString;  separator : Char ) : TDateTime;
+
+    function StrToTime( const S : string;
+                                           FormatSettings : TFormatSettings ) : TDateTime;
+
+    function StrToTime( const S : PChar; Len : Integer; 
+                                           separator : Char = #0 ) : TDateTime;
+
+
+
+
+

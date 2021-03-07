@@ -1,0 +1,30 @@
+*M1
+
+  uses ... fileutil;
+ 
+     procedure FindAllFiles( AList : TStrings; 
+                                                 const SearchPath : String;
+                                                 SearchMask : String = ''; 
+                                                 SearchSubDirs : Boolean = True; 
+                                                 DirAtt : Word = faDirectory); 
+
+    function FindAllFiles(const SearchPath : String; 
+                                             SearchMask : String = '';
+                                            SearchSubDirs : Boolean = True) :  TStringList;
+
+
+    procedure TForm1.LoadFileBox(aFName: String);
+     var  list: TStringList;
+     begin
+       list := FindAllFiles(aFName,'*', False           {don't search in subdirectory});
+       ListBox1.Items := list;
+       list.Free;
+     end;
+    end.
+
+
+
+
+
+
+

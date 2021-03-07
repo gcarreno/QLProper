@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+   function FilenameIsAbsolute(const TheFilename: string):boolean;
+

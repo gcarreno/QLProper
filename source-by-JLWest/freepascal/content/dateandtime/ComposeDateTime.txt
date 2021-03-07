@@ -1,0 +1,7 @@
+*M1
+  uses ... sysutils;
+
+    function ComposeDateTime( Date : TDateTime; Time : TDateTime) : TDateTime;
+
+  Note: ComposeDateTime correctly adds Date and Time, also for dates before 
+              1899-12-31. For dates after this date, it is just the mathematical addition. 

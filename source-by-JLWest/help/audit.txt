@@ -1,0 +1,16 @@
+*M1 audit.txt
+
+ Audit Help
+
+ When the system is in AUDIT 
+ mode the system will validates
+ the location of all the files on the
+ system. Errors are reported on
+ the line next to the 
+'Dataset Errors'.
+ ( Middle left of the form)
+
+    PRESS 'CLEAR' to exit. 
+   
+  This file 'audit.txt' is located in 
+  installdir/help/audit.txt  

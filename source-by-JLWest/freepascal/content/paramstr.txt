@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+    function ParamStr( l : LongInt ) : string;
+
+  Note: Paramstr returns the L-th command-line argument. L must be 
+              between 0 and Paramcount, these values included. The zeroth
+             argument is the path and file name with which the program was started. 
+  See: ParamCount

@@ -1,0 +1,8 @@
+*M1
+
+  user ... system;
+
+   function sqrt(d : ValReal) : ValReal;
+
+  Note: returns the square root of its argument X, which must be positive.
+ 

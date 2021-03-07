@@ -1,0 +1,13 @@
+*M1
+
+ uses ... sysutils;
+
+   procedure DecodeTime( Time : TDateTime;   out Hour : Word;
+                                                     out Minute : Word;   out Second : Word;
+                                                     out MilliSecond : Word );
+
+     Call: DecodeTime(Time,HH,MM,SS,MS);
+  
+     Return HH = 20 , MM = 20, SS = 27, MS = 566 
+
+  See: EncodeDate, DecodeDate                              

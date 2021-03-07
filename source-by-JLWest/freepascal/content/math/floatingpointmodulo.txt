@@ -1,0 +1,9 @@
+*M1
+
+  uses ... math; 
+
+   operator operator mod(const a : Float; const b : Float) : Float;
+
+  Note: Modulus is the floating-point equivalent of the modulo operation a mod b.
+              It returns the result of a-b * Int(a/b)
+  See: FMod

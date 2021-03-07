@@ -1,0 +1,8 @@
+*M1
+
+  uses ... system;
+
+      while Not EOF(M7File) do begin
+           RReal MyFile,LineIN);
+      end; 
+

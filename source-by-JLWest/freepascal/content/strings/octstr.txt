@@ -1,0 +1,12 @@
+*M1
+
+  uses ... system;
+
+    function OctStr(Val: LongInt; cnt: Byte) : shortstring;
+
+    function OctStr(Val: Int64;  cnt: Byte) : shortstring;
+
+    function OctStr(Val: QWord;  cnt: Byte ) : shortstring;
+
+  Note: OctStr returns a string with the octal representation of Value. The string
+              has exactly cnt charaters. 

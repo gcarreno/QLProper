@@ -1,0 +1,13 @@
+*M1
+
+  uses ... classes;
+
+      public function TStringList.IndexOf( const S : string ) : Integer; override;
+
+     Var TList : TStringList; Item : String = 'KPHX';  I : integer;
+
+    Call: i := IndexOf( Item );
+
+    Return i = index of Item if found or -1
+   
+  

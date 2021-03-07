@@ -1,0 +1,19 @@
+*M1
+
+  uses ... system;
+
+    procedure Assert(Expr : Boolean);
+
+    procedure Assert(Expr : Boolean;  const Msg : string);
+
+  Note: With assertions on, Assert tests if expr is false, and if so, aborts the
+              application with a Runtime error 227 and an optional error message
+              in msg. If expr is true, program execution continues normally. If
+              assertions are not enabled at compile time, this routine does
+              nothing, and no code is generated for the Assert call. Enabling and
+              disabling assertions at compile time is done via the \$C or 
+              \$ASSERTIONS compiler switches. These are global switches. The
+              default behavior of the assert call can be changed by setting a new
+              handler in the AssertErrorProc variable. Sysutils overrides the
+              default handler to raise a EAssertionFailed exception. 
+    

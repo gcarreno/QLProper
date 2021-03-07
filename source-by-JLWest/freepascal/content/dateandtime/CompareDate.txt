@@ -1,0 +1,17 @@
+*M1
+
+  uses ... dateutils;
+
+    function CompareDate(const A : TDateTime; const B : TDateTime
+                                             ):TValueRelationship;
+  Arguments
+   A   First date to compare
+   B   Second date to compare
+ 
+  Return  A negative number if date A is before B, zero if they are equal, or  
+                positive if A is after B.
+ 
+  Note: CompareDate compares the date parts of two timestamps A and B 
+  
+  See:  CompareTime, CompareDateTime. Compare 2 dates, SameDate
+           SameTime, SameDateTime

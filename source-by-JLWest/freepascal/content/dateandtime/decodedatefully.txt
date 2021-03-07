@@ -1,0 +1,7 @@
+*M1
+
+ uses ... sysutils;
+
+    function DecodeDateFully(const DateTime : TDateTime;  out Year : Word;
+                                                           out Month : Word;  out Day : Word;
+                                                           out DOW: Word ) : Boolean;

@@ -1,0 +1,52 @@
+*M1
+
+  uses ... system
+
+    procedure Assign( out f : file; const Name : ShortString );
+
+    procedure Assign( out f : file; const p : PAnsiChar );
+
+    procedure Assign( out f : file; const c : AnsiChar );
+
+    procedure Assign( out f : file; const Name : UnicodeString );
+
+    procedure Assign( out f : file; const Name : RawByteString );
+
+    procedure Assign( out f : TypedFile; const Name : shortstring );
+
+    procedure Assign( out f : TypedFile; const p : PAnsiChar );
+
+    procedure Assign( out f: TypedFile; const c: AnsiChar );
+
+    procedure Assign( out f : TypedFile; const Name : unicodestring );
+
+    procedure Assign( out f : TypedFile; const Name : RawByteString );
+
+    procedure Assign( out t : Text; const s : shortstring );
+
+    procedure Assign( out t : Text; const p : PAnsiChar );
+
+    procedure Assign( out t : Text; const c : AnsiChar );
+
+    procedure Assign( out t : Text; const s : unicodestring );
+
+    procedure Assign( out t : Text; const s : RawByteString );
+
+
+    procedure TForm1.ListBoxToFile(AFile : String; ABOX : TListbox);
+      Var i : integer = -1;
+      OutFile : Textfile;
+      Line    : String = '';
+     begin
+       AssignFile( OutFile, AFile );
+      Try
+        Append( OutFile );
+       for i := 0 to ABOX.Items.Count -1 do begin
+              Line := ABOX.Items[i];
+              Line := Trim(Line);
+              WriteLn (Outfile,Line);
+       end;
+        finally
+          CloseFile(OutFile);
+      end;
+    end;

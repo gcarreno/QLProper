@@ -1,0 +1,31 @@
+*M1
+
+  uses ... sysutils;
+
+    function Format( const Fmt : String; const Args : array of Const ) : String;
+
+    function Format( const Fmt : String; const Args : array of Const; 
+                                    const FormatSettings : TFormatSettings ) : String;
+
+
+
+  The formatting rule for each given format specifier is:
+
+    % [ArgumentIndex:] ['-'] [width] [. precision] ArgumentType
+
+  d decimal(integer)      e scientific,            f fixed,         g general.  
+  m money,                      n unmber(float)   p Pointer,    s tring,
+   u unsigned                   x hexadecimal
+
+    Integer Formatting
+
+  %d               as is    
+  %8d            as is padded left if less that 8  
+  %-8             as is padded on right
+  %.8d           as padded on left with zeroes
+
+    String Formatting
+
+  %s              as is
+  %8s           as is space-padded on left right-justified
+  %-8s          as is space-padded on the right left-justified           

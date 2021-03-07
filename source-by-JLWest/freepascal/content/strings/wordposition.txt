@@ -1,0 +1,11 @@
+*M1
+
+  uses ... strutils;
+
+    function WordPosition(const N : Integer; const S : string;
+                                                const WordDelims: TSysCharSet) : SizeInt;
+
+  Note: N   Which word to search for
+              S    String to search in.
+             WordDelims  Characters to be used as word delimiters.
+

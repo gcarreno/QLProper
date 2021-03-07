@@ -1,0 +1,5 @@
+*M1
+
+ uses ... system;
+
+  Function GetForcedPathDelims(Const FileName : string) : String;

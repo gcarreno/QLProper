@@ -1,0 +1,24 @@
+*M1
+
+  uses ... math;
+
+    function MinValue(const data: array of Single) : Single;
+
+    function MinValue(const data : PSingle; const N: Integer) : Single;
+
+    function MinValue(const data : array of Double) : Double;
+
+    function MinValue(const data : PDouble; const N : Integer) : Double;
+
+    function MinValue(const data : array of Extended) : Extended;
+
+    function MinValue(const data : PExtended;  const N: Integer) : Extended;
+
+    function MinValue(const data : array of Integer) : Integer;
+
+    function MinValue(const Data : PInteger; const N : Integer) : Integer;
+
+  Note: Minvalue returns the smallest value in the data array with integer or float 
+              values. The return value has the same type as the elements of the array.
+              The third and fourth forms accept a pointer to an array of N integer or float
+               values. 

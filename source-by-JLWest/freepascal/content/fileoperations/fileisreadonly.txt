@@ -1,0 +1,18 @@
+*M1
+
+  uses ... sysutils;
+
+    function FileIsReadOnly( const FileName : UnicodeString ) : Boolean;
+
+    function FileIsReadOnly( const FileName : RawByteString ) : Boolean;
+
+  See: FileExists
+
+
+     Var Status : Boolean;
+
+    Status := FileIsReadOnly( 'C:\My File' );
+
+    Result Checks if a file exists in the file system and is a read-only file. 
+                Returns true or false.
+

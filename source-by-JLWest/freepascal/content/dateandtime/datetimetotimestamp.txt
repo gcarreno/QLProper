@@ -1,0 +1,5 @@
+*M1
+
+  uses ... sysutils;
+
+    function DateTimeToTimeStamp(DateTime : TDateTime ): TTimeStamp;

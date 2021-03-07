@@ -1,0 +1,5 @@
+*M1
+
+  uses ... system;
+
+    s.Replace('b','t',[rfReplaceAll])

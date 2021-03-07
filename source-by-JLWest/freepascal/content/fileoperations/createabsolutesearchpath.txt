@@ -1,0 +1,10 @@
+*M1
+
+  uaes ... fileutil;
+
+    function CreateAbsoluteSearchPath(const SearchPath, BaseDirectory : string) :
+                                                                         string;
+
+
+
+  

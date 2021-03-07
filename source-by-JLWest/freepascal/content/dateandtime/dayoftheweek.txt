@@ -1,0 +1,12 @@
+*M1
+
+  uses ... dateutil;
+
+    function DayOfTheWeek( const AValue: TDateTime ) :Word;
+
+     Var S : Word;
+
+      Call: S := DayOfTheWeel( Now );
+
+    Return  S := 3 Tested on Wed. 10/28/2020 ;
+  

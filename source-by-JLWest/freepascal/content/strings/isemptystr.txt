@@ -1,0 +1,6 @@
+*M1
+
+  uses ... strutil
+
+    function IsEmptyStr( const S : string;  const EmptyChars: TSysCharSet ) 
+                                       : Boolean;

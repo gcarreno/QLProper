@@ -1,0 +1,24 @@
+*M1
+
+  uses ... system
+
+    procedure Dec( var X : TOrdinal );
+
+    procedure Dec( var X : TOrdinal; Increment : TOrdinal );
+
+  See: Inc
+
+
+     Var i : Integer = 5;
+
+    Call: Dec( i );
+
+    Return i = 4
+
+
+     Var i : Integer = 5;
+
+    Call: Dec( i, 5 );
+
+   Return i = 0
+

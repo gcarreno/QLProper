@@ -1,0 +1,16 @@
+*M1
+
+  uses ... stdctrls;
+
+    function FindInMemo(AMemo : TMemo; AString : String; 
+                                               StartPos :  integer) : integer;
+      var p : integer;
+     begin
+        Result:=PosEx( AString, AMemo.text, StartPos);
+        if Result> 0 then begin
+            p := UTF8Length(PChar(AMemo.Text), Result-1 );
+            AMemo.SelStart:= p;
+            AMemo.SelLength := Length(AString);
+            Result:= Result+Length(AString);
+     end;
+   end;

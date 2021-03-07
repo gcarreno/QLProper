@@ -1,0 +1,24 @@
+*M1
+
+  uses ... system;
+ 
+   procedure Flush( var t : Text );
+  
+
+ procedure TForm1.ListBoxToFile(const AFile : String;const  ABOX : TListbox);
+      var
+       OutFile : Textfile;
+       Line    : String = '';
+     begin
+      AssignFile(OutFile, AFile);
+      Try
+       Rewrite(OutFile);
+       for line in ABox.Items do
+        WriteLn (Outfile,Line.trim);
+      finally
+        Flush(OutFile);                                 // <---- !!! flush() before closing !!!
+        CloseFile(OutFile);
+      end;
+    end;
+
+

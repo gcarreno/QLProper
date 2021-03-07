@@ -1,0 +1,8 @@
+*M1
+
+  uses ... sysutils;
+
+    procedure FileClose( Handle : THandle );
+
+  Example: see Append
+  See: FileCreate, FileWrite, FileOpen, FileRead, FileTruncate, FileSeek

@@ -1,0 +1,26 @@
+*M1
+
+  uses ... system;
+
+     function  AllCharacters(Const aStr : String): Boolean;
+
+
+  Note: Not a FPC function
+
+
+    CONST TheChars = 'A..Z, a..z';
+
+       function  AllCharacters(Const aStr : String): Boolean;
+          Var  
+            Index : Integer = -1;
+            AllChar : Boolean = False; 
+          begin 
+            Index := 1;
+            while Index <= Length(aStr) do 
+             if (aSTR[Index] in TheChars) then  begin  
+            Result  := True;
+             exit;
+           end 
+          else inc(Index);
+         Result := iNumeric;
+      end; 

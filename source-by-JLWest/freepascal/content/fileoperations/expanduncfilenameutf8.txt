@@ -1,0 +1,5 @@
+*M1
+
+  uses ... fileutil;
+
+    function ExpandUNCFileNameUTF8(const FileName : string ) : string;

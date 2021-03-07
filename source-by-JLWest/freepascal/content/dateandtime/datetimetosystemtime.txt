@@ -1,0 +1,6 @@
+*M1
+
+  uses ... sysutils;
+
+    procedure DateTimeToSystemTime(DateTime : TDateTime;
+                                                                              out SystemTime: TSystemTime);

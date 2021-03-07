@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function GetAppConfigDirUTF8(Global: Boolean; Create: boolean = false): string;

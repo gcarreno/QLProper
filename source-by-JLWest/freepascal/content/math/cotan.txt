@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math ;
+
+    function Cotan(x : Float) : Float;
+
+  Note: Cotan returns the cotangent of it's argument x. The argument x must be in 
+              radians. x should be different from zero. 
+
+  See: TanH

@@ -1,0 +1,11 @@
+*M1
+
+  uses ... strutils;
+
+   function ContainsText(const AText : string;
+                                                const ASubText: string ) : Boolean;
+
+  Note: Check whether a string contains a certain substring, ignoring case.
+  See: AnsiContainsText
+
+

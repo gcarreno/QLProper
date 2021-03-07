@@ -1,0 +1,10 @@
+*M1
+
+  uses ... math ;
+
+    function ArcTanH(x : Float) : Float;
+
+  Note: ArcSinH returns the inverse hyperbolic tangent of it's argument x.
+             This function is an alias for ArTanH, provided for Delphi compatibility.
+
+  See: Artanh

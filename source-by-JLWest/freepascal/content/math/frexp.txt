@@ -1,0 +1,7 @@
+*M1
+ 
+  uses ... math 
+
+    procedure Frexp(X :  Float; var Mantissa: Float; var Exponent : Integer
+
+);

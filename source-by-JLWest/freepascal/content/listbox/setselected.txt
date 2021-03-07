@@ -1,0 +1,11 @@
+*M1
+
+  uses ... system;
+
+    if ListBox1.ItemIndex <> -1 then begin
+         Item := ListBox1.Items[ ListBox1.ItemIndex ];
+    end;
+
+    if 'KJFK' was focused in listbox1 then Item would = 'KJFK'. 
+    If nothing had focus Item would be nul or empty.
+

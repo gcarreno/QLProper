@@ -1,0 +1,38 @@
+*M1
+
+  uses ... math;
+
+    procedure MomentSkewKurtosis(const data: array of Single; out m1: Float;
+                                                                     out m2 : Float; out m3 : Float;
+                                                                     out m4: Float;  out skew: Float;                 
+                                                                     out kurtosis: Float);
+
+    procedure MomentSkewKurtosis(const data : PSingle; const N : Integer;
+                                                                     out m1: Float;    out m2: Float;
+                                                                     out m3: Float;    out m4: Float              
+                                                                     out skew: Float; out kurtosis: Float);
+
+     procedure MomentSkewKurtosis(const data : array of Double;
+                                                                      out m1: Float;    out m2: Float;
+                                                                      out m3: Float;    out m4: Float;
+                                                                      out skew: Float; out kurtosis: Float);
+
+    procedure MomentSkewKurtosis(const data : PDouble; const N: Integer;
+                                                                     out m1: Float;    out m2: Float;
+                                                                     out m3: Float;    out m4: Float;
+                                                                     out skew: Float; out kurtosis: Float);
+
+    procedure MomentSkewKurtosis(const data : array of Extended;
+                                                                     out m1: Float;    out m2: Float;
+                                                                     out m3: Float;    out m4: Float;
+                                                                     out skew: Float; out kurtosis: Float);
+
+    procedure MomentSkewKurtosis(const data : PExtended;   const N: Integer;
+                                                                     out m1: Float;     out m2: Float;
+                                                                     out m3: Float;     out m4: Float; 
+                                                                     out skew: Float;  out kurtosis: Float);
+
+  Note: Momentskewkurtosis calculates the 4 first moments of the distribution of  
+              value in data and returns them in m1,m2,m3 and m4, as well as the skew 
+              and kurtosis.
+  See Mean, Meanandstddev

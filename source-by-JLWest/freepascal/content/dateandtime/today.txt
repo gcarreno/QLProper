@@ -1,0 +1,13 @@
+*M1
+
+  uses ... dateUtils;
+
+    function Today : TDateTime;
+
+     Var TDT : TDateTime;
+
+    TDT := Today;
+
+    Returns Current TDateTime.
+
+  See: Date, Time, Now, Tomarrow, Yesterday   

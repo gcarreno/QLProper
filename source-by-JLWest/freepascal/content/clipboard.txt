@@ -1,0 +1,9 @@
+*M1
+
+  uses  ... clipbrd;
+
+     Var S : String;
+
+      Call:  S := Clipboard.AsText;
+  
+  Notes: The contents of the clipboard will be copied to S

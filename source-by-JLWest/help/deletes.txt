@@ -1,0 +1,27 @@
+*M2 deletes.txt
+
+  DELETS Help
+
+  When the system is in Delete
+  mode it will allow the user to 
+  delete an InfoTag or SUB-menu
+  tag.
+
+  To Delete a Main Menu Infotag:
+
+ 1. Click on the Infotag to be 
+      deleted.
+
+  2. Click the 'Delete' button.
+       The Tag Name,directory will 
+       be loaded into the LBSUB
+       listbox and LBX listbox.
+ 
+  3. Click the 'Execute' button. The
+       selected Infotag wil be 
+       deleted.
+
+  Press '*Help to exit.
+
+  This file delete.txt in located
+  in the InstallDir\help\delete.txt.

@@ -1,0 +1,7 @@
+*M1
+
+  uses ... sysutil;
+
+    function strpos(str1 : pchar;  str2: pchar) : pchar;
+
+    function strpos(str1 : pwidechar; str2 : pwidechar) : pwidechar;

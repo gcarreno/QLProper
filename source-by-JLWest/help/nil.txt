@@ -1,0 +1,32 @@
+*M1 nil.txt
+ 
+ Install: 
+
+  Edit the config.txt file located in the install directory to include the path
+  to the install directory and the path to the DataSet(s). 
+  
+     Example:
+
+Instalation                	|c:/ql|                         {Where QuickList.exe is installed}
+MY Phone Book        |c:/phonebook|         {User defined DataSet                  }
+Free Pascal	|d:/freepascal|          {FPC DataSet   -  Provided            }
+
+   unzip freepascal.7z in the D:/freepascal/ directory.
+
+    The freepascal.7z MUST be installed in a different location than the
+    OuickLics.7z.
+
+ After Install and setup:
+  1. click the 'DataSet' button
+  2. cllick the  'Sidebar' button
+  3. Select 'Free Pascal'
+  4. click 'Set'
+
+ All button have a Hint or a specific help file. If a button dosen't show a 
+ hint click on the button followed by the  'Help'  button. A specific  help
+ for the button clicked will be displayed. Until a DataSet is selected and
+ Set most button on the system are locked.
+
+  PRESS 'CLEAR' to exit the Help system 
+
+   This file 'nil.txt' is located in YourInstalldirectory/help/nil.txt

@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+
+    procedure WriteStr(out S: string;  Args: Arguments);
+
+  Note: WriteStr behaves like Write, except that it stores its output in the string
+              variable S instead of a file. Semantically, the WriteStr call is equivalent to        
+              writing the arguments to a file using the Write call, and then reading them
+              into S using the Read call from the same file: 

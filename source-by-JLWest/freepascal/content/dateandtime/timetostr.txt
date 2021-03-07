@@ -1,0 +1,15 @@
+*M1
+
+  uses ... sysutils;
+
+    function TimeToStr( Time : TDateTime ) : string;
+
+    function TimeToStr( Time : TDateTime; const 
+                                             FormatSettings : TFormatSettings ) : string;
+
+
+     Var T : String;
+
+    Call: T := TimeToStr( Time );
+
+    Return T = 10/29/2020.

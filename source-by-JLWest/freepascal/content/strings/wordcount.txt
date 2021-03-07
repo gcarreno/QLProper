@@ -1,0 +1,13 @@
+*M1
+
+  uses ... strutils;
+
+    function WordCount( const S : string; const WordDelims : TSysCharSet ) : SizeInt;
+
+     Var S :  SizeInt; ASting : String = 'This is the string to count'; 
+
+    Call: S :=  Count( AString, [' ']);
+
+    Return  S = 6
+
+ 

@@ -1,0 +1,9 @@
+*M1
+
+  uses ... system;
+  
+    if ListBox1.Items.Count > 0 then begin  
+        i := ListBox1.ItemIndex;
+        if i > -1 then begin  ListBox1.Selected[i] := False; end; 
+    end;
+  

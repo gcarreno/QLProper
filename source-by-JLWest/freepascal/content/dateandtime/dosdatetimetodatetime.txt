@@ -1,0 +1,12 @@
+*M1
+
+  uses ... dateutils;
+
+    function DosDateTimeToDateTime( AValue : LongInt ) : TDateTime;
+
+        Var ALI : LongInt = 1254585;   TDT : TDateTime;
+ 
+    Call:  TDT := DosDateTimeToDateTime( ALI  );
+
+    Return TDT = date and time in TDateTime format;
+

@@ -1,0 +1,11 @@
+*M1
+   
+  uses ... sysutils;
+
+    function CurrentYear: Word;
+
+    Var AYear : Word;
+
+  Call: AYear := CurrentYear;
+
+  Return 2020 

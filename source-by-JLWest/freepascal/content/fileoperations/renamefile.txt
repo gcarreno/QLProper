@@ -1,0 +1,12 @@
+*M1
+
+  uses ... sysutils;
+
+    function RenameFile( const OldName : UnicodeString;
+                                           const NewName : UnicodeString ) : Boolean;
+
+    function RenameFile(const OldName : RawByteString;
+                                         const NewName : RawByteString) : Boolean;
+
+  Note: RenameFile will is not supported  on unix-like OS-es,
+             across partitions

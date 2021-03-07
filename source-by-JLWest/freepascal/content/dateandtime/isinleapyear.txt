@@ -1,0 +1,13 @@
+*M1
+
+  uses ... dateutils;
+
+   function IsInLeapYear( const AValue : TDateTime ) : Boolean;
+
+
+     Var TDT : TDateTime;  Yes : Boolean;
+
+    Call:    Yes := IsInLeapYear( TDT, 4 );
+
+    Return True if TDT value is a leap year otherwise false.
+

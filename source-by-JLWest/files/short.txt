@@ -1,0 +1,31 @@
+*M1
+
+  1.     Click the Data Set button at the bottom of the form.
+                    
+  2.     Click the Sidebar button at the bottom of the form.
+                
+  3.     Select the DataSet in the LBWork listbox.
+           
+  4.     Click the Set button in the button stack. 
+
+  Note: A default DataSet switch can be set in config.txt to auto select the 
+               last DataSet selected on startup.
+
+
+
+  Configuration:
+
+  The QuickList.exe can be installed in a seperate directory from the DataSet
+  allowing for multiple DataSets, Address Book, List of household items, autos, 
+  references.
+
+  This requires a configuration file to be set up pointing to the install of the 
+  exectuable and data.
+
+  My working install:
+
+   D:/QLUI
+      installation.txt
+      mypath.txt
+      short.txt                     {This text file}     
+      

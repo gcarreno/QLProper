@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    procedure Erase(var f : file);
+
+    procedure Erase(var t : Text);

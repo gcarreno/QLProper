@@ -1,0 +1,46 @@
+*M1 new.txt
+
+  NEW Help
+
+  To create a new Infotext items: 
+
+  1. Click the New button
+
+  2. Select the use clause from the
+       Items listbox if needed.
+
+  3. Click the 'Execute' button.
+
+  4. Enter the new tag name in the 
+       enquiry. Click the 'OK'
+       button.
+ 
+ Note: Tag names must start with
+    with a char 'A'..'Z' .. 'a'..'z'. The
+    tag name can cantain spaces
+    'A'..'Z' .. 'a'..'z', '0' .. '9' and '-'.
+
+    .  
+ 
+  The Cancel button is will cancel
+  this operation prior to clicking
+  the 'Execute' button.
+
+  Note: A MAIN tag will have an 
+     Infotext item associated with
+     the tag. A SUB tag will have a
+     Sub-menu or doublex file
+     associated with the tag. 
+        
+     The required  files and infotext 
+     items will be created.
+
+  See: ActiveControl for a MAIN 
+    tag example and Arrays for a 
+    sub-menu example. 
+
+  PRESS '*Help' to exit.
+
+  This file 'new.txt' is located in 
+  InstallDir/help/new.txt
+

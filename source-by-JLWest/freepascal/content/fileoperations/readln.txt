@@ -1,0 +1,7 @@
+*M1
+
+  uses ... system;
+
+    procedure ReadLn(var F: Text; Args: Arguments);
+
+    procedure ReadLn(Args: Arguments);

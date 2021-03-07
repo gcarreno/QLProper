@@ -1,0 +1,6 @@
+*M1
+
+  uses ... strutils;
+
+    function IsWordPresent( const W : string; const S : string;
+                                                    const WordDelims: TSysCharSet ) : Boolean;

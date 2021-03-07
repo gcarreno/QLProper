@@ -1,0 +1,18 @@
+*M1
+ 
+  uses ... Math ;
+
+    function InterestRate( NPeriods: Integer;  APayment: Float;
+                                                APresentValue: Float;  AFutureValue: Float;
+                                                APaymentTime: TPaymentTime) : Float;
+
+  Note: InterestRate calculates the future value of an investment (q) in the cash 
+              flow formula (see CashFlowFunctions). The function result is the interest 
+              rate value in case of a future value AFutureValue for an investment of a start 
+              value APresentValue (PV), where APayment (PMT) is invested for NPeriods 
+              (n).
+                
+              The APaymentTime parameter determines whether the investment 
+              payment) is an ordinary annuity or an annuity due: ptEndOfPeriod must be    
+              used if payments are at the end of each period. If the payments are at the
+              beginning of the periode, ptStartOfPeriod must be used. 

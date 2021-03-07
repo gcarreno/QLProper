@@ -1,0 +1,22 @@
+*M1
+
+  uses ... sysutils;
+
+    function FileOpen( const FileName : unicodestring; Mode : Integer ) : THandle;
+
+    function FileOpen( const FileName : RawByteString; Mode : Integer ) : THandle;
+
+  Mode:
+
+    fmOpenRead                Open file in read-only mode
+    fmOpenWrite               Open file in write-only mode
+    fmOpenReadWrite     Open file in read/write mode 
+
+  Windows/Unix Mode can be Or'ed with:
+    
+  fmShareCompat            Open file in DOS share-compatibility mode
+  fmShareExclusive          Lock file for exclusive use
+  fmShareDenyWrite       Lock file so other processes can only read.
+  fmShareDenyRead        Lock file so other processes cannot read.
+  fmShareDenyNone       Do not lock file. 
+

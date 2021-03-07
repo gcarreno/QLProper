@@ -1,0 +1,5 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FileIsHardLink(const AFilename : string) : boolean;

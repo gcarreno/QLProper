@@ -1,0 +1,11 @@
+*M1
+
+  uses ... math ;
+
+    function Ceil(x : Float) : Integer;
+
+  Noth: Ceil returns the lowest integer number greater than or equal to x. The
+             absolute value of x should be less than maxint. Errors If the 
+             absolute value of x is larger than maxint, an overflow error will occur.
+
+  See: Floor

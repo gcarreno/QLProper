@@ -1,0 +1,12 @@
+*M1
+
+  uses ... sysutils;
+
+    function AnsiCompareStr(const S1 : string;
+                                                       const S2 : string) : Integer;
+
+  Note: Compares two strings and returns the following:
+
+   < 0  if S1<S2
+      0  if S1=S2
+   > 0 if S1>S2

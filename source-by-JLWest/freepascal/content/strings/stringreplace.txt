@@ -1,0 +1,13 @@
+*M1
+
+  uses ... sysutils;
+
+    function StringReplace(const S : string; const OldPattern  : string;
+                                              const NewPattern: string ; Flags: TReplaceFlags 
+                                              out aCount : Integer) : string;
+
+    function StringReplace(const S : string; const OldPattern : string;
+                                              const NewPattern : string;
+                                              Flags : TReplaceFlags) : string;
+
+  See: TReplaceFlags

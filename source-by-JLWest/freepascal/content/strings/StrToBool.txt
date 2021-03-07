@@ -1,0 +1,13 @@
+*M1
+  uses ... sysutils;
+
+    function StrToBool(const S : string) : Boolean;
+
+    function StrToBool(const S : string; const FormatSettings : TFormatSettings
+                                        ):Boolean;
+
+  Note: StrToBool will convert the string S to a boolean value. The string S can
+             contain one of 'True', 'False' (case is ignored) or a numerical value. If it 
+             contains a numerical value, 0 is converted to False, all other values result in 
+             True. If the string S contains no valid boolean, then an EConvertError 
+              exception is raised. 

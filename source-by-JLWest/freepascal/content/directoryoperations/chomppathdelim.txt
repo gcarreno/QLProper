@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazutils;  
+
+    function ChompPathDelim(const Path : string) : string;
+

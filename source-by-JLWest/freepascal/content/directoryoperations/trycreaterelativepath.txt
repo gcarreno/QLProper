@@ -1,0 +1,8 @@
+*M1
+
+  uses ... lazutils;  
+
+  function TryCreateRelativePath(const Dest, Source : String;
+                                                         UsePointDirectory : boolean; 
+                                                         AlwaysRequireSharedBaseFolder : Boolean; 
+                                                         out RelPath : String) : Boolean;

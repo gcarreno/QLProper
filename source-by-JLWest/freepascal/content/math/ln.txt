@@ -1,0 +1,7 @@
+*M1
+
+  uses ... math;
+
+    function ln(d : ValReal) : ValReal;
+
+  Note: Ln returns the natural logarithm of the Real parameter X. X must be positive. 

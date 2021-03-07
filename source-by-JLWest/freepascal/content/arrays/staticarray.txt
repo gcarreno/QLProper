@@ -1,0 +1,29 @@
+*M1
+
+     Var
+
+        ID : array [0..3] of Chars;                   {  Creates a Static array of Chars   }
+
+        ID[ 0 ] := 'A';
+        ID[ 1 ] := 'B'; 
+        ID[ 2 ] := 'C';
+        ID[ 3 ] := 'D'; 
+   
+      
+
+ 
+
+    Var i : Integer; AChar : Char = 'd';
+
+    function TForm1.SearchID( AChar : Char; Out X : CHAR ) : Integer;
+      Var i, S : Integer;
+     begin
+       for i := Low(ID) to High(ID) do begin
+              if LowerCase( AChar )  = LowerCase( ID[ i ] ) then begin
+                  S := i;     X := UpperCase( ID[ i ] );    Break;
+       end;
+      end; 
+         Result := S; 
+     end; 
+
+   Restult S would return   3 , X as the out  parm would contain D.

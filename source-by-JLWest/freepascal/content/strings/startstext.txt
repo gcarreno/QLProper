@@ -1,0 +1,6 @@
+*M1
+
+  uses ... syrutils;
+
+    function StartsText(const ASubText: string;
+                                          const AText: string) : Boolean;

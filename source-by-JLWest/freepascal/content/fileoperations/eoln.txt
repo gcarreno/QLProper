@@ -1,0 +1,10 @@
+*M1
+
+  uses ... system;
+ 
+   function Eoln( var t : Text ) : Boolean;
+
+    function Eoln : Boolean;
+
+  See: EOF, Assign, Reset, Rewrite
+  Note: Returns true if file point detects a ASCII #10.

@@ -1,0 +1,6 @@
+*M1
+
+  uses ... lazfileutils;
+
+    function FindFirstUTF8(const Path: string; Attr: Longint; out Rslt: TSearchRec): 
+                                                 Longint;

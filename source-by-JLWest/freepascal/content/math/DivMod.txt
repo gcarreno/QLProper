@@ -1,0 +1,18 @@
+*M1
+
+  uses ... math ;
+
+    procedure DivMod(Dividend : LongInt; Divisor : Word;  var Result : Word;
+                                        var Remainder: Word);
+
+    procedure DivMod(Dividend : LongInt;  Divisor : Word; var Result : SmallInt;
+                                       var Remainder: SmallInt);
+
+    procedure DivMod(Dividend : DWord; Divisor : DWord; var Result : DWord;
+                                       var Remainder: DWord);
+
+    procedure DivMod(Dividend : LongInt; Divisor : LongInt;  var Result : LongInt;
+                                      var Remainder: LongInt);
+
+  Note: DivMod returns Dividend DIV Divisor in Result, and Dividend MOD Divisor
+             in Remainder

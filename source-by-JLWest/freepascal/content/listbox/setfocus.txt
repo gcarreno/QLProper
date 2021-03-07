@@ -1,0 +1,9 @@
+*M1
+
+  ises ... system;
+
+    SetFocus
+
+    Listbox1.ItemIndex := 0; 
+
+    Result  The first item in listbox1 will receive focus. Listboxes are zero based.

@@ -1,0 +1,21 @@
+*M1
+
+  uses ... stdctrls;
+
+    Memo1.Lines.Add('Add a line directly to Memo1');  
+ 
+     var TheList : TStringList;
+
+  begin   
+    TheList := TStringList.Create;
+    TheList.Add( 'A line of text.' );
+    Memo1.Lines.Assign( TheList );     
+    TheList.Free;   
+  end;      
+
+  Note: TheList is assigned to Memo1.
+ 
+  Item := Memo1.Lines[0];         { Item will = the first line of Memo1}
+
+  
+

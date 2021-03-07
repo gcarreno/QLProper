@@ -1,0 +1,12 @@
+*M1
+
+  uses ... classes;
+
+     public function TStringList.Find( const S : string; 
+                                                                    out Index  : Integer ) : Boolean; virtual;
+
+     Var TList : TstrinList; Idx : Integer; Found : Boolean;
+
+    Call: Found := TList.Find( 'KLAX', IDX );
+
+  Return True if 'KLAX' is found, Idx will = index of 'KLAX' or -1

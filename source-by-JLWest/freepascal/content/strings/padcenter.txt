@@ -1,0 +1,5 @@
+*M1
+
+  uses ... strutils;
+
+  function PadCenter(const S : string; Len : SizeInt) : string;

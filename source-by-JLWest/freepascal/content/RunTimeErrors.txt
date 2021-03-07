@@ -1,0 +1,24 @@
+*M1
+ 
+  uses ... system;
+
+    procedure RunError( w : Word );
+
+  Note: Stops execution of the program, and generates a run-time error
+                
+              The sytem unit handles errors by default by generating a run-time error, 
+              and halting the program with an exit code equal to the run-time error
+              number.
+                     
+              This behaviour changes when the SysUtils unit is used. In that case, all
+              run-time errors are converted to exceptions: most run-time errors have 
+              their own exception class.
+
+              If these exceptions are caught, the program code decides what to do with it.
+              If the exception is not caught, the program will exit through the default           
+              exception handler.
+               
+              When the system unit documentation refers to run-time errors, the above
+              should be kept in mind.
+
+  See; Exit, Halt

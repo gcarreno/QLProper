@@ -1,0 +1,12 @@
+*M1
+
+  uses ... sysutils;
+
+    function ExtractFileExt(const FileName : UNICODESTRING) : UNICODESTRING;
+
+    function ExtractFileExt(const FileName : RAWBYTESTRING) : RAWBYTESTRING;
+ 
+    Note: ExtractFileExt returns the extension (including the .(dot) character) of
+                FileName. 
+    See: CjamgeFileExt, ExtractFileName, ExtractFilePath, DextractFileDir
+             ExtractFileDir, ExtractFileExt, ExtractRelativePath

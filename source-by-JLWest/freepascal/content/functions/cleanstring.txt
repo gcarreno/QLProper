@@ -1,0 +1,22 @@
+*M1
+
+    { #3 = ETX, #4 = EOT, #5=ENQ, #6=ACK, #7=Bell, 
+       #8=BS, #9=HT,  #13, #10, #34=" , #126={, #125=}  }
+
+   function CleanString   ( Const S : String ) : String;
+
+  See: Scrub String
+
+
+   function CleanString   ( Const S : String ) : String;
+      Var  i       :  Integer = -1;
+          AString : Stting = 'procedure Delay('#13#10#13#10'  MS: Word'#13#10#13#10');';
+    begin
+          for i := 1 to LengthAString do  begin
+                 if AString [i] in [#3,#4,#5,#6,#7,#8,#9, #10, #13, #34, #123, #125] then 
+                            AString [i] := ' '; 
+    end;
+    Result  AString ;
+   end;
+
+    Returns  AString = 'procedure Delay(  MS : Word);'

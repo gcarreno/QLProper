@@ -1,0 +1,8 @@
+*M1
+
+  uaes ... sysutils;
+
+    function ExtractFileName( const FileName : UNICODESTRING ) : UNICODESTRING;
+
+    function ExtractFileName( const FileName : RAWBYTESTRING ) : 
+                                                    RAWBYTESTRING;
