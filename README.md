@@ -1,5 +1,10 @@
 # Quick List Proper
 
+[![License](https://img.shields.io/github/license/gcarreno/QLProper)](https://github.com/gcarreno/QLProper/blob/master/LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/gcarreno/QLProper?label=latest%20release)](https://github.com/gcarreno/QLProper/releases)
+[![Downloads](https://img.shields.io/github/downloads/gcarreno/QLProper/total)](https://github.com/gcarreno/QLProper/releases)
+
+
 The polemic Quick List program with original data and more intuitive User Interface.
 
 This all started due to this [post](https://forum.lazarus.freepascal.org/index.php/topic,53571.0.html) on the Lazarus forums under the Beginners section by [JLWest](https://forum.lazarus.freepascal.org/index.php?action=profile;u=61978).
