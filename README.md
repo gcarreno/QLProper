@@ -1,5 +1,6 @@
 # Quick List Proper
 
+[![Build Status](https://github.com/gcarreno/QLProper/workflows/build/badge.svg?branch=master)](https://github.com/gcarreno/QLProper/actions)
 [![License](https://img.shields.io/github/license/gcarreno/QLProper)](https://github.com/gcarreno/QLProper/blob/master/LICENSE)
 [![Latest Release](https://img.shields.io/github/v/release/gcarreno/QLProper?label=latest%20release)](https://github.com/gcarreno/QLProper/releases)
 [![Downloads](https://img.shields.io/github/downloads/gcarreno/QLProper/total)](https://github.com/gcarreno/QLProper/releases)
