@@ -20,12 +20,17 @@ type
     IniPropStorage: TIniPropStorage;
     lbDataSets: TListBox;
     lbMainMenu: TListBox;
+    lbSubMenu: TListBox;
     memData: TMemo;
     mmMain: TMainMenu;
     mnuFile: TMenuItem;
     mnuFileExit: TMenuItem;
     alMain: TActionList;
     actFileExit: TFileExit;
+    panSubMenuTitle: TPanel;
+    psSubMenu: TPairSplitter;
+    pssSubMenuOptions: TPairSplitterSide;
+    pssSubMenuData: TPairSplitterSide;
     panDataSetsTitle: TPanel;
     panMainMenuTitle: TPanel;
     psMainMenu: TPairSplitter;
@@ -37,6 +42,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure lbDataSetsSelectionChange(Sender: TObject; User: boolean);
     procedure lbMainMenuSelectionChange(Sender: TObject; User: boolean);
+    procedure lbSubMenuSelectionChange(Sender: TObject; User: boolean);
   private
     FDataSets: Array of TDataSet;
 
@@ -47,6 +53,7 @@ type
     procedure PopulateDataSets;
     procedure PopulateMainMenu(const ADataSetPath: String);
     procedure LoadMainMenuItem(const AMainMenuItem: String);
+    procedure LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
   public
 
   end;
@@ -88,6 +95,15 @@ begin
   end;
 end;
 
+procedure TfrmMain.lbSubMenuSelectionChange(Sender: TObject; User: boolean);
+begin
+  if lbSubMenu.ItemIndex <> -1 then
+  begin
+    LoadSubMenuItem(lbMainMenu.Items[lbMainMenu.ItemIndex],
+    lbSubMenu.Items[lbSubMenu.ItemIndex]);
+  end;
+end;
+
 procedure TfrmMain.SetPropStorage;
 begin
   IniPropStorage.IniFileName:= GetAppConfigFile(False);
@@ -110,6 +126,7 @@ begin
   // Sometimes the Pair Splitter's Cursor gets fumbled in the IDE
   psDataSets.Cursor:= crHSplit;
   psMainMenu.Cursor:= crHSplit;
+  psSubMenu.Cursor:=  crHSplit;
 end;
 
 procedure TfrmMain.LoadConfig;
@@ -153,13 +170,10 @@ procedure TfrmMain.PopulateMainMenu(const ADataSetPath: String);
 var
   mmFile: String;
 begin
-  if lbDataSets.ItemIndex <> -1 then
+  mmFile:= GetDataSetFilePath(ADataSetPath, cMain_Menu);
+  if FileExists(mmFile) then
   begin
-    mmFile:= GetDataSetFilePath(FDataSets[lbDataSets.ItemIndex].Data, cMain_Menu);
-    if FileExists(mmFile) then
-    begin
-      lbMainMenu.Items.LoadFromFile(mmFile);
-    end;
+    lbMainMenu.Items.LoadFromFile(mmFile);
   end;
 end;
 
@@ -168,13 +182,41 @@ var
   mmItem: String;
 begin
   memData.Clear;
+  lbSubMenu.Clear;
   mmItem:= GetDataSetContentFilePath(FDataSets[lbDataSets.ItemIndex].Data,
     AMainMenuItem);
   if FileExists(mmItem) then
   begin
     memData.Lines.LoadFromFile(mmItem);
+  end
+  else
+  begin
+    mmItem:= GetDataSetDoubleXFilePath(FDataSets[lbDataSets.ItemIndex].Data,
+      AMainMenuItem);
+    if FileExists(mmItem) then
+    begin
+      lbSubMenu.Items.LoadFromFile(mmItem);
+    end
+    else
+    begin
+      memData.Clear;
+      memData.Append('Cannot find any content on this item');
+    end;
   end;
-  //
+end;
+
+procedure TfrmMain.LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
+var
+  smItem: String;
+begin
+  memData.Clear;
+  smItem:= GetDataSetContentSubFilePath(FDataSets[lbDataSets.ItemIndex].Data,
+    AMainMenuItem,
+    ASubMenuItem);
+  if FileExists(smItem) then
+  begin
+    memData.Lines.LoadFromFile(smItem);
+  end
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);

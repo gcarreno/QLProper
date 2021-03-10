@@ -8,7 +8,7 @@ object frmMain: TfrmMain
   ClientWidth = 1037
   Menu = mmMain
   OnCreate = FormCreate
-  SessionProperties = 'Top;Left;Width;Height;WindowState;psDataSets.Position;psMainMenu.Position'
+  SessionProperties = 'Height;Left;psDataSets.Position;psMainMenu.Position;Top;Width;WindowState;psSubMenu.Position'
   object psDataSets: TPairSplitter
     Left = 0
     Height = 348
@@ -99,15 +99,62 @@ object frmMain: TfrmMain
           Width = 727
           ClientWidth = 727
           ClientHeight = 348
-          object memData: TMemo
+          object psSubMenu: TPairSplitter
             Left = 0
             Height = 348
             Top = 0
             Width = 727
             Align = alClient
-            ReadOnly = True
-            ScrollBars = ssAutoVertical
-            TabOrder = 0
+            Position = 150
+            object pssSubMenuOptions: TPairSplitterSide
+              Cursor = crArrow
+              Left = 0
+              Height = 348
+              Top = 0
+              Width = 150
+              ClientWidth = 150
+              ClientHeight = 348
+              object panSubMenuTitle: TPanel
+                Left = 0
+                Height = 26
+                Top = 0
+                Width = 150
+                Align = alTop
+                Caption = 'Sub Menu'
+                TabOrder = 0
+              end
+              object lbSubMenu: TListBox
+                Left = 0
+                Height = 322
+                Top = 26
+                Width = 150
+                Align = alClient
+                ItemHeight = 0
+                OnSelectionChange = lbSubMenuSelectionChange
+                ScrollWidth = 148
+                TabOrder = 1
+                TopIndex = -1
+              end
+            end
+            object pssSubMenuData: TPairSplitterSide
+              Cursor = crArrow
+              Left = 155
+              Height = 348
+              Top = 0
+              Width = 572
+              ClientWidth = 572
+              ClientHeight = 348
+              object memData: TMemo
+                Left = 0
+                Height = 348
+                Top = 0
+                Width = 572
+                Align = alClient
+                ReadOnly = True
+                ScrollBars = ssAutoVertical
+                TabOrder = 0
+              end
+            end
           end
         end
       end
