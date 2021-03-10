@@ -53,6 +53,7 @@ type
     procedure PopulateDataSets;
     procedure PopulateMainMenu(const ADataSetPath: String);
     procedure LoadMainMenuItem(const AMainMenuItem: String);
+    procedure PopulateSubMenu(const ASubMenuItemsFile: String);
     procedure LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
   public
 
@@ -83,6 +84,9 @@ procedure TfrmMain.lbDataSetsSelectionChange(Sender: TObject; User: boolean);
 begin
   if lbDataSets.ItemIndex <> -1 then
   begin
+    lbMainMenu.Clear;
+    lbSubMenu.Clear;
+    memData.Clear;
     PopulateMainMenu(FDataSets[lbDataSets.ItemIndex].Data);
   end;
 end;
@@ -195,7 +199,7 @@ begin
       AMainMenuItem);
     if FileExists(mmItem) then
     begin
-      lbSubMenu.Items.LoadFromFile(mmItem);
+      PopulateSubMenu(mmItem);
     end
     else
     begin
@@ -203,6 +207,11 @@ begin
       memData.Append('Cannot find any content on this item');
     end;
   end;
+end;
+
+procedure TfrmMain.PopulateSubMenu(const ASubMenuItemsFile: String);
+begin
+  lbSubMenu.Items.LoadFromFile(ASubMenuItemsFile);
 end;
 
 procedure TfrmMain.LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
