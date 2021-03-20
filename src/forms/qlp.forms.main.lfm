@@ -2,10 +2,10 @@ object frmMain: TfrmMain
   Left = 333
   Height = 348
   Top = 250
-  Width = 1037
+  Width = 973
   Caption = 'frmMain'
   ClientHeight = 348
-  ClientWidth = 1037
+  ClientWidth = 973
   Menu = mmMain
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
@@ -15,7 +15,7 @@ object frmMain: TfrmMain
     Left = 0
     Height = 348
     Top = 0
-    Width = 1037
+    Width = 973
     Align = alClient
     Position = 150
     object pssDataSetsOptions: TPairSplitterSide
@@ -66,7 +66,7 @@ object frmMain: TfrmMain
           ShowHint = True
           ParentShowHint = False
         end
-        object sbFileRemoveDataset: TSpeedButton
+        object sbtnFileRemoveDataset: TSpeedButton
           Left = 32
           Height = 22
           Top = 4
@@ -83,14 +83,14 @@ object frmMain: TfrmMain
       Left = 155
       Height = 348
       Top = 0
-      Width = 882
-      ClientWidth = 882
+      Width = 818
+      ClientWidth = 818
       ClientHeight = 348
       object psMainMenu: TPairSplitter
         Left = 0
         Height = 348
         Top = 0
-        Width = 882
+        Width = 818
         Align = alClient
         Position = 150
         object pssMainMenuOptions: TPairSplitterSide
@@ -103,8 +103,8 @@ object frmMain: TfrmMain
           ClientHeight = 348
           object lbOptions: TListBox
             Left = 0
-            Height = 324
-            Top = 24
+            Height = 294
+            Top = 54
             Width = 150
             Align = alClient
             ItemHeight = 0
@@ -122,20 +122,50 @@ object frmMain: TfrmMain
             Caption = 'Options'
             TabOrder = 1
           end
+          object panOptionsButtons: TPanel
+            Left = 0
+            Height = 30
+            Top = 24
+            Width = 150
+            Align = alTop
+            ClientHeight = 30
+            ClientWidth = 150
+            TabOrder = 2
+            object sbtnOptionsAdd: TSpeedButton
+              Left = 4
+              Height = 22
+              Top = 4
+              Width = 23
+              Action = actOptionsAdd
+              ShowCaption = False
+              ShowHint = True
+              ParentShowHint = False
+            end
+            object sbtnOptionsRemove: TSpeedButton
+              Left = 32
+              Height = 22
+              Top = 4
+              Width = 23
+              Action = actOptionsRemove
+              ShowCaption = False
+              ShowHint = True
+              ParentShowHint = False
+            end
+          end
         end
         object pssMainMenuData: TPairSplitterSide
           Cursor = crArrow
           Left = 155
           Height = 348
           Top = 0
-          Width = 727
-          ClientWidth = 727
+          Width = 663
+          ClientWidth = 663
           ClientHeight = 348
           object psSubMenu: TPairSplitter
             Left = 0
             Height = 348
             Top = 0
-            Width = 727
+            Width = 663
             Align = alClient
             Position = 150
             object pssSubMenuOptions: TPairSplitterSide
@@ -157,8 +187,8 @@ object frmMain: TfrmMain
               end
               object lbSubOptions: TListBox
                 Left = 0
-                Height = 322
-                Top = 26
+                Height = 292
+                Top = 56
                 Width = 150
                 Align = alClient
                 ItemHeight = 0
@@ -167,21 +197,52 @@ object frmMain: TfrmMain
                 TabOrder = 1
                 TopIndex = -1
               end
+              object panSubOptionsButtons: TPanel
+                Left = 0
+                Height = 30
+                Top = 26
+                Width = 150
+                Align = alTop
+                ClientHeight = 30
+                ClientWidth = 150
+                TabOrder = 2
+                object sbtnSubOptionsAdd: TSpeedButton
+                  Left = 4
+                  Height = 22
+                  Top = 4
+                  Width = 23
+                  Action = actSubOptionsAdd
+                  ShowCaption = False
+                  ShowHint = True
+                  ParentShowHint = False
+                end
+                object sbtnSubOptionsRemove: TSpeedButton
+                  Left = 32
+                  Height = 22
+                  Top = 4
+                  Width = 23
+                  Action = actSubOptionsRemove
+                  ShowCaption = False
+                  ShowHint = True
+                  ParentShowHint = False
+                end
+              end
             end
             object pssSubMenuData: TPairSplitterSide
               Cursor = crArrow
               Left = 155
               Height = 348
               Top = 0
-              Width = 572
-              ClientWidth = 572
+              Width = 508
+              ClientWidth = 508
               ClientHeight = 348
               object memData: TMemo
                 Left = 0
-                Height = 315
-                Top = 33
-                Width = 572
+                Height = 291
+                Top = 57
+                Width = 508
                 Align = alClient
+                OnChange = memDataChange
                 ReadOnly = True
                 ScrollBars = ssAutoVertical
                 TabOrder = 0
@@ -189,11 +250,11 @@ object frmMain: TfrmMain
               object panDataButtons: TPanel
                 Left = 0
                 Height = 33
-                Top = 0
-                Width = 572
+                Top = 24
+                Width = 508
                 Align = alTop
                 ClientHeight = 33
-                ClientWidth = 572
+                ClientWidth = 508
                 TabOrder = 1
                 object btnDataEdit: TButton
                   Left = 4
@@ -211,6 +272,23 @@ object frmMain: TfrmMain
                   Action = actDataSave
                   TabOrder = 1
                 end
+                object btnDataCancel: TButton
+                  Left = 156
+                  Height = 25
+                  Top = 4
+                  Width = 75
+                  Action = actDataCancel
+                  TabOrder = 2
+                end
+              end
+              object panDataTitle: TPanel
+                Left = 0
+                Height = 24
+                Top = 0
+                Width = 508
+                Align = alTop
+                Caption = 'Data'
+                TabOrder = 2
               end
             end
           end
@@ -238,9 +316,21 @@ object frmMain: TfrmMain
     end
     object mnuOptions: TMenuItem
       Caption = '&Options'
+      object mnuOptionsAdd: TMenuItem
+        Action = actOptionsAdd
+      end
+      object mnuOptionsRemove: TMenuItem
+        Action = actOptionsRemove
+      end
     end
     object mnuSubOptions: TMenuItem
       Caption = '&Sub Options'
+      object mnuSubOptionsAdd: TMenuItem
+        Action = actSubOptionsAdd
+      end
+      object mnuSubOptionsRemove: TMenuItem
+        Action = actSubOptionsRemove
+      end
     end
     object mnuData: TMenuItem
       Caption = '&Data'
@@ -249,6 +339,9 @@ object frmMain: TfrmMain
       end
       object mnuDataSave: TMenuItem
         Action = actDataSave
+      end
+      object mnuDataCancel: TMenuItem
+        Action = actDataCancel
       end
     end
   end
@@ -285,6 +378,36 @@ object frmMain: TfrmMain
       Caption = '&Save'
       OnExecute = actDataSaveExecute
       ShortCut = 16467
+    end
+    object actDataCancel: TAction
+      Category = 'Data'
+      Caption = '&Cancel'
+      OnExecute = actDataCancelExecute
+      ShortCut = 27
+    end
+    object actOptionsAdd: TAction
+      Category = 'Options'
+      Caption = '&Add Option'
+      ImageIndex = 0
+      ShortCut = 8237
+    end
+    object actOptionsRemove: TAction
+      Category = 'Options'
+      Caption = '&Remove Option'
+      ImageIndex = 1
+      ShortCut = 8238
+    end
+    object actSubOptionsAdd: TAction
+      Category = 'SubOptions'
+      Caption = '&Add Sub Option'
+      ImageIndex = 0
+      ShortCut = 16429
+    end
+    object actSubOptionsRemove: TAction
+      Category = 'SubOptions'
+      Caption = '&Remove Sub Option'
+      ImageIndex = 1
+      ShortCut = 16430
     end
   end
   object IniPropStorage: TIniPropStorage

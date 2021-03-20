@@ -20,14 +20,25 @@ type
     actFileRemoveDataset: TAction;
     actDataEdit: TAction;
     actDataSave: TAction;
+    actDataCancel: TAction;
+    actSubOptionsRemove: TAction;
+    actSubOptionsAdd: TAction;
+    actOptionsRemove: TAction;
+    actOptionsAdd: TAction;
     btnDataEdit: TButton;
     btnDataSave: TButton;
+    btnDataCancel: TButton;
     imMain: TImageList;
     IniPropStorage: TIniPropStorage;
     lbDataSets: TListBox;
     lbOptions: TListBox;
     lbSubOptions: TListBox;
     memData: TMemo;
+    mnuOptionsAdd: TMenuItem;
+    mnuOptionsRemove: TMenuItem;
+    mnuSubOptionsAdd: TMenuItem;
+    mnuSubOptionsRemove: TMenuItem;
+    mnuDataCancel: TMenuItem;
     mnuData: TMenuItem;
     mnuDataEdit: TMenuItem;
     mnuDataSave: TMenuItem;
@@ -43,6 +54,9 @@ type
     actFileExit: TFileExit;
     panDatasetButtons: TPanel;
     panDataButtons: TPanel;
+    panDataTitle: TPanel;
+    panOptionsButtons: TPanel;
+    panSubOptionsButtons: TPanel;
     panSubOptionsTitle: TPanel;
     psSubMenu: TPairSplitter;
     pssSubMenuOptions: TPairSplitterSide;
@@ -55,8 +69,13 @@ type
     psDataSets: TPairSplitter;
     pssDataSetsOptions: TPairSplitterSide;
     pssDataSetsData: TPairSplitterSide;
+    sbtnSubOptionsAdd: TSpeedButton;
+    sbtnOptionsRemove: TSpeedButton;
     sbtnFileAddDataset: TSpeedButton;
-    sbFileRemoveDataset: TSpeedButton;
+    sbtnFileRemoveDataset: TSpeedButton;
+    sbtnOptionsAdd: TSpeedButton;
+    sbtnSubOptionsRemove: TSpeedButton;
+    procedure actDataCancelExecute(Sender: TObject);
     procedure actDataEditExecute(Sender: TObject);
     procedure actDataSaveExecute(Sender: TObject);
     procedure actFileAddDatasetExecute(Sender: TObject);
@@ -68,9 +87,11 @@ type
     procedure lbDataSetsSelectionChange(Sender: TObject; User: boolean);
     procedure lbOptionsSelectionChange(Sender: TObject; User: boolean);
     procedure lbSubOptionsSelectionChange(Sender: TObject; User: boolean);
+    procedure memDataChange(Sender: TObject);
   private
     FDataSets: array of TDataSet;
     FContentPresent: Boolean;
+    FContentModified: Boolean;
     FContentFilename: String;
     FEditing: Boolean;
 
@@ -102,7 +123,7 @@ uses
 
 const
   cApplicationName = 'QLProper';
-  cVersion = '0.4.0.7';
+  cVersion = '0.4.0.9';
   cIniFilename = 'qlproper.ini';
   cIniSection = 'Application';
   cDataSetsDataFolder = 'DataFolder';
@@ -139,6 +160,14 @@ begin
   begin
     LoadSubOptionsItem(lbOptions.Items[lbOptions.ItemIndex],
     lbSubOptions.Items[lbSubOptions.ItemIndex]);
+  end;
+end;
+
+procedure TfrmMain.memDataChange(Sender: TObject);
+begin
+  if FEditing then
+  begin
+    FContentModified:= True;
   end;
 end;
 
@@ -299,6 +328,7 @@ begin
   Caption:= Format('%s v%s', [cApplicationName, cVersion]);
   FEditing:= False;
   FContentPresent:= False;
+  FContentModified:= False;
   FContentFilename:= '';
   SetPropStorage;
   SetShortcuts;
@@ -368,12 +398,24 @@ begin
   memData.SetFocus;
 end;
 
+procedure TfrmMain.actDataCancelExecute(Sender: TObject);
+begin
+  memData.Lines.LoadFromFile(FContentFilename);
+  FEditing:= False;
+  FContentModified:= False;
+  pssDataSetsOptions.Enabled:= True;
+  pssMainMenuOptions.Enabled:= True;
+  pssSubMenuOptions.Enabled:= True;
+  memData.ReadOnly:= True;
+end;
+
 procedure TfrmMain.actDataSaveExecute(Sender: TObject);
 begin
   try
     memData.Lines.SaveToFile(FContentFilename);
   finally
     FEditing:= False;
+    FContentModified:= False;
     pssDataSetsOptions.Enabled:= True;
     pssMainMenuOptions.Enabled:= True;
     pssSubMenuOptions.Enabled:= True;
@@ -424,7 +466,13 @@ begin
   end;
   if AAction = actDataSave then
   begin
-    actDataSave.Enabled:= FEditing;
+    actDataSave.Enabled:= FEditing and FContentModified;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actDataCancel then
+  begin
+    actDataCancel.Enabled:= FEditing;
     Handled:= True;
     exit;
   end;
