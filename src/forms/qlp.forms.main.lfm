@@ -3,7 +3,7 @@ object frmMain: TfrmMain
   Height = 348
   Top = 250
   Width = 1037
-  Caption = 'Quick List'
+  Caption = 'frmMain'
   ClientHeight = 348
   ClientWidth = 1037
   Menu = mmMain
@@ -101,14 +101,14 @@ object frmMain: TfrmMain
           Width = 150
           ClientWidth = 150
           ClientHeight = 348
-          object lbMainMenu: TListBox
+          object lbOptions: TListBox
             Left = 0
             Height = 324
             Top = 24
             Width = 150
             Align = alClient
             ItemHeight = 0
-            OnSelectionChange = lbMainMenuSelectionChange
+            OnSelectionChange = lbOptionsSelectionChange
             ScrollWidth = 148
             TabOrder = 0
             TopIndex = -1
@@ -155,14 +155,14 @@ object frmMain: TfrmMain
                 Caption = 'Sub Options'
                 TabOrder = 0
               end
-              object lbSubMenu: TListBox
+              object lbSubOptions: TListBox
                 Left = 0
                 Height = 322
                 Top = 26
                 Width = 150
                 Align = alClient
                 ItemHeight = 0
-                OnSelectionChange = lbSubMenuSelectionChange
+                OnSelectionChange = lbSubOptionsSelectionChange
                 ScrollWidth = 148
                 TabOrder = 1
                 TopIndex = -1
@@ -178,13 +178,39 @@ object frmMain: TfrmMain
               ClientHeight = 348
               object memData: TMemo
                 Left = 0
-                Height = 348
-                Top = 0
+                Height = 315
+                Top = 33
                 Width = 572
                 Align = alClient
                 ReadOnly = True
                 ScrollBars = ssAutoVertical
                 TabOrder = 0
+              end
+              object panDataButtons: TPanel
+                Left = 0
+                Height = 33
+                Top = 0
+                Width = 572
+                Align = alTop
+                ClientHeight = 33
+                ClientWidth = 572
+                TabOrder = 1
+                object btnDataEdit: TButton
+                  Left = 4
+                  Height = 25
+                  Top = 4
+                  Width = 75
+                  Action = actDataEdit
+                  TabOrder = 0
+                end
+                object btnDataSave: TButton
+                  Left = 80
+                  Height = 25
+                  Top = 4
+                  Width = 75
+                  Action = actDataSave
+                  TabOrder = 1
+                end
               end
             end
           end
@@ -216,6 +242,15 @@ object frmMain: TfrmMain
     object mnuSubOptions: TMenuItem
       Caption = '&Sub Options'
     end
+    object mnuData: TMenuItem
+      Caption = '&Data'
+      object mnuDataEdit: TMenuItem
+        Action = actDataEdit
+      end
+      object mnuDataSave: TMenuItem
+        Action = actDataSave
+      end
+    end
   end
   object alMain: TActionList
     Images = imMain
@@ -239,6 +274,18 @@ object frmMain: TfrmMain
       Caption = 'E&xit'
       Hint = 'Exit'
     end
+    object actDataEdit: TAction
+      Category = 'Data'
+      Caption = '&Edit'
+      OnExecute = actDataEditExecute
+      ShortCut = 16453
+    end
+    object actDataSave: TAction
+      Category = 'Data'
+      Caption = '&Save'
+      OnExecute = actDataSaveExecute
+      ShortCut = 16467
+    end
   end
   object IniPropStorage: TIniPropStorage
     StoredValues = <>
@@ -250,9 +297,22 @@ object frmMain: TfrmMain
     Left = 912
     Top = 288
     Bitmap = {
-      4C7A020000001000000010000000410000000000000078DA6360C001FE33F000
-      310CF230900A46F513A7FF3F033F0E2C85A45F0A8FBA818694B97F34FD0C4EFD
-      A3804EE03F1F85F83F85F8376578140C650000ED60FE95
+      4C7A020000001000000010000000D50100000000000078DAB593CD2B445118C6
+      AF32E3667C6CFC13164A666181624121F94EB32016444923251165362C944858
+      188944A4A6148592284A64C142592929498A3B3E528F790FE776E638472EB9F5
+      ABF3BECF3CCF3973DE7BFD8661F8FF815E9C8218C539C3A9BF192748C10662C3
+      2BA0B56BBECC51460EF610773303D7ED3C2A7088D8D92247FEA4932198D75330
+      2F27918A6DC404F37FECA7DF923FFE629441E7A09E2EC33CEE8FEC13949884E7
+      6CC446D62993FB1376FBD87EC9478351244AB588E77CCCF67BB6BB90BC1F7004
+      6573BF6BA90632E6562B28376EA703E641F717DD1DAAFBF63EDD6B8D2C83A00C
+      A33BCBD1FCD81956EBD93EE67A93737FE47D732F567E10C970EAA759D33B4750
+      D66FFC22FE7FFA4E0118FC49CFDD0361681E59272FF7537F6337CC5065A874EE
+      A73AB46921ADF08A416B3143A78BFE85550B1925D73654F3F3EA34E1FC5EAAA7
+      971F91597E6343B5AAF77936AFF8FF79C6C49C85ECEA5B25A471AF7C7F62C670
+      D0429EEF2E0AEA895E8D9FDDC5E0781805B5F751504F9E8BEC273D30124671C3
+      8312D2BE9B7FCFD0134A1B2D1BAA553DD5FC3B079E51D5F26443359F9F4E13FD
+      ED8157F8DA5E18B416EECAABD3E5F9B7F6BD31E47BD6E9AAF92BBC5A5D357F8D
+      57A973FF5F7807FBEE2778
     }
   end
 end

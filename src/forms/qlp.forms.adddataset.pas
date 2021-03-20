@@ -5,16 +5,15 @@ unit QLP.Forms.AddDataset;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons,
-  StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons;
 
 type
 
   { TfrmAddDataset }
 
   TfrmAddDataset = class(TForm)
-    btnOk: TButton;
-    btnCancel: TButton;
+    btnCancel: TBitBtn;
+    btnOk: TBitBtn;
     ledtName: TLabeledEdit;
     ledtPath: TLabeledEdit;
     sbtnSelectFolder: TSpeedButton;

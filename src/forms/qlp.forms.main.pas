@@ -1,7 +1,6 @@
 unit QLP.Forms.Main;
 
 {$mode objfpc}{$H+}
-
 interface
 
 uses
@@ -19,12 +18,19 @@ type
   TfrmMain = class(TForm)
     actFileAddDataset: TAction;
     actFileRemoveDataset: TAction;
+    actDataEdit: TAction;
+    actDataSave: TAction;
+    btnDataEdit: TButton;
+    btnDataSave: TButton;
     imMain: TImageList;
     IniPropStorage: TIniPropStorage;
     lbDataSets: TListBox;
-    lbMainMenu: TListBox;
-    lbSubMenu: TListBox;
+    lbOptions: TListBox;
+    lbSubOptions: TListBox;
     memData: TMemo;
+    mnuData: TMenuItem;
+    mnuDataEdit: TMenuItem;
+    mnuDataSave: TMenuItem;
     mnuFileRemoveDataset: TMenuItem;
     mnuOptions: TMenuItem;
     mnuSubOptions: TMenuItem;
@@ -36,6 +42,7 @@ type
     alMain: TActionList;
     actFileExit: TFileExit;
     panDatasetButtons: TPanel;
+    panDataButtons: TPanel;
     panSubOptionsTitle: TPanel;
     psSubMenu: TPairSplitter;
     pssSubMenuOptions: TPairSplitterSide;
@@ -50,6 +57,8 @@ type
     pssDataSetsData: TPairSplitterSide;
     sbtnFileAddDataset: TSpeedButton;
     sbFileRemoveDataset: TSpeedButton;
+    procedure actDataEditExecute(Sender: TObject);
+    procedure actDataSaveExecute(Sender: TObject);
     procedure actFileAddDatasetExecute(Sender: TObject);
     procedure actFileRemoveDatasetExecute(Sender: TObject);
     procedure alMainUpdate(AAction: TBasicAction; var Handled: Boolean);
@@ -57,10 +66,13 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure lbDataSetsSelectionChange(Sender: TObject; User: boolean);
-    procedure lbMainMenuSelectionChange(Sender: TObject; User: boolean);
-    procedure lbSubMenuSelectionChange(Sender: TObject; User: boolean);
+    procedure lbOptionsSelectionChange(Sender: TObject; User: boolean);
+    procedure lbSubOptionsSelectionChange(Sender: TObject; User: boolean);
   private
     FDataSets: array of TDataSet;
+    FContentPresent: Boolean;
+    FContentFilename: String;
+    FEditing: Boolean;
 
     procedure SetPropStorage;
     procedure SetShortcuts;
@@ -69,9 +81,9 @@ type
     procedure SaveConfig;
     procedure PopulateDataSets;
     procedure PopulateMainMenu(const ADataSetPath: String);
-    procedure LoadMainMenuItem(const AMainMenuItem: String);
+    procedure LoadOptionsItem(const AMainMenuItem: String);
     procedure PopulateSubMenu(const ASubMenuItemsFile: String);
-    procedure LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
+    procedure LoadSubOptionsItem(const AMainMenuItem, ASubMenuItem: String);
   public
 
   end;
@@ -83,13 +95,14 @@ implementation
 
 uses
   LCLType
-//, StrUtils
 , IniFiles
 , QLP.Utils.Helpers
 , QLP.Forms.AddDataset
 ;
 
 const
+  cApplicationName = 'QLProper';
+  cVersion = '0.4.0.7';
   cIniFilename = 'qlproper.ini';
   cIniSection = 'Application';
   cDataSetsDataFolder = 'DataFolder';
@@ -103,27 +116,29 @@ procedure TfrmMain.lbDataSetsSelectionChange(Sender: TObject; User: boolean);
 begin
   if lbDataSets.ItemIndex <> -1 then
   begin
-    lbMainMenu.Clear;
-    lbSubMenu.Clear;
+    FContentPresent:= False;
+    FContentFilename:= '';
+    lbOptions.Clear;
+    lbSubOptions.Clear;
     memData.Clear;
     PopulateMainMenu(FDataSets[lbDataSets.ItemIndex].DataFolder);
   end;
 end;
 
-procedure TfrmMain.lbMainMenuSelectionChange(Sender: TObject; User: boolean);
+procedure TfrmMain.lbOptionsSelectionChange(Sender: TObject; User: boolean);
 begin
-  if lbMainMenu.ItemIndex <> -1 then
+  if lbOptions.ItemIndex <> -1 then
   begin
-    LoadMainMenuItem(lbMainMenu.Items[lbMainMenu.ItemIndex]);
+    LoadOptionsItem(lbOptions.Items[lbOptions.ItemIndex]);
   end;
 end;
 
-procedure TfrmMain.lbSubMenuSelectionChange(Sender: TObject; User: boolean);
+procedure TfrmMain.lbSubOptionsSelectionChange(Sender: TObject; User: boolean);
 begin
-  if lbSubMenu.ItemIndex <> -1 then
+  if lbSubOptions.ItemIndex <> -1 then
   begin
-    LoadSubMenuItem(lbMainMenu.Items[lbMainMenu.ItemIndex],
-    lbSubMenu.Items[lbSubMenu.ItemIndex]);
+    LoadSubOptionsItem(lbOptions.Items[lbOptions.ItemIndex],
+    lbSubOptions.Items[lbSubOptions.ItemIndex]);
   end;
 end;
 
@@ -222,21 +237,24 @@ begin
   mmFile:= GetDataSetFilesFilePath(ADataSetPath, cMain_Menu);
   if FileExists(mmFile) then
   begin
-    lbMainMenu.Items.LoadFromFile(mmFile);
+    lbOptions.Items.LoadFromFile(mmFile);
   end;
 end;
 
-procedure TfrmMain.LoadMainMenuItem(const AMainMenuItem: String);
+procedure TfrmMain.LoadOptionsItem(const AMainMenuItem: String);
 var
   mmItem: String;
 begin
+  FContentPresent:= False;
   memData.Clear;
-  lbSubMenu.Clear;
+  lbSubOptions.Clear;
   mmItem:= GetDataSetContentFilePath(FDataSets[lbDataSets.ItemIndex].DataFolder,
     AMainMenuItem);
   if FileExists(mmItem) then
   begin
     memData.Lines.LoadFromFile(mmItem);
+    FContentPresent:= True;
+    FContentFilename:= mmItem;
   end
   else
   begin
@@ -256,13 +274,14 @@ end;
 
 procedure TfrmMain.PopulateSubMenu(const ASubMenuItemsFile: String);
 begin
-  lbSubMenu.Items.LoadFromFile(ASubMenuItemsFile);
+  lbSubOptions.Items.LoadFromFile(ASubMenuItemsFile);
 end;
 
-procedure TfrmMain.LoadSubMenuItem(const AMainMenuItem, ASubMenuItem: String);
+procedure TfrmMain.LoadSubOptionsItem(const AMainMenuItem, ASubMenuItem: String);
 var
   smItem: String;
 begin
+  FContentPresent:= False;
   memData.Clear;
   smItem:= GetDataSetContentSubFilePath(FDataSets[lbDataSets.ItemIndex].DataFolder,
     AMainMenuItem,
@@ -270,11 +289,17 @@ begin
   if FileExists(smItem) then
   begin
     memData.Lines.LoadFromFile(smItem);
+    FContentPresent:= True;
+    FContentFilename:= smItem;
   end
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  Caption:= Format('%s v%s', [cApplicationName, cVersion]);
+  FEditing:= False;
+  FContentPresent:= False;
+  FContentFilename:= '';
   SetPropStorage;
   SetShortcuts;
   CorrectPaiSplitterCursor;
@@ -333,6 +358,29 @@ begin
   end;
 end;
 
+procedure TfrmMain.actDataEditExecute(Sender: TObject);
+begin
+  FEditing:= True;
+  pssDataSetsOptions.Enabled:= False;
+  pssMainMenuOptions.Enabled:= False;
+  pssSubMenuOptions.Enabled:= False;
+  memData.ReadOnly:= False;
+  memData.SetFocus;
+end;
+
+procedure TfrmMain.actDataSaveExecute(Sender: TObject);
+begin
+  try
+    memData.Lines.SaveToFile(FContentFilename);
+  finally
+    FEditing:= False;
+    pssDataSetsOptions.Enabled:= True;
+    pssMainMenuOptions.Enabled:= True;
+    pssSubMenuOptions.Enabled:= True;
+    memData.ReadOnly:= True;
+  end;
+end;
+
 procedure TfrmMain.actFileRemoveDatasetExecute(Sender: TObject);
 var
   mResult: Integer;
@@ -362,7 +410,24 @@ end;
 
 procedure TfrmMain.alMainUpdate(AAction: TBasicAction; var Handled: Boolean);
 begin
-  actFileRemoveDataset.Enabled:= lbDataSets.ItemIndex <> -1;
+  if AAction = actFileRemoveDataset then
+  begin
+    actFileRemoveDataset.Enabled:= lbDataSets.ItemIndex <> -1;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actDataEdit then
+  begin
+    actDataEdit.Enabled:= (not FEditing) and (FContentPresent);
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actDataSave then
+  begin
+    actDataSave.Enabled:= FEditing;
+    Handled:= True;
+    exit;
+  end;
 end;
 
 procedure TfrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
