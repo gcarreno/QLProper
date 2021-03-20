@@ -15,5 +15,5 @@ After some back and forth and me being a bit of a dick, I decided to put some ef
 This is the result of it.
 
 # Screenshots
-![Linux-Image1](screenshots/qproper-linux-image1.png)
-![Linux-Image2](screenshots/qproper-linux-image2.png)
+![Linux-Image1](screenshots/qlproper-linux-image1.png)
+![Linux-Image2](screenshots/qlproper-linux-image2.png)
