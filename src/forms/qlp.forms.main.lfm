@@ -7,6 +7,8 @@ object frmMain: TfrmMain
   ClientHeight = 348
   ClientWidth = 1037
   Menu = mmMain
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   SessionProperties = 'Height;Left;psDataSets.Position;psMainMenu.Position;Top;Width;WindowState;psSubMenu.Position'
   object psDataSets: TPairSplitter
@@ -26,8 +28,8 @@ object frmMain: TfrmMain
       ClientHeight = 348
       object lbDataSets: TListBox
         Left = 0
-        Height = 324
-        Top = 24
+        Height = 294
+        Top = 54
         Width = 150
         Align = alClient
         ItemHeight = 0
@@ -44,6 +46,36 @@ object frmMain: TfrmMain
         Align = alTop
         Caption = 'Data Sets'
         TabOrder = 1
+      end
+      object panDatasetButtons: TPanel
+        Left = 0
+        Height = 30
+        Top = 24
+        Width = 150
+        Align = alTop
+        ClientHeight = 30
+        ClientWidth = 150
+        TabOrder = 2
+        object sbtnFileAddDataset: TSpeedButton
+          Left = 4
+          Height = 22
+          Top = 4
+          Width = 23
+          Action = actFileAddDataset
+          ShowCaption = False
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object sbFileRemoveDataset: TSpeedButton
+          Left = 32
+          Height = 22
+          Top = 4
+          Width = 23
+          Action = actFileRemoveDataset
+          ShowCaption = False
+          ShowHint = True
+          ParentShowHint = False
+        end
       end
     end
     object pssDataSetsData: TPairSplitterSide
@@ -81,13 +113,13 @@ object frmMain: TfrmMain
             TabOrder = 0
             TopIndex = -1
           end
-          object panMainMenuTitle: TPanel
+          object panOptionsTitle: TPanel
             Left = 0
             Height = 24
             Top = 0
             Width = 150
             Align = alTop
-            Caption = 'Main Menu'
+            Caption = 'Options'
             TabOrder = 1
           end
         end
@@ -114,13 +146,13 @@ object frmMain: TfrmMain
               Width = 150
               ClientWidth = 150
               ClientHeight = 348
-              object panSubMenuTitle: TPanel
+              object panSubOptionsTitle: TPanel
                 Left = 0
                 Height = 26
                 Top = 0
                 Width = 150
                 Align = alTop
-                Caption = 'Sub Menu'
+                Caption = 'Sub Options'
                 TabOrder = 0
               end
               object lbSubMenu: TListBox
@@ -165,14 +197,43 @@ object frmMain: TfrmMain
     Top = 168
     object mnuFile: TMenuItem
       Caption = '&File'
+      object mnuFileAddDataset: TMenuItem
+        Action = actFileAddDataset
+      end
+      object mnuFileRemoveDataset: TMenuItem
+        Action = actFileRemoveDataset
+      end
+      object mnuFileSep1: TMenuItem
+        Caption = '-'
+      end
       object mnuFileExit: TMenuItem
         Action = actFileExit
       end
     end
+    object mnuOptions: TMenuItem
+      Caption = '&Options'
+    end
+    object mnuSubOptions: TMenuItem
+      Caption = '&Sub Options'
+    end
   end
   object alMain: TActionList
+    Images = imMain
+    OnUpdate = alMainUpdate
     Left = 912
     Top = 224
+    object actFileAddDataset: TAction
+      Category = 'File'
+      Caption = '&Add Dataset'
+      ImageIndex = 0
+      OnExecute = actFileAddDatasetExecute
+    end
+    object actFileRemoveDataset: TAction
+      Category = 'File'
+      Caption = '&Remove Dataset'
+      ImageIndex = 1
+      OnExecute = actFileRemoveDatasetExecute
+    end
     object actFileExit: TFileExit
       Category = 'File'
       Caption = 'E&xit'
@@ -184,5 +245,14 @@ object frmMain: TfrmMain
     Active = False
     Left = 912
     Top = 112
+  end
+  object imMain: TImageList
+    Left = 912
+    Top = 288
+    Bitmap = {
+      4C7A020000001000000010000000410000000000000078DA6360C001FE33F000
+      310CF230900A46F513A7FF3F033F0E2C85A45F0A8FBA818694B97F34FD0C4EFD
+      A3804EE03F1F85F83F85F8376578140C650000ED60FE95
+    }
   end
 end

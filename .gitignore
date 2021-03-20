@@ -2,6 +2,7 @@
 qlproper
 qlproper.exe
 /bin
+/icons
 
 # Compiled l10n files: .mo should be ignored
 *.mo

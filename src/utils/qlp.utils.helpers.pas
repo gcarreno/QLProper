@@ -12,33 +12,62 @@ uses
 
 function GetMainMenuPath(const ADataSetPath, AMAinMenu: String): String;
 
-function GetDataSetFilePath(const ADataSetPath, AFilename: String): String;
+function GetDataSetFilesPath(const ADataSetPath: String): String;
+function GetDataSetFilesFilePath(const ADataSetPath, AFilename: String): String;
 
+function GetDataSetContentPath(const ADataSetPath: String): String;
 function GetDataSetContentFilePath(const ADataSetPath, AName: String): String;
 function GetDataSetContentDirPath(const ADataSetPath, AName: String): String;
 
+function GetDataSetDoubleXPath(const ADataSetPath: String): String;
 function GetDataSetDoubleXFilePath(const ADataSetPath, AName: String): String;
 function GetDataSetContentSubFilePath(const ADataSetPath, AMainName,
   ASubName: String): String;
 
 implementation
 
+const
+  DatasetFolderFiles = 'files';
+  DatasetFolderDoubleX = 'doublex';
+  DatasetFolderContent = 'content';
+  DatasetFileExtension = '.txt';
+
 function GetMainMenuPath(const ADataSetPath, AMAinMenu: String): String;
 begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    LowerCase(AMAinMenu));
+    LowerCase(AMAinMenu)
+  );
 end;
 
-function GetDataSetFilePath(const ADataSetPath, AFilename: String): String;
+function GetDataSetFilesPath(const ADataSetPath: String): String;
 begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    'files' +
+    DatasetFolderFiles
+  );
+end;
+
+function GetDataSetFilesFilePath(const ADataSetPath, AFilename: String): String;
+begin
+  Result:= ExpandFileName(
+    ADataSetPath +
     DirectorySeparator +
-    AFilename + '.txt');
+    DatasetFolderFiles +
+    DirectorySeparator +
+    AFilename + DatasetFileExtension
+  );
+end;
+
+function GetDataSetContentPath(const ADataSetPath: String): String;
+begin
+  Result:= ExpandFileName(
+    ADataSetPath +
+    DirectorySeparator +
+    DatasetFolderContent
+  );
 end;
 
 function GetDataSetContentFilePath(const ADataSetPath, AName: String): String;
@@ -46,9 +75,11 @@ begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    'content' +
+    DatasetFolderContent +
     DirectorySeparator +
-    DelSpace(LowerCase(AName)) + '.txt');
+    DelSpace(LowerCase(AName)) +
+    DatasetFileExtension
+  );
 end;
 
 function GetDataSetContentDirPath(const ADataSetPath, AName: String): String;
@@ -56,9 +87,19 @@ begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    'content' +
+    DatasetFolderContent +
     DirectorySeparator +
-    DelSpace(LowerCase(AName)));
+    DelSpace(LowerCase(AName))
+  );
+end;
+
+function GetDataSetDoubleXPath(const ADataSetPath: String): String;
+begin
+  Result:= ExpandFileName(
+    ADataSetPath +
+    DirectorySeparator +
+    DatasetFolderDoubleX
+  );
 end;
 
 function GetDataSetDoubleXFilePath(const ADataSetPath, AName: String): String;
@@ -66,9 +107,9 @@ begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    'doublex' +
+    DatasetFolderDoubleX +
     DirectorySeparator +
-    DelSpace(LowerCase(AName[1])+LowerCase(AName)) + '.txt'
+    DelSpace(LowerCase(AName[1])+LowerCase(AName)) + DatasetFileExtension
   );
 end;
 
@@ -78,11 +119,13 @@ begin
   Result:= ExpandFileName(
     ADataSetPath +
     DirectorySeparator +
-    'content' +
+    DatasetFolderContent +
     DirectorySeparator +
     DelSPace(LowerCase(AMainName)) +
     DirectorySeparator +
-    DelSpace(LowerCase(ASubName))) + '.txt';
+    DelSpace(LowerCase(ASubName)) +
+    DatasetFileExtension
+  );
 end;
 
 end.
