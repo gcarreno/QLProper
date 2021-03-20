@@ -389,24 +389,28 @@ object frmMain: TfrmMain
       Category = 'Options'
       Caption = '&Add Option'
       ImageIndex = 0
+      OnExecute = actOptionsAddExecute
       ShortCut = 8237
     end
     object actOptionsRemove: TAction
       Category = 'Options'
       Caption = '&Remove Option'
       ImageIndex = 1
+      OnExecute = actOptionsRemoveExecute
       ShortCut = 8238
     end
     object actSubOptionsAdd: TAction
       Category = 'SubOptions'
       Caption = '&Add Sub Option'
       ImageIndex = 0
+      OnExecute = actSubOptionsAddExecute
       ShortCut = 16429
     end
     object actSubOptionsRemove: TAction
       Category = 'SubOptions'
       Caption = '&Remove Sub Option'
       ImageIndex = 1
+      OnExecute = actSubOptionsRemoveExecute
       ShortCut = 16430
     end
   end

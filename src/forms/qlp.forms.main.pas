@@ -80,6 +80,10 @@ type
     procedure actDataSaveExecute(Sender: TObject);
     procedure actFileAddDatasetExecute(Sender: TObject);
     procedure actFileRemoveDatasetExecute(Sender: TObject);
+    procedure actOptionsAddExecute(Sender: TObject);
+    procedure actOptionsRemoveExecute(Sender: TObject);
+    procedure actSubOptionsAddExecute(Sender: TObject);
+    procedure actSubOptionsRemoveExecute(Sender: TObject);
     procedure alMainUpdate(AAction: TBasicAction; var Handled: Boolean);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -92,6 +96,9 @@ type
     FDataSets: array of TDataSet;
     FContentPresent: Boolean;
     FContentModified: Boolean;
+    FHasDatasets: Boolean;
+    FHasOptions: Boolean;
+    FHasSubOptions: Boolean;
     FContentFilename: String;
     FEditing: Boolean;
 
@@ -101,7 +108,7 @@ type
     procedure LoadConfig;
     procedure SaveConfig;
     procedure PopulateDataSets;
-    procedure PopulateMainMenu(const ADataSetPath: String);
+    procedure PopulateOptions(const ADataSetPath: String);
     procedure LoadOptionsItem(const AMainMenuItem: String);
     procedure PopulateSubMenu(const ASubMenuItemsFile: String);
     procedure LoadSubOptionsItem(const AMainMenuItem, ASubMenuItem: String);
@@ -123,7 +130,7 @@ uses
 
 const
   cApplicationName = 'QLProper';
-  cVersion = '0.4.0.9';
+  cVersion = '0.4.0.10';
   cIniFilename = 'qlproper.ini';
   cIniSection = 'Application';
   cDataSetsDataFolder = 'DataFolder';
@@ -139,10 +146,12 @@ begin
   begin
     FContentPresent:= False;
     FContentFilename:= '';
+    FHasOptions:= False;
+    FHasSubOptions:= False;
     lbOptions.Clear;
     lbSubOptions.Clear;
     memData.Clear;
-    PopulateMainMenu(FDataSets[lbDataSets.ItemIndex].DataFolder);
+    PopulateOptions(FDataSets[lbDataSets.ItemIndex].DataFolder);
   end;
 end;
 
@@ -150,6 +159,7 @@ procedure TfrmMain.lbOptionsSelectionChange(Sender: TObject; User: boolean);
 begin
   if lbOptions.ItemIndex <> -1 then
   begin
+    FHasSubOptions:= False;
     LoadOptionsItem(lbOptions.Items[lbOptions.ItemIndex]);
   end;
 end;
@@ -257,9 +267,10 @@ begin
   begin
     lbDataSets.Items.Add(FDataSets[index].Name);
   end;
+  FHasDatasets:= lbDataSets.Count > 0;
 end;
 
-procedure TfrmMain.PopulateMainMenu(const ADataSetPath: String);
+procedure TfrmMain.PopulateOptions(const ADataSetPath: String);
 var
   mmFile: String;
 begin
@@ -268,6 +279,7 @@ begin
   begin
     lbOptions.Items.LoadFromFile(mmFile);
   end;
+  FHasOptions:= lbOptions.Count > 0;
 end;
 
 procedure TfrmMain.LoadOptionsItem(const AMainMenuItem: String);
@@ -291,6 +303,7 @@ begin
       AMainMenuItem);
     if FileExists(mmItem) then
     begin
+      FHasSubOptions:= True;
       PopulateSubMenu(mmItem);
     end
     else
@@ -329,6 +342,9 @@ begin
   FEditing:= False;
   FContentPresent:= False;
   FContentModified:= False;
+  FHasDatasets:= False;
+  FHasOptions:= False;
+  FHasSubOptions:= False;
   FContentFilename:= '';
   SetPropStorage;
   SetShortcuts;
@@ -450,6 +466,26 @@ begin
   end;
 end;
 
+procedure TfrmMain.actOptionsAddExecute(Sender: TObject);
+begin
+  ShowMessage('Not Implemented yet');
+end;
+
+procedure TfrmMain.actOptionsRemoveExecute(Sender: TObject);
+begin
+  ShowMessage('Not Implemented yet');
+end;
+
+procedure TfrmMain.actSubOptionsAddExecute(Sender: TObject);
+begin
+  ShowMessage('Not Implemented yet');
+end;
+
+procedure TfrmMain.actSubOptionsRemoveExecute(Sender: TObject);
+begin
+  ShowMessage('Not Implemented yet');
+end;
+
 procedure TfrmMain.alMainUpdate(AAction: TBasicAction; var Handled: Boolean);
 begin
   if AAction = actFileRemoveDataset then
@@ -473,6 +509,30 @@ begin
   if AAction = actDataCancel then
   begin
     actDataCancel.Enabled:= FEditing;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actOptionsAdd then
+  begin
+    actOptionsAdd.Enabled:= lbDataSets.ItemIndex <> -1;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actOptionsRemove then
+  begin
+    actOptionsRemove.Enabled:= lbOptions.ItemIndex <> -1;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actSubOptionsAdd then
+  begin
+    actSubOptionsAdd.Enabled:= FHasSubOptions;
+    Handled:= True;
+    exit;
+  end;
+  if AAction = actSubOptionsRemove then
+  begin
+    actSubOptionsRemove.Enabled:= lbSubOptions.ItemIndex <> -1;
     Handled:= True;
     exit;
   end;
